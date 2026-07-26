@@ -1,0 +1,4546 @@
+{
+  "generatedAt": "2026-07-26T19:21:35.852Z",
+  "statistics": {
+    "generatedAt": "2026-07-26T19:21:35.803Z",
+    "drawCount": 451,
+    "frequency": [
+      {
+        "number": 1,
+        "count": 63,
+        "gap": 2,
+        "averageGap": 7.17741935483871
+      },
+      {
+        "number": 2,
+        "count": 58,
+        "gap": 3,
+        "averageGap": 7.7894736842105265
+      },
+      {
+        "number": 3,
+        "count": 63,
+        "gap": 8,
+        "averageGap": 7.048387096774194
+      },
+      {
+        "number": 4,
+        "count": 65,
+        "gap": 1,
+        "averageGap": 6.84375
+      },
+      {
+        "number": 5,
+        "count": 61,
+        "gap": 2,
+        "averageGap": 7.466666666666667
+      },
+      {
+        "number": 6,
+        "count": 69,
+        "gap": 8,
+        "averageGap": 6.397058823529412
+      },
+      {
+        "number": 7,
+        "count": 55,
+        "gap": 1,
+        "averageGap": 8.314814814814815
+      },
+      {
+        "number": 8,
+        "count": 66,
+        "gap": 3,
+        "averageGap": 6.861538461538461
+      },
+      {
+        "number": 9,
+        "count": 61,
+        "gap": 0,
+        "averageGap": 7.466666666666667
+      },
+      {
+        "number": 10,
+        "count": 67,
+        "gap": 1,
+        "averageGap": 6.712121212121212
+      },
+      {
+        "number": 11,
+        "count": 63,
+        "gap": 5,
+        "averageGap": 7.145161290322581
+      },
+      {
+        "number": 12,
+        "count": 48,
+        "gap": 2,
+        "averageGap": 9.46808510638298
+      },
+      {
+        "number": 13,
+        "count": 67,
+        "gap": 0,
+        "averageGap": 6.803030303030303
+      },
+      {
+        "number": 14,
+        "count": 79,
+        "gap": 2,
+        "averageGap": 5.730769230769231
+      },
+      {
+        "number": 15,
+        "count": 77,
+        "gap": 0,
+        "averageGap": 5.921052631578948
+      },
+      {
+        "number": 16,
+        "count": 54,
+        "gap": 31,
+        "averageGap": 7.90566037735849
+      },
+      {
+        "number": 17,
+        "count": 67,
+        "gap": 7,
+        "averageGap": 6.636363636363637
+      },
+      {
+        "number": 18,
+        "count": 64,
+        "gap": 10,
+        "averageGap": 6.984126984126984
+      },
+      {
+        "number": 19,
+        "count": 74,
+        "gap": 3,
+        "averageGap": 6.013698630136986
+      },
+      {
+        "number": 20,
+        "count": 60,
+        "gap": 4,
+        "averageGap": 7.491525423728813
+      },
+      {
+        "number": 21,
+        "count": 55,
+        "gap": 29,
+        "averageGap": 7.722222222222222
+      },
+      {
+        "number": 22,
+        "count": 74,
+        "gap": 0,
+        "averageGap": 6.054794520547945
+      },
+      {
+        "number": 23,
+        "count": 67,
+        "gap": 2,
+        "averageGap": 6.681818181818182
+      },
+      {
+        "number": 24,
+        "count": 57,
+        "gap": 17,
+        "averageGap": 7.660714285714286
+      },
+      {
+        "number": 25,
+        "count": 58,
+        "gap": 1,
+        "averageGap": 7.842105263157895
+      },
+      {
+        "number": 26,
+        "count": 74,
+        "gap": 6,
+        "averageGap": 6.054794520547945
+      },
+      {
+        "number": 27,
+        "count": 75,
+        "gap": 1,
+        "averageGap": 6.054054054054054
+      },
+      {
+        "number": 28,
+        "count": 64,
+        "gap": 7,
+        "averageGap": 6.968253968253968
+      },
+      {
+        "number": 29,
+        "count": 73,
+        "gap": 4,
+        "averageGap": 6.041666666666667
+      },
+      {
+        "number": 30,
+        "count": 55,
+        "gap": 9,
+        "averageGap": 8.037037037037036
+      },
+      {
+        "number": 31,
+        "count": 61,
+        "gap": 4,
+        "averageGap": 7.266666666666667
+      },
+      {
+        "number": 32,
+        "count": 58,
+        "gap": 0,
+        "averageGap": 7.578947368421052
+      },
+      {
+        "number": 33,
+        "count": 66,
+        "gap": 10,
+        "averageGap": 6.538461538461538
+      },
+      {
+        "number": 34,
+        "count": 69,
+        "gap": 5,
+        "averageGap": 6.411764705882353
+      },
+      {
+        "number": 35,
+        "count": 68,
+        "gap": 5,
+        "averageGap": 6.626865671641791
+      }
+    ],
+    "specialFrequency": [
+      {
+        "number": 1,
+        "count": 39,
+        "drawsSinceLatest": 2,
+        "daysSinceLatest": 0.931664375,
+        "averageGapDraws": 11.578947368421053,
+        "averageIntervalDays": 5.789473684210527,
+        "overdueDays": -4.857809309210527,
+        "recurrencePercentile": 18.421052631578945
+      },
+      {
+        "number": 2,
+        "count": 37,
+        "drawsSinceLatest": 4,
+        "daysSinceLatest": 1.931664375,
+        "averageGapDraws": 11.444444444444445,
+        "averageIntervalDays": 5.722222222222222,
+        "overdueDays": -3.7905578472222223,
+        "recurrencePercentile": 11.11111111111111
+      },
+      {
+        "number": 3,
+        "count": 39,
+        "drawsSinceLatest": 20,
+        "daysSinceLatest": 9.931664375,
+        "averageGapDraws": 10.789473684210526,
+        "averageIntervalDays": 5.394736842105263,
+        "overdueDays": 4.536927532894738,
+        "recurrencePercentile": 84.21052631578947
+      },
+      {
+        "number": 4,
+        "count": 35,
+        "drawsSinceLatest": 8,
+        "daysSinceLatest": 3.931664375,
+        "averageGapDraws": 11.352941176470589,
+        "averageIntervalDays": 5.676470588235294,
+        "overdueDays": -1.7448062132352944,
+        "recurrencePercentile": 55.88235294117647
+      },
+      {
+        "number": 5,
+        "count": 33,
+        "drawsSinceLatest": 22,
+        "daysSinceLatest": 10.931664375,
+        "averageGapDraws": 13.03125,
+        "averageIntervalDays": 6.510416666666667,
+        "overdueDays": 4.4212477083333335,
+        "recurrencePercentile": 84.375
+      },
+      {
+        "number": 6,
+        "count": 39,
+        "drawsSinceLatest": 7,
+        "daysSinceLatest": 3.2649977083333335,
+        "averageGapDraws": 11.631578947368421,
+        "averageIntervalDays": 5.815789473684211,
+        "overdueDays": -2.550791765350877,
+        "recurrencePercentile": 44.73684210526316
+      },
+      {
+        "number": 7,
+        "count": 33,
+        "drawsSinceLatest": 6,
+        "daysSinceLatest": 2.931664375,
+        "averageGapDraws": 13.8125,
+        "averageIntervalDays": 6.906250000000001,
+        "overdueDays": -3.974585625000001,
+        "recurrencePercentile": 34.375
+      },
+      {
+        "number": 8,
+        "count": 34,
+        "drawsSinceLatest": 5,
+        "daysSinceLatest": 2.2649977083333335,
+        "averageGapDraws": 13.212121212121213,
+        "averageIntervalDays": 6.606060606060606,
+        "overdueDays": -4.341062897727273,
+        "recurrencePercentile": 30.303030303030305
+      },
+      {
+        "number": 9,
+        "count": 47,
+        "drawsSinceLatest": 1,
+        "daysSinceLatest": 0.26499770833333336,
+        "averageGapDraws": 9.695652173913043,
+        "averageIntervalDays": 4.8478260869565215,
+        "overdueDays": -4.582828378623188,
+        "recurrencePercentile": 0
+      },
+      {
+        "number": 10,
+        "count": 43,
+        "drawsSinceLatest": 9,
+        "daysSinceLatest": 4.2649977083333335,
+        "averageGapDraws": 10.5,
+        "averageIntervalDays": 5.253968253968254,
+        "overdueDays": -0.9889705456349205,
+        "recurrencePercentile": 59.523809523809526
+      },
+      {
+        "number": 11,
+        "count": 31,
+        "drawsSinceLatest": 30,
+        "daysSinceLatest": 14.931664375,
+        "averageGapDraws": 13.8,
+        "averageIntervalDays": 6.9,
+        "overdueDays": 8.031664375,
+        "recurrencePercentile": 93.33333333333333
+      },
+      {
+        "number": 12,
+        "count": 41,
+        "drawsSinceLatest": 0,
+        "daysSinceLatest": -0.068335625,
+        "averageGapDraws": 10.5,
+        "averageIntervalDays": 5.25,
+        "overdueDays": -5.318335625,
+        "recurrencePercentile": 0
+      }
+    ],
+    "specialByHour": {
+      "13": [
+        {
+          "number": 1,
+          "count": 18,
+          "drawsSinceLatest": 17,
+          "daysSinceLatest": 17.264997719907406,
+          "averageGapDraws": 10.941176470588236,
+          "averageIntervalDays": 10.941176470588236,
+          "overdueDays": 6.32382124931917,
+          "recurrencePercentile": 76.47058823529412
+        },
+        {
+          "number": 2,
+          "count": 15,
+          "drawsSinceLatest": 42,
+          "daysSinceLatest": 42.264997719907406,
+          "averageGapDraws": 10.357142857142858,
+          "averageIntervalDays": 10.357142857142858,
+          "overdueDays": 31.907854862764548,
+          "recurrencePercentile": 100
+        },
+        {
+          "number": 3,
+          "count": 20,
+          "drawsSinceLatest": 14,
+          "daysSinceLatest": 14.264997719907408,
+          "averageGapDraws": 10.526315789473685,
+          "averageIntervalDays": 10.526315789473685,
+          "overdueDays": 3.7386819304337227,
+          "recurrencePercentile": 73.68421052631578
+        },
+        {
+          "number": 4,
+          "count": 17,
+          "drawsSinceLatest": 26,
+          "daysSinceLatest": 26.264997719907406,
+          "averageGapDraws": 8.5625,
+          "averageIntervalDays": 8.5625,
+          "overdueDays": 17.702497719907406,
+          "recurrencePercentile": 93.75
+        },
+        {
+          "number": 5,
+          "count": 15,
+          "drawsSinceLatest": 21,
+          "daysSinceLatest": 21.264997719907406,
+          "averageGapDraws": 14.142857142857142,
+          "averageIntervalDays": 14.142857142857142,
+          "overdueDays": 7.1221405770502635,
+          "recurrencePercentile": 85.71428571428571
+        },
+        {
+          "number": 6,
+          "count": 20,
+          "drawsSinceLatest": 3,
+          "daysSinceLatest": 3.2649977199074076,
+          "averageGapDraws": 11.631578947368421,
+          "averageIntervalDays": 11.631578947368421,
+          "overdueDays": -8.366581227461014,
+          "recurrencePercentile": 26.31578947368421
+        },
+        {
+          "number": 7,
+          "count": 16,
+          "drawsSinceLatest": 7,
+          "daysSinceLatest": 7.264997719907408,
+          "averageGapDraws": 12.6,
+          "averageIntervalDays": 12.6,
+          "overdueDays": -5.335002280092592,
+          "recurrencePercentile": 60
+        },
+        {
+          "number": 8,
+          "count": 23,
+          "drawsSinceLatest": 2,
+          "daysSinceLatest": 2.2649977199074076,
+          "averageGapDraws": 9.909090909090908,
+          "averageIntervalDays": 9.909090909090908,
+          "overdueDays": -7.644093189183501,
+          "recurrencePercentile": 13.636363636363635
+        },
+        {
+          "number": 9,
+          "count": 29,
+          "drawsSinceLatest": 0,
+          "daysSinceLatest": 0.2649977199074074,
+          "averageGapDraws": 7.964285714285714,
+          "averageIntervalDays": 7.964285714285714,
+          "overdueDays": -7.699287994378307,
+          "recurrencePercentile": 0
+        },
+        {
+          "number": 10,
+          "count": 24,
+          "drawsSinceLatest": 4,
+          "daysSinceLatest": 4.264997719907408,
+          "averageGapDraws": 9.478260869565217,
+          "averageIntervalDays": 9.478260869565217,
+          "overdueDays": -5.213263149657809,
+          "recurrencePercentile": 34.78260869565217
+        },
+        {
+          "number": 11,
+          "count": 8,
+          "drawsSinceLatest": 49,
+          "daysSinceLatest": 49.264997719907406,
+          "averageGapDraws": 24.142857142857142,
+          "averageIntervalDays": 24.142857142857142,
+          "overdueDays": 25.122140577050263,
+          "recurrencePercentile": 85.71428571428571
+        },
+        {
+          "number": 12,
+          "count": 20,
+          "drawsSinceLatest": 1,
+          "daysSinceLatest": 1.2649977199074074,
+          "averageGapDraws": 10.789473684210526,
+          "averageIntervalDays": 10.789473684210526,
+          "overdueDays": -9.524475964303118,
+          "recurrencePercentile": 15.789473684210526
+        }
+      ],
+      "21": [
+        {
+          "number": 1,
+          "count": 21,
+          "drawsSinceLatest": 1,
+          "daysSinceLatest": 0.9316643981481482,
+          "averageGapDraws": 11,
+          "averageIntervalDays": 11,
+          "overdueDays": -10.068335601851851,
+          "recurrencePercentile": 0
+        },
+        {
+          "number": 2,
+          "count": 22,
+          "drawsSinceLatest": 2,
+          "daysSinceLatest": 1.931664398148148,
+          "averageGapDraws": 9.80952380952381,
+          "averageIntervalDays": 9.80952380952381,
+          "overdueDays": -7.877859411375662,
+          "recurrencePercentile": 0
+        },
+        {
+          "number": 3,
+          "count": 19,
+          "drawsSinceLatest": 10,
+          "daysSinceLatest": 9.931664398148149,
+          "averageGapDraws": 11.38888888888889,
+          "averageIntervalDays": 11.38888888888889,
+          "overdueDays": -1.4572244907407406,
+          "recurrencePercentile": 55.55555555555556
+        },
+        {
+          "number": 4,
+          "count": 18,
+          "drawsSinceLatest": 4,
+          "daysSinceLatest": 3.9316643981481483,
+          "averageGapDraws": 11.352941176470589,
+          "averageIntervalDays": 11.352941176470589,
+          "overdueDays": -7.42127677832244,
+          "recurrencePercentile": 35.294117647058826
+        },
+        {
+          "number": 5,
+          "count": 18,
+          "drawsSinceLatest": 11,
+          "daysSinceLatest": 10.931664398148149,
+          "averageGapDraws": 11.941176470588236,
+          "averageIntervalDays": 11.941176470588236,
+          "overdueDays": -1.0095120724400868,
+          "recurrencePercentile": 64.70588235294117
+        },
+        {
+          "number": 6,
+          "count": 19,
+          "drawsSinceLatest": 33,
+          "daysSinceLatest": 32.93166439814815,
+          "averageGapDraws": 9.555555555555555,
+          "averageIntervalDays": 9.555555555555555,
+          "overdueDays": 23.376108842592593,
+          "recurrencePercentile": 100
+        },
+        {
+          "number": 7,
+          "count": 17,
+          "drawsSinceLatest": 3,
+          "daysSinceLatest": 2.9316643981481483,
+          "averageGapDraws": 13.8125,
+          "averageIntervalDays": 13.8125,
+          "overdueDays": -10.880835601851851,
+          "recurrencePercentile": 25
+        },
+        {
+          "number": 8,
+          "count": 11,
+          "drawsSinceLatest": 34,
+          "daysSinceLatest": 33.93166439814815,
+          "averageGapDraws": 17.8,
+          "averageIntervalDays": 17.8,
+          "overdueDays": 16.13166439814815,
+          "recurrencePercentile": 90
+        },
+        {
+          "number": 9,
+          "count": 18,
+          "drawsSinceLatest": 5,
+          "daysSinceLatest": 4.931664398148148,
+          "averageGapDraws": 12.823529411764707,
+          "averageIntervalDays": 12.823529411764707,
+          "overdueDays": -7.891865013616559,
+          "recurrencePercentile": 35.294117647058826
+        },
+        {
+          "number": 10,
+          "count": 19,
+          "drawsSinceLatest": 40,
+          "daysSinceLatest": 39.93166439814815,
+          "averageGapDraws": 10.277777777777779,
+          "averageIntervalDays": 10.277777777777779,
+          "overdueDays": 29.653886620370372,
+          "recurrencePercentile": 100
+        },
+        {
+          "number": 11,
+          "count": 23,
+          "drawsSinceLatest": 15,
+          "daysSinceLatest": 14.931664398148149,
+          "averageGapDraws": 9.409090909090908,
+          "averageIntervalDays": 9.409090909090908,
+          "overdueDays": 5.52257348905724,
+          "recurrencePercentile": 81.81818181818183
+        },
+        {
+          "number": 12,
+          "count": 21,
+          "drawsSinceLatest": 0,
+          "daysSinceLatest": -0.06833560185185185,
+          "averageGapDraws": 10.5,
+          "averageIntervalDays": 10.5,
+          "overdueDays": -10.568335601851851,
+          "recurrencePercentile": 0
+        }
+      ]
+    },
+    "specialAssociations": {
+      "1": [
+        {
+          "number": 13,
+          "count": 10,
+          "rate": 0.2564102564102564
+        },
+        {
+          "number": 14,
+          "count": 9,
+          "rate": 0.23076923076923078
+        },
+        {
+          "number": 25,
+          "count": 9,
+          "rate": 0.23076923076923078
+        },
+        {
+          "number": 27,
+          "count": 9,
+          "rate": 0.23076923076923078
+        },
+        {
+          "number": 1,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 23,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 24,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 31,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 2,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 9,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 10,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 29,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 6,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 17,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 19,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 22,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 32,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 33,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 3,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 18,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 20,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 30,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 34,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 4,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 7,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 21,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 28,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 11,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 12,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 15,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 16,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 35,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 5,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 8,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 26,
+          "count": 2,
+          "rate": 0.05128205128205128
+        }
+      ],
+      "2": [
+        {
+          "number": 3,
+          "count": 10,
+          "rate": 0.2702702702702703
+        },
+        {
+          "number": 16,
+          "count": 8,
+          "rate": 0.21621621621621623
+        },
+        {
+          "number": 31,
+          "count": 8,
+          "rate": 0.21621621621621623
+        },
+        {
+          "number": 8,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 9,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 15,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 17,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 23,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 26,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 32,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 6,
+          "count": 6,
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 21,
+          "count": 6,
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 27,
+          "count": 6,
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 28,
+          "count": 6,
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 29,
+          "count": 6,
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 35,
+          "count": 6,
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 1,
+          "count": 5,
+          "rate": 0.13513513513513514
+        },
+        {
+          "number": 4,
+          "count": 5,
+          "rate": 0.13513513513513514
+        },
+        {
+          "number": 5,
+          "count": 5,
+          "rate": 0.13513513513513514
+        },
+        {
+          "number": 10,
+          "count": 5,
+          "rate": 0.13513513513513514
+        },
+        {
+          "number": 14,
+          "count": 5,
+          "rate": 0.13513513513513514
+        },
+        {
+          "number": 19,
+          "count": 5,
+          "rate": 0.13513513513513514
+        },
+        {
+          "number": 20,
+          "count": 5,
+          "rate": 0.13513513513513514
+        },
+        {
+          "number": 11,
+          "count": 4,
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 13,
+          "count": 4,
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 18,
+          "count": 4,
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 30,
+          "count": 4,
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 33,
+          "count": 4,
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 34,
+          "count": 4,
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.08108108108108109
+        },
+        {
+          "number": 12,
+          "count": 3,
+          "rate": 0.08108108108108109
+        },
+        {
+          "number": 25,
+          "count": 3,
+          "rate": 0.08108108108108109
+        },
+        {
+          "number": 2,
+          "count": 2,
+          "rate": 0.05405405405405406
+        },
+        {
+          "number": 22,
+          "count": 2,
+          "rate": 0.05405405405405406
+        },
+        {
+          "number": 24,
+          "count": 2,
+          "rate": 0.05405405405405406
+        }
+      ],
+      "3": [
+        {
+          "number": 22,
+          "count": 10,
+          "rate": 0.2564102564102564
+        },
+        {
+          "number": 3,
+          "count": 9,
+          "rate": 0.23076923076923078
+        },
+        {
+          "number": 35,
+          "count": 9,
+          "rate": 0.23076923076923078
+        },
+        {
+          "number": 2,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 10,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 11,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 28,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 15,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 26,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 34,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 6,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 14,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 17,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 18,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 20,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 29,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 33,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 1,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 7,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 9,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 12,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 19,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 21,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 23,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 24,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 30,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 25,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 27,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 4,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 5,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 13,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 31,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 32,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 8,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 16,
+          "count": 2,
+          "rate": 0.05128205128205128
+        }
+      ],
+      "4": [
+        {
+          "number": 29,
+          "count": 9,
+          "rate": 0.2571428571428571
+        },
+        {
+          "number": 32,
+          "count": 9,
+          "rate": 0.2571428571428571
+        },
+        {
+          "number": 22,
+          "count": 8,
+          "rate": 0.22857142857142856
+        },
+        {
+          "number": 4,
+          "count": 7,
+          "rate": 0.2
+        },
+        {
+          "number": 17,
+          "count": 7,
+          "rate": 0.2
+        },
+        {
+          "number": 19,
+          "count": 7,
+          "rate": 0.2
+        },
+        {
+          "number": 23,
+          "count": 7,
+          "rate": 0.2
+        },
+        {
+          "number": 1,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 3,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 6,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 8,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 15,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 21,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 26,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 30,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 33,
+          "count": 6,
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 5,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 10,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 11,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 18,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 27,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 34,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 2,
+          "count": 4,
+          "rate": 0.11428571428571428
+        },
+        {
+          "number": 9,
+          "count": 4,
+          "rate": 0.11428571428571428
+        },
+        {
+          "number": 14,
+          "count": 4,
+          "rate": 0.11428571428571428
+        },
+        {
+          "number": 28,
+          "count": 4,
+          "rate": 0.11428571428571428
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.08571428571428572
+        },
+        {
+          "number": 20,
+          "count": 3,
+          "rate": 0.08571428571428572
+        },
+        {
+          "number": 25,
+          "count": 3,
+          "rate": 0.08571428571428572
+        },
+        {
+          "number": 35,
+          "count": 3,
+          "rate": 0.08571428571428572
+        },
+        {
+          "number": 12,
+          "count": 2,
+          "rate": 0.05714285714285714
+        },
+        {
+          "number": 13,
+          "count": 2,
+          "rate": 0.05714285714285714
+        },
+        {
+          "number": 24,
+          "count": 2,
+          "rate": 0.05714285714285714
+        },
+        {
+          "number": 31,
+          "count": 2,
+          "rate": 0.05714285714285714
+        },
+        {
+          "number": 16,
+          "count": 1,
+          "rate": 0.02857142857142857
+        }
+      ],
+      "5": [
+        {
+          "number": 11,
+          "count": 9,
+          "rate": 0.2727272727272727
+        },
+        {
+          "number": 19,
+          "count": 9,
+          "rate": 0.2727272727272727
+        },
+        {
+          "number": 5,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 6,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 7,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 27,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 29,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 30,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 35,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 1,
+          "count": 6,
+          "rate": 0.18181818181818182
+        },
+        {
+          "number": 2,
+          "count": 6,
+          "rate": 0.18181818181818182
+        },
+        {
+          "number": 20,
+          "count": 6,
+          "rate": 0.18181818181818182
+        },
+        {
+          "number": 25,
+          "count": 6,
+          "rate": 0.18181818181818182
+        },
+        {
+          "number": 14,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 18,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 21,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 26,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 33,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 34,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 8,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 15,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 23,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 24,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 28,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 31,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 10,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 12,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 13,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 22,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 4,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 16,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 17,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 3,
+          "count": 1,
+          "rate": 0.030303030303030304
+        },
+        {
+          "number": 9,
+          "count": 1,
+          "rate": 0.030303030303030304
+        }
+      ],
+      "6": [
+        {
+          "number": 34,
+          "count": 10,
+          "rate": 0.2564102564102564
+        },
+        {
+          "number": 5,
+          "count": 9,
+          "rate": 0.23076923076923078
+        },
+        {
+          "number": 28,
+          "count": 9,
+          "rate": 0.23076923076923078
+        },
+        {
+          "number": 7,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 12,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 27,
+          "count": 8,
+          "rate": 0.20512820512820512
+        },
+        {
+          "number": 6,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 10,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 18,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 23,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 25,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 29,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 8,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 9,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 11,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 17,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 19,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 30,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 3,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 14,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 16,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 26,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 2,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 4,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 13,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 15,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 20,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 22,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 31,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 35,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 24,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 32,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 33,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 1,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 21,
+          "count": 2,
+          "rate": 0.05128205128205128
+        }
+      ],
+      "7": [
+        {
+          "number": 4,
+          "count": 10,
+          "rate": 0.30303030303030304
+        },
+        {
+          "number": 26,
+          "count": 10,
+          "rate": 0.30303030303030304
+        },
+        {
+          "number": 6,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 11,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 12,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 14,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 19,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 25,
+          "count": 7,
+          "rate": 0.21212121212121213
+        },
+        {
+          "number": 8,
+          "count": 6,
+          "rate": 0.18181818181818182
+        },
+        {
+          "number": 1,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 9,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 18,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 22,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 24,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 27,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 29,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 31,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 32,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 10,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 13,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 15,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 16,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 20,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 33,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 34,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 2,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 5,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 17,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 23,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 28,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 35,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 3,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 21,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 30,
+          "count": 2,
+          "rate": 0.06060606060606061
+        }
+      ],
+      "8": [
+        {
+          "number": 15,
+          "count": 9,
+          "rate": 0.2647058823529412
+        },
+        {
+          "number": 17,
+          "count": 9,
+          "rate": 0.2647058823529412
+        },
+        {
+          "number": 23,
+          "count": 8,
+          "rate": 0.23529411764705882
+        },
+        {
+          "number": 33,
+          "count": 8,
+          "rate": 0.23529411764705882
+        },
+        {
+          "number": 5,
+          "count": 7,
+          "rate": 0.20588235294117646
+        },
+        {
+          "number": 6,
+          "count": 7,
+          "rate": 0.20588235294117646
+        },
+        {
+          "number": 18,
+          "count": 7,
+          "rate": 0.20588235294117646
+        },
+        {
+          "number": 8,
+          "count": 6,
+          "rate": 0.17647058823529413
+        },
+        {
+          "number": 10,
+          "count": 6,
+          "rate": 0.17647058823529413
+        },
+        {
+          "number": 22,
+          "count": 6,
+          "rate": 0.17647058823529413
+        },
+        {
+          "number": 34,
+          "count": 6,
+          "rate": 0.17647058823529413
+        },
+        {
+          "number": 35,
+          "count": 6,
+          "rate": 0.17647058823529413
+        },
+        {
+          "number": 3,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 13,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 19,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 20,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 27,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 28,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 29,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 4,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 9,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 21,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 24,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 26,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 32,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 1,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 11,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 12,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 14,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 16,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 25,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 30,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 2,
+          "count": 2,
+          "rate": 0.058823529411764705
+        },
+        {
+          "number": 31,
+          "count": 2,
+          "rate": 0.058823529411764705
+        },
+        {
+          "number": 7,
+          "count": 1,
+          "rate": 0.029411764705882353
+        }
+      ],
+      "9": [
+        {
+          "number": 26,
+          "count": 11,
+          "rate": 0.23404255319148937
+        },
+        {
+          "number": 8,
+          "count": 10,
+          "rate": 0.2127659574468085
+        },
+        {
+          "number": 22,
+          "count": 10,
+          "rate": 0.2127659574468085
+        },
+        {
+          "number": 33,
+          "count": 10,
+          "rate": 0.2127659574468085
+        },
+        {
+          "number": 7,
+          "count": 9,
+          "rate": 0.19148936170212766
+        },
+        {
+          "number": 10,
+          "count": 9,
+          "rate": 0.19148936170212766
+        },
+        {
+          "number": 12,
+          "count": 9,
+          "rate": 0.19148936170212766
+        },
+        {
+          "number": 14,
+          "count": 9,
+          "rate": 0.19148936170212766
+        },
+        {
+          "number": 15,
+          "count": 9,
+          "rate": 0.19148936170212766
+        },
+        {
+          "number": 24,
+          "count": 9,
+          "rate": 0.19148936170212766
+        },
+        {
+          "number": 5,
+          "count": 8,
+          "rate": 0.1702127659574468
+        },
+        {
+          "number": 13,
+          "count": 8,
+          "rate": 0.1702127659574468
+        },
+        {
+          "number": 16,
+          "count": 8,
+          "rate": 0.1702127659574468
+        },
+        {
+          "number": 31,
+          "count": 8,
+          "rate": 0.1702127659574468
+        },
+        {
+          "number": 2,
+          "count": 7,
+          "rate": 0.14893617021276595
+        },
+        {
+          "number": 4,
+          "count": 7,
+          "rate": 0.14893617021276595
+        },
+        {
+          "number": 11,
+          "count": 7,
+          "rate": 0.14893617021276595
+        },
+        {
+          "number": 19,
+          "count": 7,
+          "rate": 0.14893617021276595
+        },
+        {
+          "number": 1,
+          "count": 6,
+          "rate": 0.1276595744680851
+        },
+        {
+          "number": 18,
+          "count": 6,
+          "rate": 0.1276595744680851
+        },
+        {
+          "number": 27,
+          "count": 6,
+          "rate": 0.1276595744680851
+        },
+        {
+          "number": 29,
+          "count": 6,
+          "rate": 0.1276595744680851
+        },
+        {
+          "number": 34,
+          "count": 6,
+          "rate": 0.1276595744680851
+        },
+        {
+          "number": 35,
+          "count": 6,
+          "rate": 0.1276595744680851
+        },
+        {
+          "number": 9,
+          "count": 5,
+          "rate": 0.10638297872340426
+        },
+        {
+          "number": 28,
+          "count": 5,
+          "rate": 0.10638297872340426
+        },
+        {
+          "number": 30,
+          "count": 5,
+          "rate": 0.10638297872340426
+        },
+        {
+          "number": 3,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 6,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 17,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 20,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 23,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 25,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 32,
+          "count": 3,
+          "rate": 0.06382978723404255
+        },
+        {
+          "number": 21,
+          "count": 2,
+          "rate": 0.0425531914893617
+        }
+      ],
+      "10": [
+        {
+          "number": 14,
+          "count": 14,
+          "rate": 0.32558139534883723
+        },
+        {
+          "number": 15,
+          "count": 10,
+          "rate": 0.23255813953488372
+        },
+        {
+          "number": 16,
+          "count": 10,
+          "rate": 0.23255813953488372
+        },
+        {
+          "number": 3,
+          "count": 9,
+          "rate": 0.20930232558139536
+        },
+        {
+          "number": 13,
+          "count": 9,
+          "rate": 0.20930232558139536
+        },
+        {
+          "number": 21,
+          "count": 9,
+          "rate": 0.20930232558139536
+        },
+        {
+          "number": 6,
+          "count": 8,
+          "rate": 0.18604651162790697
+        },
+        {
+          "number": 17,
+          "count": 8,
+          "rate": 0.18604651162790697
+        },
+        {
+          "number": 19,
+          "count": 8,
+          "rate": 0.18604651162790697
+        },
+        {
+          "number": 24,
+          "count": 8,
+          "rate": 0.18604651162790697
+        },
+        {
+          "number": 27,
+          "count": 8,
+          "rate": 0.18604651162790697
+        },
+        {
+          "number": 7,
+          "count": 7,
+          "rate": 0.16279069767441862
+        },
+        {
+          "number": 23,
+          "count": 7,
+          "rate": 0.16279069767441862
+        },
+        {
+          "number": 28,
+          "count": 7,
+          "rate": 0.16279069767441862
+        },
+        {
+          "number": 31,
+          "count": 7,
+          "rate": 0.16279069767441862
+        },
+        {
+          "number": 2,
+          "count": 6,
+          "rate": 0.13953488372093023
+        },
+        {
+          "number": 8,
+          "count": 6,
+          "rate": 0.13953488372093023
+        },
+        {
+          "number": 22,
+          "count": 6,
+          "rate": 0.13953488372093023
+        },
+        {
+          "number": 30,
+          "count": 6,
+          "rate": 0.13953488372093023
+        },
+        {
+          "number": 34,
+          "count": 6,
+          "rate": 0.13953488372093023
+        },
+        {
+          "number": 18,
+          "count": 5,
+          "rate": 0.11627906976744186
+        },
+        {
+          "number": 20,
+          "count": 5,
+          "rate": 0.11627906976744186
+        },
+        {
+          "number": 26,
+          "count": 5,
+          "rate": 0.11627906976744186
+        },
+        {
+          "number": 32,
+          "count": 5,
+          "rate": 0.11627906976744186
+        },
+        {
+          "number": 1,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 4,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 9,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 29,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 33,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 35,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 5,
+          "count": 3,
+          "rate": 0.06976744186046512
+        },
+        {
+          "number": 10,
+          "count": 3,
+          "rate": 0.06976744186046512
+        },
+        {
+          "number": 25,
+          "count": 3,
+          "rate": 0.06976744186046512
+        },
+        {
+          "number": 11,
+          "count": 2,
+          "rate": 0.046511627906976744
+        },
+        {
+          "number": 12,
+          "count": 1,
+          "rate": 0.023255813953488372
+        }
+      ],
+      "11": [
+        {
+          "number": 35,
+          "count": 10,
+          "rate": 0.3225806451612903
+        },
+        {
+          "number": 4,
+          "count": 9,
+          "rate": 0.2903225806451613
+        },
+        {
+          "number": 13,
+          "count": 8,
+          "rate": 0.25806451612903225
+        },
+        {
+          "number": 15,
+          "count": 7,
+          "rate": 0.22580645161290322
+        },
+        {
+          "number": 21,
+          "count": 7,
+          "rate": 0.22580645161290322
+        },
+        {
+          "number": 26,
+          "count": 7,
+          "rate": 0.22580645161290322
+        },
+        {
+          "number": 18,
+          "count": 6,
+          "rate": 0.1935483870967742
+        },
+        {
+          "number": 32,
+          "count": 6,
+          "rate": 0.1935483870967742
+        },
+        {
+          "number": 7,
+          "count": 5,
+          "rate": 0.16129032258064516
+        },
+        {
+          "number": 14,
+          "count": 5,
+          "rate": 0.16129032258064516
+        },
+        {
+          "number": 16,
+          "count": 5,
+          "rate": 0.16129032258064516
+        },
+        {
+          "number": 24,
+          "count": 5,
+          "rate": 0.16129032258064516
+        },
+        {
+          "number": 27,
+          "count": 5,
+          "rate": 0.16129032258064516
+        },
+        {
+          "number": 33,
+          "count": 5,
+          "rate": 0.16129032258064516
+        },
+        {
+          "number": 1,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 2,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 8,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 11,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 20,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 28,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 29,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 5,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 9,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 10,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 17,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 19,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 22,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 25,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 30,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 34,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 3,
+          "count": 2,
+          "rate": 0.06451612903225806
+        },
+        {
+          "number": 6,
+          "count": 2,
+          "rate": 0.06451612903225806
+        },
+        {
+          "number": 12,
+          "count": 2,
+          "rate": 0.06451612903225806
+        },
+        {
+          "number": 23,
+          "count": 2,
+          "rate": 0.06451612903225806
+        },
+        {
+          "number": 31,
+          "count": 2,
+          "rate": 0.06451612903225806
+        }
+      ],
+      "12": [
+        {
+          "number": 22,
+          "count": 11,
+          "rate": 0.2682926829268293
+        },
+        {
+          "number": 9,
+          "count": 10,
+          "rate": 0.24390243902439024
+        },
+        {
+          "number": 1,
+          "count": 9,
+          "rate": 0.21951219512195122
+        },
+        {
+          "number": 20,
+          "count": 9,
+          "rate": 0.21951219512195122
+        },
+        {
+          "number": 31,
+          "count": 8,
+          "rate": 0.1951219512195122
+        },
+        {
+          "number": 34,
+          "count": 8,
+          "rate": 0.1951219512195122
+        },
+        {
+          "number": 8,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 10,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 13,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 14,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 15,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 27,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 29,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 32,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 35,
+          "count": 7,
+          "rate": 0.17073170731707318
+        },
+        {
+          "number": 4,
+          "count": 6,
+          "rate": 0.14634146341463414
+        },
+        {
+          "number": 5,
+          "count": 6,
+          "rate": 0.14634146341463414
+        },
+        {
+          "number": 17,
+          "count": 6,
+          "rate": 0.14634146341463414
+        },
+        {
+          "number": 19,
+          "count": 6,
+          "rate": 0.14634146341463414
+        },
+        {
+          "number": 25,
+          "count": 6,
+          "rate": 0.14634146341463414
+        },
+        {
+          "number": 2,
+          "count": 5,
+          "rate": 0.12195121951219512
+        },
+        {
+          "number": 3,
+          "count": 5,
+          "rate": 0.12195121951219512
+        },
+        {
+          "number": 11,
+          "count": 5,
+          "rate": 0.12195121951219512
+        },
+        {
+          "number": 23,
+          "count": 5,
+          "rate": 0.12195121951219512
+        },
+        {
+          "number": 26,
+          "count": 5,
+          "rate": 0.12195121951219512
+        },
+        {
+          "number": 28,
+          "count": 5,
+          "rate": 0.12195121951219512
+        },
+        {
+          "number": 33,
+          "count": 5,
+          "rate": 0.12195121951219512
+        },
+        {
+          "number": 6,
+          "count": 3,
+          "rate": 0.07317073170731707
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.07317073170731707
+        },
+        {
+          "number": 16,
+          "count": 3,
+          "rate": 0.07317073170731707
+        },
+        {
+          "number": 18,
+          "count": 3,
+          "rate": 0.07317073170731707
+        },
+        {
+          "number": 21,
+          "count": 3,
+          "rate": 0.07317073170731707
+        },
+        {
+          "number": 30,
+          "count": 3,
+          "rate": 0.07317073170731707
+        },
+        {
+          "number": 12,
+          "count": 2,
+          "rate": 0.04878048780487805
+        },
+        {
+          "number": 24,
+          "count": 2,
+          "rate": 0.04878048780487805
+        }
+      ]
+    },
+    "specialTransitions": {
+      "1": [
+        {
+          "number": 1,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 2,
+          "count": 6,
+          "rate": 0.15384615384615385
+        },
+        {
+          "number": 4,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 10,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 3,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 5,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 8,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 11,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 7,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 9,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 6,
+          "count": 1,
+          "rate": 0.02564102564102564
+        },
+        {
+          "number": 12,
+          "count": 1,
+          "rate": 0.02564102564102564
+        }
+      ],
+      "2": [
+        {
+          "number": 12,
+          "count": 7,
+          "rate": 0.1891891891891892
+        },
+        {
+          "number": 3,
+          "count": 6,
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 11,
+          "count": 4,
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 5,
+          "count": 3,
+          "rate": 0.08108108108108109
+        },
+        {
+          "number": 6,
+          "count": 3,
+          "rate": 0.08108108108108109
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.08108108108108109
+        },
+        {
+          "number": 9,
+          "count": 3,
+          "rate": 0.08108108108108109
+        },
+        {
+          "number": 1,
+          "count": 2,
+          "rate": 0.05405405405405406
+        },
+        {
+          "number": 4,
+          "count": 2,
+          "rate": 0.05405405405405406
+        },
+        {
+          "number": 10,
+          "count": 2,
+          "rate": 0.05405405405405406
+        },
+        {
+          "number": 2,
+          "count": 1,
+          "rate": 0.02702702702702703
+        },
+        {
+          "number": 8,
+          "count": 1,
+          "rate": 0.02702702702702703
+        }
+      ],
+      "3": [
+        {
+          "number": 5,
+          "count": 7,
+          "rate": 0.1794871794871795
+        },
+        {
+          "number": 3,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 6,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 8,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 4,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 10,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 12,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 1,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 7,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 9,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 11,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 2,
+          "count": 1,
+          "rate": 0.02564102564102564
+        }
+      ],
+      "4": [
+        {
+          "number": 4,
+          "count": 7,
+          "rate": 0.2
+        },
+        {
+          "number": 6,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 8,
+          "count": 5,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 9,
+          "count": 4,
+          "rate": 0.11428571428571428
+        },
+        {
+          "number": 3,
+          "count": 3,
+          "rate": 0.08571428571428572
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.08571428571428572
+        },
+        {
+          "number": 2,
+          "count": 2,
+          "rate": 0.05714285714285714
+        },
+        {
+          "number": 11,
+          "count": 2,
+          "rate": 0.05714285714285714
+        },
+        {
+          "number": 1,
+          "count": 1,
+          "rate": 0.02857142857142857
+        },
+        {
+          "number": 5,
+          "count": 1,
+          "rate": 0.02857142857142857
+        },
+        {
+          "number": 10,
+          "count": 1,
+          "rate": 0.02857142857142857
+        },
+        {
+          "number": 12,
+          "count": 1,
+          "rate": 0.02857142857142857
+        }
+      ],
+      "5": [
+        {
+          "number": 10,
+          "count": 8,
+          "rate": 0.24242424242424243
+        },
+        {
+          "number": 1,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 6,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 3,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 2,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 4,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 12,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 8,
+          "count": 1,
+          "rate": 0.030303030303030304
+        },
+        {
+          "number": 9,
+          "count": 1,
+          "rate": 0.030303030303030304
+        },
+        {
+          "number": 11,
+          "count": 1,
+          "rate": 0.030303030303030304
+        }
+      ],
+      "6": [
+        {
+          "number": 6,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 9,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 11,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 12,
+          "count": 5,
+          "rate": 0.1282051282051282
+        },
+        {
+          "number": 2,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 7,
+          "count": 4,
+          "rate": 0.10256410256410256
+        },
+        {
+          "number": 1,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 3,
+          "count": 3,
+          "rate": 0.07692307692307693
+        },
+        {
+          "number": 5,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 10,
+          "count": 2,
+          "rate": 0.05128205128205128
+        },
+        {
+          "number": 8,
+          "count": 1,
+          "rate": 0.02564102564102564
+        }
+      ],
+      "7": [
+        {
+          "number": 4,
+          "count": 6,
+          "rate": 0.18181818181818182
+        },
+        {
+          "number": 9,
+          "count": 5,
+          "rate": 0.15151515151515152
+        },
+        {
+          "number": 8,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 12,
+          "count": 4,
+          "rate": 0.12121212121212122
+        },
+        {
+          "number": 1,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 2,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 10,
+          "count": 3,
+          "rate": 0.09090909090909091
+        },
+        {
+          "number": 3,
+          "count": 2,
+          "rate": 0.06060606060606061
+        },
+        {
+          "number": 6,
+          "count": 1,
+          "rate": 0.030303030303030304
+        },
+        {
+          "number": 7,
+          "count": 1,
+          "rate": 0.030303030303030304
+        },
+        {
+          "number": 11,
+          "count": 1,
+          "rate": 0.030303030303030304
+        }
+      ],
+      "8": [
+        {
+          "number": 2,
+          "count": 6,
+          "rate": 0.17647058823529413
+        },
+        {
+          "number": 8,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 9,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 10,
+          "count": 4,
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 6,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 12,
+          "count": 3,
+          "rate": 0.08823529411764706
+        },
+        {
+          "number": 3,
+          "count": 2,
+          "rate": 0.058823529411764705
+        },
+        {
+          "number": 11,
+          "count": 2,
+          "rate": 0.058823529411764705
+        },
+        {
+          "number": 1,
+          "count": 1,
+          "rate": 0.029411764705882353
+        },
+        {
+          "number": 4,
+          "count": 1,
+          "rate": 0.029411764705882353
+        },
+        {
+          "number": 5,
+          "count": 1,
+          "rate": 0.029411764705882353
+        }
+      ],
+      "9": [
+        {
+          "number": 4,
+          "count": 5,
+          "rate": 0.10638297872340426
+        },
+        {
+          "number": 7,
+          "count": 5,
+          "rate": 0.10638297872340426
+        },
+        {
+          "number": 10,
+          "count": 5,
+          "rate": 0.10638297872340426
+        },
+        {
+          "number": 12,
+          "count": 5,
+          "rate": 0.10638297872340426
+        },
+        {
+          "number": 1,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 5,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 6,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 9,
+          "count": 4,
+          "rate": 0.0851063829787234
+        },
+        {
+          "number": 2,
+          "count": 3,
+          "rate": 0.06382978723404255
+        },
+        {
+          "number": 3,
+          "count": 3,
+          "rate": 0.06382978723404255
+        },
+        {
+          "number": 11,
+          "count": 3,
+          "rate": 0.06382978723404255
+        },
+        {
+          "number": 8,
+          "count": 2,
+          "rate": 0.0425531914893617
+        }
+      ],
+      "10": [
+        {
+          "number": 11,
+          "count": 7,
+          "rate": 0.16279069767441862
+        },
+        {
+          "number": 10,
+          "count": 6,
+          "rate": 0.13953488372093023
+        },
+        {
+          "number": 9,
+          "count": 5,
+          "rate": 0.11627906976744186
+        },
+        {
+          "number": 1,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 2,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 4,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 5,
+          "count": 4,
+          "rate": 0.09302325581395349
+        },
+        {
+          "number": 3,
+          "count": 3,
+          "rate": 0.06976744186046512
+        },
+        {
+          "number": 6,
+          "count": 3,
+          "rate": 0.06976744186046512
+        },
+        {
+          "number": 7,
+          "count": 2,
+          "rate": 0.046511627906976744
+        },
+        {
+          "number": 12,
+          "count": 1,
+          "rate": 0.023255813953488372
+        }
+      ],
+      "11": [
+        {
+          "number": 5,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 6,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 8,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 9,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 12,
+          "count": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "number": 1,
+          "count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "number": 2,
+          "count": 2,
+          "rate": 0.06451612903225806
+        },
+        {
+          "number": 3,
+          "count": 2,
+          "rate": 0.06451612903225806
+        },
+        {
+          "number": 7,
+          "count": 2,
+          "rate": 0.06451612903225806
+        },
+        {
+          "number": 4,
+          "count": 1,
+          "rate": 0.03225806451612903
+        },
+        {
+          "number": 10,
+          "count": 1,
+          "rate": 0.03225806451612903
+        }
+      ],
+      "12": [
+        {
+          "number": 9,
+          "count": 8,
+          "rate": 0.2
+        },
+        {
+          "number": 8,
+          "count": 5,
+          "rate": 0.125
+        },
+        {
+          "number": 12,
+          "count": 5,
+          "rate": 0.125
+        },
+        {
+          "number": 1,
+          "count": 4,
+          "rate": 0.1
+        },
+        {
+          "number": 3,
+          "count": 4,
+          "rate": 0.1
+        },
+        {
+          "number": 5,
+          "count": 4,
+          "rate": 0.1
+        },
+        {
+          "number": 2,
+          "count": 3,
+          "rate": 0.075
+        },
+        {
+          "number": 7,
+          "count": 3,
+          "rate": 0.075
+        },
+        {
+          "number": 10,
+          "count": 3,
+          "rate": 0.075
+        },
+        {
+          "number": 11,
+          "count": 1,
+          "rate": 0.025
+        }
+      ]
+    },
+    "specialBacktest": {
+      "evaluated": 391,
+      "top3Hits": 105,
+      "top3HitRate": 0.26854219948849106,
+      "baselineTop3Rate": 0.25
+    },
+    "pairs": [
+      {
+        "key": "15,27",
+        "count": 16
+      },
+      {
+        "key": "3,35",
+        "count": 16
+      },
+      {
+        "key": "8,14",
+        "count": 15
+      },
+      {
+        "key": "14,27",
+        "count": 15
+      },
+      {
+        "key": "25,28",
+        "count": 15
+      },
+      {
+        "key": "23,27",
+        "count": 15
+      },
+      {
+        "key": "14,19",
+        "count": 15
+      },
+      {
+        "key": "4,6",
+        "count": 15
+      },
+      {
+        "key": "15,32",
+        "count": 15
+      },
+      {
+        "key": "15,18",
+        "count": 14
+      },
+      {
+        "key": "13,19",
+        "count": 14
+      },
+      {
+        "key": "26,34",
+        "count": 14
+      },
+      {
+        "key": "19,27",
+        "count": 14
+      },
+      {
+        "key": "19,21",
+        "count": 14
+      },
+      {
+        "key": "11,27",
+        "count": 14
+      },
+      {
+        "key": "6,10",
+        "count": 14
+      },
+      {
+        "key": "3,6",
+        "count": 14
+      },
+      {
+        "key": "18,29",
+        "count": 14
+      },
+      {
+        "key": "15,22",
+        "count": 14
+      },
+      {
+        "key": "9,29",
+        "count": 14
+      },
+      {
+        "key": "13,14",
+        "count": 13
+      },
+      {
+        "key": "7,10",
+        "count": 13
+      },
+      {
+        "key": "10,22",
+        "count": 13
+      },
+      {
+        "key": "5,29",
+        "count": 13
+      },
+      {
+        "key": "12,14",
+        "count": 13
+      },
+      {
+        "key": "22,23",
+        "count": 13
+      },
+      {
+        "key": "19,33",
+        "count": 13
+      },
+      {
+        "key": "14,22",
+        "count": 13
+      },
+      {
+        "key": "26,29",
+        "count": 13
+      },
+      {
+        "key": "6,17",
+        "count": 13
+      },
+      {
+        "key": "24,26",
+        "count": 13
+      },
+      {
+        "key": "15,26",
+        "count": 13
+      },
+      {
+        "key": "15,19",
+        "count": 13
+      },
+      {
+        "key": "18,33",
+        "count": 13
+      },
+      {
+        "key": "8,27",
+        "count": 12
+      },
+      {
+        "key": "8,35",
+        "count": 12
+      },
+      {
+        "key": "13,35",
+        "count": 12
+      },
+      {
+        "key": "27,35",
+        "count": 12
+      },
+      {
+        "key": "7,22",
+        "count": 12
+      },
+      {
+        "key": "17,22",
+        "count": 12
+      },
+      {
+        "key": "13,29",
+        "count": 12
+      },
+      {
+        "key": "28,35",
+        "count": 12
+      },
+      {
+        "key": "22,34",
+        "count": 12
+      },
+      {
+        "key": "23,26",
+        "count": 12
+      },
+      {
+        "key": "2,24",
+        "count": 12
+      },
+      {
+        "key": "2,34",
+        "count": 12
+      },
+      {
+        "key": "15,24",
+        "count": 12
+      },
+      {
+        "key": "22,29",
+        "count": 12
+      },
+      {
+        "key": "4,26",
+        "count": 12
+      },
+      {
+        "key": "2,29",
+        "count": 12
+      }
+    ],
+    "distributions": {
+      "oddEven": {
+        "3 odd / 2 even": 173,
+        "2 odd / 3 even": 121,
+        "4 odd / 1 even": 70,
+        "1 odd / 4 even": 68,
+        "0 odd / 5 even": 6,
+        "5 odd / 0 even": 13
+      },
+      "highLow": {
+        "0 high / 5 low": 10,
+        "2 high / 3 low": 137,
+        "5 high / 0 low": 11,
+        "3 high / 2 low": 147,
+        "4 high / 1 low": 64,
+        "1 high / 4 low": 82
+      },
+      "sums": [
+        61,
+        97,
+        79,
+        36,
+        118,
+        45,
+        105,
+        114,
+        75,
+        107,
+        87,
+        86,
+        70,
+        63,
+        69,
+        118,
+        126,
+        85,
+        144,
+        121,
+        140,
+        50,
+        131,
+        103,
+        78,
+        74,
+        106,
+        80,
+        94,
+        117,
+        43,
+        69,
+        109,
+        81,
+        102,
+        118,
+        74,
+        111,
+        80,
+        104,
+        61,
+        82,
+        94,
+        102,
+        118,
+        77,
+        36,
+        116,
+        69,
+        145,
+        79,
+        81,
+        86,
+        121,
+        82,
+        105,
+        78,
+        85,
+        102,
+        85,
+        111,
+        85,
+        50,
+        66,
+        64,
+        87,
+        64,
+        74,
+        71,
+        116,
+        74,
+        85,
+        62,
+        72,
+        74,
+        82,
+        99,
+        107,
+        53,
+        103,
+        74,
+        111,
+        79,
+        108,
+        115,
+        127,
+        77,
+        107,
+        130,
+        64,
+        105,
+        99,
+        83,
+        89,
+        59,
+        119,
+        75,
+        89,
+        95,
+        97,
+        106,
+        83,
+        26,
+        131,
+        83,
+        98,
+        120,
+        66,
+        74,
+        69,
+        51,
+        55,
+        88,
+        67,
+        98,
+        83,
+        129,
+        111,
+        63,
+        112,
+        80,
+        82,
+        74,
+        89,
+        92,
+        121,
+        57,
+        45,
+        47,
+        103,
+        82,
+        116,
+        129,
+        115,
+        121,
+        77,
+        107,
+        110,
+        89,
+        55,
+        86,
+        95,
+        70,
+        73,
+        93,
+        101,
+        86,
+        99,
+        79,
+        96,
+        96,
+        86,
+        94,
+        41,
+        96,
+        104,
+        104,
+        92,
+        81,
+        122,
+        76,
+        79,
+        65,
+        92,
+        80,
+        84,
+        85,
+        100,
+        101,
+        111,
+        127,
+        95,
+        101,
+        106,
+        35,
+        108,
+        103,
+        75,
+        93,
+        84,
+        73,
+        65,
+        96,
+        109,
+        102,
+        98,
+        65,
+        101,
+        101,
+        80,
+        87,
+        67,
+        113,
+        102,
+        74,
+        50,
+        100,
+        62,
+        83,
+        54,
+        81,
+        98,
+        109,
+        119,
+        53,
+        129,
+        116,
+        120,
+        105,
+        61,
+        67,
+        63,
+        100,
+        85,
+        95,
+        94,
+        113,
+        105,
+        90,
+        86,
+        109,
+        107,
+        135,
+        77,
+        91,
+        70,
+        107,
+        99,
+        103,
+        108,
+        69,
+        99,
+        117,
+        93,
+        81,
+        112,
+        88,
+        86,
+        72,
+        140,
+        115,
+        108,
+        85,
+        71,
+        109,
+        103,
+        81,
+        112,
+        78,
+        72,
+        46,
+        132,
+        99,
+        68,
+        40,
+        81,
+        73,
+        89,
+        73,
+        63,
+        98,
+        102,
+        80,
+        53,
+        110,
+        96,
+        68,
+        73,
+        117,
+        124,
+        106,
+        90,
+        84,
+        106,
+        107,
+        52,
+        96,
+        104,
+        97,
+        86,
+        43,
+        97,
+        65,
+        107,
+        99,
+        113,
+        119,
+        87,
+        81,
+        66,
+        84,
+        74,
+        99,
+        120,
+        75,
+        94,
+        129,
+        101,
+        100,
+        83,
+        100,
+        62,
+        103,
+        106,
+        103,
+        126,
+        79,
+        98,
+        87,
+        82,
+        135,
+        134,
+        103,
+        86,
+        57,
+        131,
+        85,
+        70,
+        115,
+        67,
+        69,
+        89,
+        145,
+        79,
+        78,
+        97,
+        54,
+        87,
+        108,
+        84,
+        79,
+        113,
+        71,
+        120,
+        93,
+        51,
+        71,
+        102,
+        93,
+        40,
+        105,
+        68,
+        109,
+        113,
+        93,
+        87,
+        106,
+        101,
+        59,
+        99,
+        89,
+        76,
+        120,
+        105,
+        100,
+        71,
+        135,
+        101,
+        59,
+        121,
+        85,
+        77,
+        105,
+        93,
+        126,
+        74,
+        104,
+        140,
+        103,
+        109,
+        69,
+        104,
+        96,
+        82,
+        97,
+        101,
+        77,
+        96,
+        117,
+        94,
+        87,
+        111,
+        63,
+        89,
+        118,
+        65,
+        100,
+        94,
+        93,
+        98,
+        41,
+        59,
+        109,
+        62,
+        85,
+        128,
+        123,
+        110,
+        98,
+        136,
+        83,
+        68,
+        66,
+        78,
+        100,
+        114,
+        71,
+        116,
+        114,
+        109,
+        66,
+        97,
+        73,
+        84,
+        90,
+        94,
+        116,
+        67,
+        105,
+        89,
+        64,
+        94,
+        110,
+        97,
+        65,
+        108,
+        108,
+        69,
+        92,
+        89,
+        55,
+        98,
+        119,
+        105,
+        97,
+        83,
+        109,
+        96,
+        94,
+        50,
+        108,
+        101,
+        80,
+        91,
+        77,
+        113,
+        119,
+        55,
+        55,
+        73,
+        91
+      ]
+    },
+    "rollingMeans": [
+      61,
+      79,
+      79,
+      68.25,
+      78.2,
+      72.66666666666667,
+      77.28571428571429,
+      81.875,
+      81.11111111111111,
+      83.7,
+      86.3,
+      85.2,
+      84.3,
+      87,
+      82.1,
+      89.4,
+      91.5,
+      88.6,
+      95.5,
+      96.9,
+      102.2,
+      98.6,
+      104.7,
+      108.7,
+      109.6,
+      105.2,
+      103.2,
+      102.7,
+      97.7,
+      97.3,
+      87.6,
+      89.5,
+      87.3,
+      85.1,
+      87.5,
+      91.9,
+      88.7,
+      91.8,
+      90.4,
+      89.1,
+      90.9,
+      92.2,
+      90.7,
+      92.8,
+      94.4,
+      90.3,
+      86.5,
+      87,
+      85.9,
+      90,
+      91.8,
+      91.7,
+      90.9,
+      92.8,
+      89.2,
+      92,
+      96.2,
+      93.1,
+      96.4,
+      90.4,
+      93.6,
+      94,
+      90.4,
+      84.9,
+      83.1,
+      81.3,
+      79.9,
+      78.8,
+      75.7,
+      78.8,
+      75.1,
+      75.1,
+      76.3,
+      76.9,
+      77.9,
+      77.4,
+      80.9,
+      84.2,
+      82.4,
+      81.1,
+      81.1,
+      83.7,
+      85.4,
+      89,
+      93.1,
+      97.6,
+      95.4,
+      95.4,
+      103.1,
+      99.2,
+      102.3,
+      101.1,
+      101.5,
+      99.6,
+      94,
+      93.2,
+      93,
+      91.2,
+      87.7,
+      91,
+      91.1,
+      89.5,
+      83.8,
+      88,
+      90.4,
+      88.3,
+      92.8,
+      90.5,
+      88.4,
+      85.6,
+      80.1,
+      77.3,
+      83.5,
+      77.1,
+      78.6,
+      77.1,
+      78,
+      82.5,
+      81.4,
+      85.7,
+      88.6,
+      91.3,
+      89.9,
+      92.1,
+      91.5,
+      95.3,
+      88.1,
+      81.5,
+      79.9,
+      79,
+      79.2,
+      82.6,
+      88.1,
+      90.7,
+      93.6,
+      89.2,
+      94.2,
+      100.7,
+      104.9,
+      100.1,
+      100.5,
+      98.4,
+      92.5,
+      88.3,
+      85.5,
+      87.9,
+      85.8,
+      84.7,
+      83.7,
+      87.8,
+      88.8,
+      87.9,
+      90.3,
+      87.1,
+      87.4,
+      87.7,
+      89.5,
+      88.8,
+      89,
+      91.6,
+      89.6,
+      88.9,
+      86,
+      91.1,
+      89.5,
+      87.5,
+      85.6,
+      86.4,
+      88.4,
+      87.3,
+      92.4,
+      94,
+      97.6,
+      99,
+      94.5,
+      96.9,
+      98.7,
+      96.2,
+      95.4,
+      92.7,
+      87.3,
+      84.3,
+      83.8,
+      84.1,
+      90.8,
+      89.8,
+      86,
+      88.6,
+      89.4,
+      89,
+      90.4,
+      90.6,
+      92.3,
+      91.6,
+      88.8,
+      84,
+      87.5,
+      83.6,
+      81.8,
+      79.2,
+      78.6,
+      81.7,
+      81.3,
+      83,
+      80.9,
+      88.8,
+      90.4,
+      96.2,
+      98.4,
+      99.1,
+      97.7,
+      94.2,
+      93.3,
+      89.9,
+      94.1,
+      90.6,
+      90.3,
+      88.8,
+      87.3,
+      89.8,
+      94,
+      98.4,
+      101.9,
+      101.1,
+      100.7,
+      98.3,
+      97.7,
+      97.1,
+      98.4,
+      100.6,
+      96.6,
+      95.8,
+      94,
+      95.6,
+      94.6,
+      98.8,
+      96.9,
+      95.6,
+      92.5,
+      95.7,
+      100.3,
+      101.2,
+      98,
+      95.8,
+      98.6,
+      97.7,
+      97,
+      99.6,
+      100.2,
+      93.4,
+      86.5,
+      88.9,
+      90.3,
+      90,
+      83.1,
+      80.9,
+      80.1,
+      77.8,
+      77.3,
+      76.4,
+      81.6,
+      78.6,
+      76.7,
+      75.2,
+      82.2,
+      83.7,
+      83.2,
+      81.6,
+      86,
+      92.1,
+      92.9,
+      91.7,
+      92.1,
+      97.4,
+      97.1,
+      92.7,
+      95.5,
+      98.6,
+      96.6,
+      92.8,
+      86.5,
+      87.2,
+      85.3,
+      85.4,
+      84.6,
+      90.7,
+      93,
+      91.3,
+      89.7,
+      87.7,
+      91.8,
+      89.5,
+      92.9,
+      94.2,
+      91.8,
+      89.9,
+      90.9,
+      92.3,
+      94.2,
+      95.9,
+      97.5,
+      96.3,
+      96.7,
+      95.3,
+      98.1,
+      101.3,
+      96.3,
+      96,
+      94.7,
+      94.6,
+      98.1,
+      105.3,
+      105.3,
+      103.3,
+      98.7,
+      99.2,
+      99.8,
+      97,
+      99.8,
+      98.3,
+      91.7,
+      87.2,
+      91.4,
+      90.7,
+      92.8,
+      89.4,
+      86.3,
+      88,
+      87.3,
+      89,
+      90,
+      92.4,
+      85,
+      89.1,
+      90.6,
+      86,
+      87.7,
+      89.2,
+      87.7,
+      83.3,
+      85.9,
+      81.4,
+      85.2,
+      84.5,
+      84.5,
+      88.1,
+      91.6,
+      91.5,
+      88.1,
+      94,
+      92.4,
+      93.2,
+      94.3,
+      93.5,
+      94.2,
+      92.6,
+      95.5,
+      95.5,
+      95.5,
+      97.7,
+      97.3,
+      97.4,
+      95.9,
+      94.7,
+      97.3,
+      97.6,
+      94.5,
+      98.4,
+      102.8,
+      101.6,
+      100,
+      102.7,
+      101.8,
+      100.7,
+      97.8,
+      100.5,
+      97.8,
+      93.4,
+      94.8,
+      93.3,
+      95.1,
+      95.8,
+      92.5,
+      93.2,
+      95.3,
+      91.7,
+      94,
+      93.8,
+      91.4,
+      91.8,
+      87.2,
+      82,
+      86.6,
+      83.9,
+      80.6,
+      86.9,
+      89.2,
+      90.8,
+      91.3,
+      95.1,
+      99.3,
+      100.2,
+      95.9,
+      97.5,
+      99,
+      97.6,
+      92.4,
+      93,
+      94.6,
+      91.9,
+      90.2,
+      93.1,
+      93.8,
+      94.4,
+      93.4,
+      91.4,
+      95.9,
+      91,
+      90.1,
+      88.1,
+      87.9,
+      87.6,
+      91.3,
+      92.6,
+      90.1,
+      91.5,
+      90.7,
+      90.9,
+      89.6,
+      89.6,
+      88.7,
+      89.1,
+      90,
+      90.8,
+      94,
+      91.5,
+      91.6,
+      94.3,
+      94.5,
+      90.6,
+      95.9,
+      96.2,
+      92.3,
+      90.9,
+      88.9,
+      91.9,
+      92.9,
+      88.8,
+      84.9,
+      87.2,
+      85.5
+    ]
+  }
+}

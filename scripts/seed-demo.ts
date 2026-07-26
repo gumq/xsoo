@@ -1,0 +1,20 @@
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve } from 'node:path';
+import { JsonHistoryRepository } from '../src/database/history-repository.ts';
+import { JsonFileStore } from '../src/database/json-file-store.ts';
+import { StatisticsService } from '../src/statistics/statistics-service.ts';
+import { defaultRules, SynchronizationService } from '../src/sync/synchronization-service.ts';
+import { EventValidator } from '../src/sync/event-validator.ts';
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const store = new JsonFileStore();
+const history = new JsonHistoryRepository(store, resolve(root, 'data/history.json'));
+const service = new SynchronizationService(history, new EventValidator(defaultRules), new StatisticsService(defaultRules), store, resolve(root, 'data/metadata.json'), resolve(root, 'data/cache.json'));
+let state = 246813579;
+const random = () => { state = (state * 1664525 + 1013904223) >>> 0; return state / 4294967296; };
+const numbers = (count: number) => { const selected = new Set<number>(); while (selected.size < count) selected.add(Math.floor(random() * 45) + 1); return [...selected].sort((a, b) => a - b); };
+const now = new Date();
+const rawEvents = Array.from({ length: 120 }, (_, index) => { const date = new Date(now); date.setDate(now.getDate() - (119 - index) * 3); const timestamp = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), 12)); return { drawId: `DEMO-${String(index + 1).padStart(4, '0')}`, date: timestamp.toISOString().slice(0, 10), timestamp: timestamp.toISOString(), mainNumbers: numbers(6), specialNumber: 0, validation: { source: 'deterministic-demo-generator', validatedAt: new Date().toISOString(), schemaVersion: '1' } }; });
+if (await history.count()) throw new Error('history.json already contains data. Demo seed will not overwrite it.');
+const result = await service.synchronize(rawEvents);
+console.log(`Created ${result.added} deterministic demo events; rejected ${result.rejected.length}.`);
