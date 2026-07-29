@@ -8116,5 +8116,95 @@
       "validatedAt": "2026-07-26T19:07:07.174Z",
       "schemaVersion": "1"
     }
+  },
+  {
+    "drawId": "LOTTO535-00787",
+    "date": "2026-07-27",
+    "timestamp": "2026-07-27T13:00:00.000Z",
+    "mainNumbers": [
+      10,
+      13,
+      18,
+      21,
+      27
+    ],
+    "specialNumber": 1,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/27-07-2026.html",
+      "validatedAt": "2026-07-27T08:45:45.740Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00788",
+    "date": "2026-07-27",
+    "timestamp": "2026-07-27T21:00:00.000Z",
+    "mainNumbers": [
+      7,
+      16,
+      28,
+      34,
+      35
+    ],
+    "specialNumber": 9,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/28-07-2026.html",
+      "validatedAt": "2026-07-28T06:44:16.192Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00789",
+    "date": "2026-07-28",
+    "timestamp": "2026-07-28T13:00:00.000Z",
+    "mainNumbers": [
+      13,
+      17,
+      23,
+      33,
+      35
+    ],
+    "specialNumber": 10,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/28-07-2026.html",
+      "validatedAt": "2026-07-28T06:44:16.192Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00790",
+    "date": "2026-07-28",
+    "timestamp": "2026-07-28T21:00:00.000Z",
+    "mainNumbers": [
+      7,
+      12,
+      20,
+      21,
+      26
+    ],
+    "specialNumber": 9,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/29-07-2026.html",
+      "validatedAt": "2026-07-29T08:05:32.978Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00791",
+    "date": "2026-07-29",
+    "timestamp": "2026-07-29T13:00:00.000Z",
+    "mainNumbers": [
+      11,
+      15,
+      19,
+      22,
+      25
+    ],
+    "specialNumber": 5,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/29-07-2026.html",
+      "validatedAt": "2026-07-29T08:05:32.978Z",
+      "schemaVersion": "1"
+    }
   }
 ]
