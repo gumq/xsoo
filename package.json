@@ -11,6 +11,7 @@
     "seed:demo": "tsx scripts/seed-demo.ts",
     "crawl:lotto535": "tsx scripts/crawl-lotto535.ts",
     "sync:lotto535": "tsx scripts/sync-lotto535-latest.ts",
+    "rebuild:lotto535": "tsx scripts/rebuild-lotto535-cache.ts",
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "test:watch": "vitest",
