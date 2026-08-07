@@ -17,5 +17,6 @@ describe('StatisticsService', () => {
     expect(new Set(result.coverageBacktest.tickets.flatMap((ticket) => ticket.greens)).size).toBe(15);
     expect(result.greenForecast.greens).toHaveLength(5);
     expect(result.greenBacktest.evaluated).toBe(1);
+    expect(result.predictionHistory).toHaveLength(8);
   });
 });

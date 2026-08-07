@@ -1,352 +1,352 @@
 {
-  "generatedAt": "2026-08-06T18:40:03.705Z",
+  "generatedAt": "2026-08-07T06:37:24.289Z",
   "statistics": {
-    "generatedAt": "2026-08-06T18:40:01.240Z",
-    "drawCount": 456,
+    "generatedAt": "2026-08-07T06:37:21.443Z",
+    "drawCount": 474,
     "frequency": [
       {
         "number": 1,
         "count": 63,
-        "gap": 7,
+        "gap": 25,
         "averageGap": 7.17741935483871
       },
       {
         "number": 2,
-        "count": 58,
-        "gap": 8,
-        "averageGap": 7.7894736842105265
+        "count": 62,
+        "gap": 3,
+        "averageGap": 7.655737704918033
       },
       {
         "number": 3,
-        "count": 63,
-        "gap": 13,
-        "averageGap": 7.048387096774194
+        "count": 64,
+        "gap": 1,
+        "averageGap": 7.412698412698413
       },
       {
         "number": 4,
-        "count": 65,
-        "gap": 6,
-        "averageGap": 6.84375
+        "count": 68,
+        "gap": 0,
+        "averageGap": 6.895522388059701
       },
       {
         "number": 5,
-        "count": 61,
-        "gap": 7,
-        "averageGap": 7.466666666666667
+        "count": 63,
+        "gap": 12,
+        "averageGap": 7.435483870967742
       },
       {
         "number": 6,
-        "count": 69,
-        "gap": 13,
-        "averageGap": 6.397058823529412
+        "count": 72,
+        "gap": 1,
+        "averageGap": 6.549295774647887
       },
       {
         "number": 7,
-        "count": 57,
-        "gap": 1,
-        "averageGap": 8.107142857142858
+        "count": 59,
+        "gap": 5,
+        "averageGap": 8.068965517241379
       },
       {
         "number": 8,
-        "count": 66,
-        "gap": 8,
-        "averageGap": 6.861538461538461
+        "count": 67,
+        "gap": 12,
+        "averageGap": 6.96969696969697
       },
       {
         "number": 9,
-        "count": 61,
-        "gap": 5,
-        "averageGap": 7.466666666666667
+        "count": 66,
+        "gap": 1,
+        "averageGap": 7.230769230769231
       },
       {
         "number": 10,
-        "count": 68,
-        "gap": 4,
-        "averageGap": 6.641791044776119
+        "count": 71,
+        "gap": 2,
+        "averageGap": 6.642857142857143
       },
       {
         "number": 11,
-        "count": 64,
+        "count": 68,
         "gap": 0,
-        "averageGap": 7.190476190476191
+        "averageGap": 7.029850746268656
       },
       {
         "number": 12,
-        "count": 49,
-        "gap": 1,
-        "averageGap": 9.395833333333334
+        "count": 52,
+        "gap": 3,
+        "averageGap": 9.156862745098039
       },
       {
         "number": 13,
-        "count": 69,
-        "gap": 2,
-        "averageGap": 6.647058823529412
+        "count": 72,
+        "gap": 0,
+        "averageGap": 6.647887323943662
       },
       {
         "number": 14,
-        "count": 79,
-        "gap": 7,
-        "averageGap": 5.730769230769231
+        "count": 80,
+        "gap": 6,
+        "averageGap": 5.89873417721519
       },
       {
         "number": 15,
-        "count": 78,
-        "gap": 0,
-        "averageGap": 5.909090909090909
+        "count": 82,
+        "gap": 2,
+        "averageGap": 5.814814814814815
       },
       {
         "number": 16,
-        "count": 55,
-        "gap": 3,
-        "averageGap": 8.37037037037037
+        "count": 57,
+        "gap": 4,
+        "averageGap": 8.375
       },
       {
         "number": 17,
-        "count": 68,
-        "gap": 2,
-        "averageGap": 6.686567164179104
+        "count": 70,
+        "gap": 5,
+        "averageGap": 6.7101449275362315
       },
       {
         "number": 18,
-        "count": 65,
-        "gap": 4,
-        "averageGap": 7.046875
+        "count": 68,
+        "gap": 7,
+        "averageGap": 6.955223880597015
       },
       {
         "number": 19,
-        "count": 75,
-        "gap": 0,
-        "averageGap": 6.04054054054054
+        "count": 78,
+        "gap": 2,
+        "averageGap": 6.012987012987013
       },
       {
         "number": 20,
-        "count": 61,
-        "gap": 1,
-        "averageGap": 7.5
+        "count": 64,
+        "gap": 0,
+        "averageGap": 7.444444444444445
       },
       {
         "number": 21,
-        "count": 57,
+        "count": 62,
         "gap": 1,
-        "averageGap": 8.035714285714286
+        "averageGap": 7.672131147540983
       },
       {
         "number": 22,
-        "count": 75,
-        "gap": 0,
-        "averageGap": 6.04054054054054
+        "count": 77,
+        "gap": 3,
+        "averageGap": 6.078947368421052
       },
       {
         "number": 23,
-        "count": 68,
+        "count": 71,
         "gap": 2,
-        "averageGap": 6.656716417910448
+        "averageGap": 6.628571428571429
       },
       {
         "number": 24,
-        "count": 57,
-        "gap": 22,
-        "averageGap": 7.660714285714286
+        "count": 59,
+        "gap": 5,
+        "averageGap": 8
       },
       {
         "number": 25,
-        "count": 59,
-        "gap": 0,
-        "averageGap": 7.810344827586207
+        "count": 60,
+        "gap": 8,
+        "averageGap": 7.8474576271186445
       },
       {
         "number": 26,
-        "count": 75,
-        "gap": 1,
-        "averageGap": 6.108108108108108
+        "count": 77,
+        "gap": 4,
+        "averageGap": 6.144736842105263
       },
       {
         "number": 27,
-        "count": 76,
-        "gap": 4,
-        "averageGap": 6
+        "count": 77,
+        "gap": 14,
+        "averageGap": 6.026315789473684
       },
       {
         "number": 28,
-        "count": 65,
-        "gap": 3,
-        "averageGap": 7
+        "count": 69,
+        "gap": 9,
+        "averageGap": 6.764705882352941
       },
       {
         "number": 29,
-        "count": 73,
-        "gap": 9,
-        "averageGap": 6.041666666666667
+        "count": 75,
+        "gap": 13,
+        "averageGap": 6.0675675675675675
       },
       {
         "number": 30,
         "count": 55,
-        "gap": 14,
+        "gap": 32,
         "averageGap": 8.037037037037036
       },
       {
         "number": 31,
-        "count": 61,
-        "gap": 9,
-        "averageGap": 7.266666666666667
+        "count": 63,
+        "gap": 7,
+        "averageGap": 7.354838709677419
       },
       {
         "number": 32,
-        "count": 58,
-        "gap": 5,
-        "averageGap": 7.578947368421052
+        "count": 60,
+        "gap": 10,
+        "averageGap": 7.5423728813559325
       },
       {
         "number": 33,
-        "count": 67,
-        "gap": 2,
-        "averageGap": 6.636363636363637
+        "count": 72,
+        "gap": 3,
+        "averageGap": 6.408450704225352
       },
       {
         "number": 34,
-        "count": 70,
-        "gap": 3,
-        "averageGap": 6.420289855072464
+        "count": 74,
+        "gap": 5,
+        "averageGap": 6.287671232876712
       },
       {
         "number": 35,
-        "count": 70,
-        "gap": 2,
-        "averageGap": 6.550724637681159
+        "count": 73,
+        "gap": 0,
+        "averageGap": 6.555555555555555
       }
     ],
     "specialFrequency": [
       {
         "number": 1,
         "count": 40,
-        "drawsSinceLatest": 4,
+        "drawsSinceLatest": 22,
         "maxGapDraws": 44,
-        "daysSinceLatest": 10.236125300925925,
+        "daysSinceLatest": 10.73427587962963,
         "averageGapDraws": 11.35897435897436,
         "averageIntervalDays": 5.683760683760684,
-        "overdueDays": 4.552364617165241,
-        "recurrencePercentile": 76.92307692307693
+        "overdueDays": 5.050515195868946,
+        "recurrencePercentile": 79.48717948717949
       },
       {
         "number": 2,
-        "count": 37,
-        "drawsSinceLatest": 9,
+        "count": 38,
+        "drawsSinceLatest": 7,
         "maxGapDraws": 36,
-        "daysSinceLatest": 12.902791967592593,
-        "averageGapDraws": 11.444444444444445,
-        "averageIntervalDays": 5.722222222222222,
-        "overdueDays": 7.180569745370371,
-        "recurrencePercentile": 88.88888888888889
+        "daysSinceLatest": 3.4009425462962963,
+        "averageGapDraws": 11.675675675675675,
+        "averageIntervalDays": 5.837837837837838,
+        "overdueDays": -2.4368952915415414,
+        "recurrencePercentile": 37.83783783783784
       },
       {
         "number": 3,
-        "count": 39,
-        "drawsSinceLatest": 25,
+        "count": 45,
+        "drawsSinceLatest": 5,
         "maxGapDraws": 45,
-        "daysSinceLatest": 20.90279196759259,
-        "averageGapDraws": 10.789473684210526,
-        "averageIntervalDays": 5.394736842105263,
-        "overdueDays": 15.508055125487328,
-        "recurrencePercentile": 97.36842105263158
+        "daysSinceLatest": 2.4009425462962963,
+        "averageGapDraws": 10.181818181818182,
+        "averageIntervalDays": 5.090909090909091,
+        "overdueDays": -2.6899665446127945,
+        "recurrencePercentile": 40.909090909090914
       },
       {
         "number": 4,
-        "count": 35,
-        "drawsSinceLatest": 13,
+        "count": 37,
+        "drawsSinceLatest": 0,
         "maxGapDraws": 65,
-        "daysSinceLatest": 14.902791967592593,
-        "averageGapDraws": 11.352941176470589,
-        "averageIntervalDays": 5.676470588235294,
-        "overdueDays": 9.226321379357298,
-        "recurrencePercentile": 91.17647058823529
+        "daysSinceLatest": -0.26572412037037035,
+        "averageGapDraws": 11.583333333333334,
+        "averageIntervalDays": 5.796296296296296,
+        "overdueDays": -6.062020416666666,
+        "recurrencePercentile": 0
       },
       {
         "number": 5,
-        "count": 34,
-        "drawsSinceLatest": 0,
+        "count": 35,
+        "drawsSinceLatest": 1,
         "maxGapDraws": 40,
-        "daysSinceLatest": 8.236125300925925,
-        "averageGapDraws": 13.454545454545455,
-        "averageIntervalDays": 6.7272727272727275,
-        "overdueDays": 1.508852573653198,
-        "recurrencePercentile": 66.66666666666666
+        "daysSinceLatest": 0.4009425462962963,
+        "averageGapDraws": 13.558823529411764,
+        "averageIntervalDays": 6.7745098039215685,
+        "overdueDays": -6.373567257625273,
+        "recurrencePercentile": 0
       },
       {
         "number": 6,
-        "count": 39,
-        "drawsSinceLatest": 12,
+        "count": 40,
+        "drawsSinceLatest": 4,
         "maxGapDraws": 33,
-        "daysSinceLatest": 14.236125300925925,
-        "averageGapDraws": 11.631578947368421,
-        "averageIntervalDays": 5.815789473684211,
-        "overdueDays": 8.420335827241715,
-        "recurrencePercentile": 94.73684210526315
+        "daysSinceLatest": 1.7342758796296296,
+        "averageGapDraws": 12,
+        "averageIntervalDays": 6,
+        "overdueDays": -4.26572412037037,
+        "recurrencePercentile": 25.64102564102564
       },
       {
         "number": 7,
-        "count": 33,
-        "drawsSinceLatest": 11,
+        "count": 34,
+        "drawsSinceLatest": 2,
         "maxGapDraws": 62,
-        "daysSinceLatest": 13.902791967592593,
-        "averageGapDraws": 13.8125,
-        "averageIntervalDays": 6.906250000000001,
-        "overdueDays": 6.996541967592592,
-        "recurrencePercentile": 84.375
+        "daysSinceLatest": 0.7342758796296296,
+        "averageGapDraws": 14.212121212121213,
+        "averageIntervalDays": 7.111111111111112,
+        "overdueDays": -6.376835231481482,
+        "recurrencePercentile": 3.0303030303030303
       },
       {
         "number": 8,
-        "count": 34,
-        "drawsSinceLatest": 10,
+        "count": 36,
+        "drawsSinceLatest": 3,
         "maxGapDraws": 94,
-        "daysSinceLatest": 13.236125300925925,
-        "averageGapDraws": 13.212121212121213,
-        "averageIntervalDays": 6.606060606060606,
-        "overdueDays": 6.630064694865319,
-        "recurrencePercentile": 87.87878787878788
+        "daysSinceLatest": 1.4009425462962963,
+        "averageGapDraws": 13.17142857142857,
+        "averageIntervalDays": 6.5809523809523816,
+        "overdueDays": -5.180009834656085,
+        "recurrencePercentile": 20
       },
       {
         "number": 9,
-        "count": 49,
-        "drawsSinceLatest": 1,
+        "count": 50,
+        "drawsSinceLatest": 10,
         "maxGapDraws": 36,
-        "daysSinceLatest": 8.902791967592593,
-        "averageGapDraws": 9.395833333333334,
-        "averageIntervalDays": 4.694444444444445,
-        "overdueDays": 4.208347523148149,
-        "recurrencePercentile": 81.25
+        "daysSinceLatest": 4.73427587962963,
+        "averageGapDraws": 9.387755102040817,
+        "averageIntervalDays": 4.6938775510204085,
+        "overdueDays": 0.04039832860922132,
+        "recurrencePercentile": 59.183673469387756
       },
       {
         "number": 10,
-        "count": 44,
-        "drawsSinceLatest": 2,
+        "count": 46,
+        "drawsSinceLatest": 8,
         "maxGapDraws": 45,
-        "daysSinceLatest": 9.236125300925925,
-        "averageGapDraws": 10.534883720930232,
-        "averageIntervalDays": 5.271317829457364,
-        "overdueDays": 3.9648074714685615,
-        "recurrencePercentile": 79.06976744186046
+        "daysSinceLatest": 3.73427587962963,
+        "averageGapDraws": 10.333333333333334,
+        "averageIntervalDays": 5.17037037037037,
+        "overdueDays": -1.4360944907407402,
+        "recurrencePercentile": 55.55555555555556
       },
       {
         "number": 11,
         "count": 31,
-        "drawsSinceLatest": 35,
+        "drawsSinceLatest": 53,
         "maxGapDraws": 69,
-        "daysSinceLatest": 25.90279196759259,
+        "daysSinceLatest": 26.400942546296296,
         "averageGapDraws": 13.8,
         "averageIntervalDays": 6.9,
-        "overdueDays": 19.002791967592593,
+        "overdueDays": 19.500942546296294,
         "recurrencePercentile": 96.66666666666667
       },
       {
         "number": 12,
-        "count": 41,
-        "drawsSinceLatest": 5,
+        "count": 42,
+        "drawsSinceLatest": 9,
         "maxGapDraws": 37,
-        "daysSinceLatest": 10.902791967592593,
-        "averageGapDraws": 10.5,
-        "averageIntervalDays": 5.25,
-        "overdueDays": 5.652791967592593,
-        "recurrencePercentile": 92.5
+        "daysSinceLatest": 4.400942546296296,
+        "averageGapDraws": 10.585365853658537,
+        "averageIntervalDays": 5.2926829268292686,
+        "overdueDays": -0.8917403805329727,
+        "recurrencePercentile": 53.65853658536586
       }
     ],
     "specialByHour": {
@@ -354,133 +354,133 @@
         {
           "number": 1,
           "count": 19,
-          "drawsSinceLatest": 2,
+          "drawsSinceLatest": 11,
           "maxGapDraws": 40,
-          "daysSinceLatest": 10.236125462962963,
+          "daysSinceLatest": 10.734275960648148,
           "averageGapDraws": 11.333333333333334,
           "averageIntervalDays": 11.333333333333334,
-          "overdueDays": -1.0972078703703705,
+          "overdueDays": -0.599057372685186,
           "recurrencePercentile": 61.111111111111114
         },
         {
           "number": 2,
           "count": 15,
-          "drawsSinceLatest": 45,
+          "drawsSinceLatest": 54,
           "maxGapDraws": 37,
-          "daysSinceLatest": 53.23612546296296,
+          "daysSinceLatest": 53.73427596064815,
           "averageGapDraws": 10.357142857142858,
           "averageIntervalDays": 10.357142857142858,
-          "overdueDays": 42.8789826058201,
+          "overdueDays": 43.37713310350529,
           "recurrencePercentile": 100
         },
         {
           "number": 3,
-          "count": 20,
-          "drawsSinceLatest": 17,
+          "count": 23,
+          "drawsSinceLatest": 3,
           "maxGapDraws": 39,
-          "daysSinceLatest": 25.236125462962963,
-          "averageGapDraws": 10.526315789473685,
-          "averageIntervalDays": 10.526315789473685,
-          "overdueDays": 14.709809673489278,
-          "recurrencePercentile": 89.47368421052632
+          "daysSinceLatest": 2.734275960648148,
+          "averageGapDraws": 10.136363636363637,
+          "averageIntervalDays": 10.136363636363637,
+          "overdueDays": -7.402087675715489,
+          "recurrencePercentile": 18.181818181818183
         },
         {
           "number": 4,
-          "count": 17,
-          "drawsSinceLatest": 29,
+          "count": 19,
+          "drawsSinceLatest": 0,
           "maxGapDraws": 43,
-          "daysSinceLatest": 37.23612546296296,
-          "averageGapDraws": 8.5625,
-          "averageIntervalDays": 8.5625,
-          "overdueDays": 28.67362546296296,
-          "recurrencePercentile": 93.75
+          "daysSinceLatest": -0.26572403935185185,
+          "averageGapDraws": 9.722222222222221,
+          "averageIntervalDays": 9.722222222222221,
+          "overdueDays": -9.987946261574074,
+          "recurrencePercentile": 0
         },
         {
           "number": 5,
           "count": 16,
-          "drawsSinceLatest": 0,
+          "drawsSinceLatest": 9,
           "maxGapDraws": 42,
-          "daysSinceLatest": 8.236125462962963,
+          "daysSinceLatest": 8.734275960648148,
           "averageGapDraws": 14.8,
           "averageIntervalDays": 14.8,
-          "overdueDays": -6.563874537037037,
+          "overdueDays": -6.065724039351853,
           "recurrencePercentile": 40
         },
         {
           "number": 6,
-          "count": 20,
-          "drawsSinceLatest": 6,
+          "count": 21,
+          "drawsSinceLatest": 2,
           "maxGapDraws": 41,
-          "daysSinceLatest": 14.236125462962963,
-          "averageGapDraws": 11.631578947368421,
-          "averageIntervalDays": 11.631578947368421,
-          "overdueDays": 2.604546515594542,
-          "recurrencePercentile": 73.68421052631578
+          "daysSinceLatest": 1.7342759606481482,
+          "averageGapDraws": 11.7,
+          "averageIntervalDays": 11.7,
+          "overdueDays": -9.965724039351851,
+          "recurrencePercentile": 0
         },
         {
           "number": 7,
-          "count": 16,
-          "drawsSinceLatest": 10,
+          "count": 17,
+          "drawsSinceLatest": 1,
           "maxGapDraws": 44,
-          "daysSinceLatest": 18.236125462962963,
-          "averageGapDraws": 12.6,
-          "averageIntervalDays": 12.6,
-          "overdueDays": 5.636125462962964,
-          "recurrencePercentile": 73.33333333333333
+          "daysSinceLatest": 0.7342759606481482,
+          "averageGapDraws": 12.9375,
+          "averageIntervalDays": 12.9375,
+          "overdueDays": -12.203224039351852,
+          "recurrencePercentile": 0
         },
         {
           "number": 8,
           "count": 23,
-          "drawsSinceLatest": 5,
+          "drawsSinceLatest": 14,
           "maxGapDraws": 47,
-          "daysSinceLatest": 13.236125462962963,
+          "daysSinceLatest": 13.734275960648148,
           "averageGapDraws": 9.909090909090908,
           "averageIntervalDays": 9.909090909090908,
-          "overdueDays": 3.327034553872055,
+          "overdueDays": 3.8251850515572396,
           "recurrencePercentile": 77.27272727272727
         },
         {
           "number": 9,
-          "count": 29,
-          "drawsSinceLatest": 3,
+          "count": 30,
+          "drawsSinceLatest": 5,
           "maxGapDraws": 35,
-          "daysSinceLatest": 11.236125462962963,
-          "averageGapDraws": 7.964285714285714,
-          "averageIntervalDays": 7.964285714285714,
-          "overdueDays": 3.271839748677249,
-          "recurrencePercentile": 75
+          "daysSinceLatest": 4.734275960648148,
+          "averageGapDraws": 7.931034482758621,
+          "averageIntervalDays": 7.931034482758621,
+          "overdueDays": -3.196758522110473,
+          "recurrencePercentile": 41.37931034482759
         },
         {
           "number": 10,
-          "count": 25,
-          "drawsSinceLatest": 1,
+          "count": 26,
+          "drawsSinceLatest": 4,
           "maxGapDraws": 53,
-          "daysSinceLatest": 9.236125462962963,
-          "averageGapDraws": 9.333333333333334,
-          "averageIntervalDays": 9.333333333333334,
-          "overdueDays": -0.09720787037037049,
-          "recurrencePercentile": 62.5
+          "daysSinceLatest": 3.734275960648148,
+          "averageGapDraws": 9.2,
+          "averageIntervalDays": 9.2,
+          "overdueDays": -5.465724039351851,
+          "recurrencePercentile": 24
         },
         {
           "number": 11,
           "count": 8,
-          "drawsSinceLatest": 52,
+          "drawsSinceLatest": 61,
           "maxGapDraws": 54,
-          "daysSinceLatest": 60.23612546296296,
+          "daysSinceLatest": 60.73427596064815,
           "averageGapDraws": 24.142857142857142,
           "averageIntervalDays": 24.142857142857142,
-          "overdueDays": 36.09326832010582,
+          "overdueDays": 36.59141881779101,
           "recurrencePercentile": 100
         },
         {
           "number": 12,
           "count": 20,
-          "drawsSinceLatest": 4,
+          "drawsSinceLatest": 13,
           "maxGapDraws": 37,
-          "daysSinceLatest": 12.236125462962963,
+          "daysSinceLatest": 12.734275960648148,
           "averageGapDraws": 10.789473684210526,
           "averageIntervalDays": 10.789473684210526,
-          "overdueDays": 1.4466517787524378,
+          "overdueDays": 1.9448022764376223,
           "recurrencePercentile": 68.42105263157895
         }
       ],
@@ -488,134 +488,134 @@
         {
           "number": 1,
           "count": 21,
-          "drawsSinceLatest": 3,
+          "drawsSinceLatest": 12,
           "maxGapDraws": 22,
-          "daysSinceLatest": 11.902792141203705,
+          "daysSinceLatest": 12.400942627314814,
           "averageGapDraws": 11,
           "averageIntervalDays": 11,
-          "overdueDays": 0.9027921412037045,
-          "recurrencePercentile": 55.00000000000001
+          "overdueDays": 1.400942627314814,
+          "recurrencePercentile": 65
         },
         {
           "number": 2,
-          "count": 22,
-          "drawsSinceLatest": 4,
+          "count": 23,
+          "drawsSinceLatest": 3,
           "maxGapDraws": 28,
-          "daysSinceLatest": 12.902792141203705,
-          "averageGapDraws": 9.80952380952381,
-          "averageIntervalDays": 9.80952380952381,
-          "overdueDays": 3.0932683316798943,
-          "recurrencePercentile": 66.66666666666666
+          "daysSinceLatest": 3.400942627314815,
+          "averageGapDraws": 9.818181818181818,
+          "averageIntervalDays": 9.818181818181818,
+          "overdueDays": -6.4172391908670035,
+          "recurrencePercentile": 13.636363636363635
         },
         {
           "number": 3,
-          "count": 19,
-          "drawsSinceLatest": 12,
+          "count": 22,
+          "drawsSinceLatest": 2,
           "maxGapDraws": 43,
-          "daysSinceLatest": 20.902792141203705,
-          "averageGapDraws": 11.38888888888889,
-          "averageIntervalDays": 11.38888888888889,
-          "overdueDays": 9.513903252314815,
-          "recurrencePercentile": 77.77777777777779
+          "daysSinceLatest": 2.400942627314815,
+          "averageGapDraws": 10.666666666666666,
+          "averageIntervalDays": 10.666666666666666,
+          "overdueDays": -8.265724039351852,
+          "recurrencePercentile": 14.285714285714285
         },
         {
           "number": 4,
           "count": 18,
-          "drawsSinceLatest": 6,
+          "drawsSinceLatest": 15,
           "maxGapDraws": 33,
-          "daysSinceLatest": 14.902792141203705,
+          "daysSinceLatest": 15.400942627314814,
           "averageGapDraws": 11.352941176470589,
           "averageIntervalDays": 11.352941176470589,
-          "overdueDays": 3.549850964733116,
+          "overdueDays": 4.048001450844225,
           "recurrencePercentile": 70.58823529411765
         },
         {
           "number": 5,
-          "count": 18,
-          "drawsSinceLatest": 13,
+          "count": 19,
+          "drawsSinceLatest": 0,
           "maxGapDraws": 43,
-          "daysSinceLatest": 21.902792141203705,
-          "averageGapDraws": 11.941176470588236,
-          "averageIntervalDays": 11.941176470588236,
-          "overdueDays": 9.961615670615469,
-          "recurrencePercentile": 82.35294117647058
+          "daysSinceLatest": 0.40094262731481484,
+          "averageGapDraws": 12.5,
+          "averageIntervalDays": 12.5,
+          "overdueDays": -12.099057372685186,
+          "recurrencePercentile": 0
         },
         {
           "number": 6,
           "count": 19,
-          "drawsSinceLatest": 35,
+          "drawsSinceLatest": 44,
           "maxGapDraws": 25,
-          "daysSinceLatest": 43.902792141203705,
+          "daysSinceLatest": 44.40094262731481,
           "averageGapDraws": 9.555555555555555,
           "averageIntervalDays": 9.555555555555555,
-          "overdueDays": 34.34723658564815,
+          "overdueDays": 34.845387071759255,
           "recurrencePercentile": 100
         },
         {
           "number": 7,
           "count": 17,
-          "drawsSinceLatest": 5,
+          "drawsSinceLatest": 14,
           "maxGapDraws": 55,
-          "daysSinceLatest": 13.902792141203705,
+          "daysSinceLatest": 14.400942627314814,
           "averageGapDraws": 13.8125,
           "averageIntervalDays": 13.8125,
-          "overdueDays": 0.09029214120370455,
-          "recurrencePercentile": 68.75
+          "overdueDays": 0.588442627314814,
+          "recurrencePercentile": 75
         },
         {
           "number": 8,
-          "count": 11,
-          "drawsSinceLatest": 36,
+          "count": 13,
+          "drawsSinceLatest": 1,
           "maxGapDraws": 78,
-          "daysSinceLatest": 44.902792141203705,
-          "averageGapDraws": 17.8,
-          "averageIntervalDays": 17.8,
-          "overdueDays": 27.102792141203704,
-          "recurrencePercentile": 90
+          "daysSinceLatest": 1.400942627314815,
+          "averageGapDraws": 18.5,
+          "averageIntervalDays": 18.5,
+          "overdueDays": -17.099057372685184,
+          "recurrencePercentile": 0
         },
         {
           "number": 9,
           "count": 20,
-          "drawsSinceLatest": 0,
+          "drawsSinceLatest": 9,
           "maxGapDraws": 60,
-          "daysSinceLatest": 8.902792141203705,
+          "daysSinceLatest": 9.400942627314814,
           "averageGapDraws": 11.842105263157896,
           "averageIntervalDays": 11.842105263157896,
-          "overdueDays": -2.939313121954191,
+          "overdueDays": -2.4411626358430816,
           "recurrencePercentile": 57.89473684210527
         },
         {
           "number": 10,
-          "count": 19,
-          "drawsSinceLatest": 42,
-          "maxGapDraws": 26,
-          "daysSinceLatest": 50.902792141203705,
-          "averageGapDraws": 10.277777777777779,
-          "averageIntervalDays": 10.277777777777779,
-          "overdueDays": 40.625014363425926,
-          "recurrencePercentile": 100
+          "count": 20,
+          "drawsSinceLatest": 5,
+          "maxGapDraws": 46,
+          "daysSinceLatest": 5.400942627314815,
+          "averageGapDraws": 12.157894736842104,
+          "averageIntervalDays": 12.157894736842104,
+          "overdueDays": -6.7569521095272895,
+          "recurrencePercentile": 31.57894736842105
         },
         {
           "number": 11,
           "count": 23,
-          "drawsSinceLatest": 17,
+          "drawsSinceLatest": 26,
           "maxGapDraws": 49,
-          "daysSinceLatest": 25.902792141203705,
+          "daysSinceLatest": 26.400942627314816,
           "averageGapDraws": 9.409090909090908,
           "averageIntervalDays": 9.409090909090908,
-          "overdueDays": 16.493701232112798,
+          "overdueDays": 16.991851718223906,
           "recurrencePercentile": 95.45454545454545
         },
         {
           "number": 12,
-          "count": 21,
-          "drawsSinceLatest": 2,
+          "count": 22,
+          "drawsSinceLatest": 4,
           "maxGapDraws": 37,
-          "daysSinceLatest": 10.902792141203705,
-          "averageGapDraws": 10.5,
-          "averageIntervalDays": 10.5,
-          "overdueDays": 0.40279214120370455,
-          "recurrencePercentile": 55.00000000000001
+          "daysSinceLatest": 4.400942627314815,
+          "averageGapDraws": 10.333333333333334,
+          "averageIntervalDays": 10.333333333333334,
+          "overdueDays": -5.932390706018519,
+          "recurrencePercentile": 38.095238095238095
         }
       ]
     },
@@ -801,1583 +801,1583 @@
         {
           "number": 3,
           "count": 10,
-          "rate": 0.2702702702702703
+          "rate": 0.2631578947368421
+        },
+        {
+          "number": 31,
+          "count": 9,
+          "rate": 0.23684210526315788
         },
         {
           "number": 16,
           "count": 8,
-          "rate": 0.21621621621621623
+          "rate": 0.21052631578947367
         },
         {
-          "number": 31,
+          "number": 23,
           "count": 8,
-          "rate": 0.21621621621621623
+          "rate": 0.21052631578947367
         },
         {
           "number": 8,
           "count": 7,
-          "rate": 0.1891891891891892
+          "rate": 0.18421052631578946
         },
         {
           "number": 9,
           "count": 7,
-          "rate": 0.1891891891891892
+          "rate": 0.18421052631578946
         },
         {
           "number": 15,
           "count": 7,
-          "rate": 0.1891891891891892
+          "rate": 0.18421052631578946
         },
         {
           "number": 17,
           "count": 7,
-          "rate": 0.1891891891891892
-        },
-        {
-          "number": 23,
-          "count": 7,
-          "rate": 0.1891891891891892
+          "rate": 0.18421052631578946
         },
         {
           "number": 26,
           "count": 7,
-          "rate": 0.1891891891891892
+          "rate": 0.18421052631578946
         },
         {
           "number": 32,
           "count": 7,
-          "rate": 0.1891891891891892
+          "rate": 0.18421052631578946
         },
         {
           "number": 6,
           "count": 6,
-          "rate": 0.16216216216216217
+          "rate": 0.15789473684210525
         },
         {
           "number": 21,
           "count": 6,
-          "rate": 0.16216216216216217
+          "rate": 0.15789473684210525
         },
         {
           "number": 27,
           "count": 6,
-          "rate": 0.16216216216216217
+          "rate": 0.15789473684210525
         },
         {
           "number": 28,
           "count": 6,
-          "rate": 0.16216216216216217
+          "rate": 0.15789473684210525
         },
         {
           "number": 29,
           "count": 6,
-          "rate": 0.16216216216216217
+          "rate": 0.15789473684210525
         },
         {
           "number": 35,
           "count": 6,
-          "rate": 0.16216216216216217
+          "rate": 0.15789473684210525
         },
         {
           "number": 1,
           "count": 5,
-          "rate": 0.13513513513513514
+          "rate": 0.13157894736842105
         },
         {
           "number": 4,
           "count": 5,
-          "rate": 0.13513513513513514
+          "rate": 0.13157894736842105
         },
         {
           "number": 5,
           "count": 5,
-          "rate": 0.13513513513513514
+          "rate": 0.13157894736842105
         },
         {
           "number": 10,
           "count": 5,
-          "rate": 0.13513513513513514
+          "rate": 0.13157894736842105
         },
         {
           "number": 14,
           "count": 5,
-          "rate": 0.13513513513513514
+          "rate": 0.13157894736842105
+        },
+        {
+          "number": 18,
+          "count": 5,
+          "rate": 0.13157894736842105
         },
         {
           "number": 19,
           "count": 5,
-          "rate": 0.13513513513513514
+          "rate": 0.13157894736842105
         },
         {
           "number": 20,
           "count": 5,
-          "rate": 0.13513513513513514
+          "rate": 0.13157894736842105
+        },
+        {
+          "number": 33,
+          "count": 5,
+          "rate": 0.13157894736842105
         },
         {
           "number": 11,
           "count": 4,
-          "rate": 0.10810810810810811
+          "rate": 0.10526315789473684
         },
         {
           "number": 13,
           "count": 4,
-          "rate": 0.10810810810810811
-        },
-        {
-          "number": 18,
-          "count": 4,
-          "rate": 0.10810810810810811
+          "rate": 0.10526315789473684
         },
         {
           "number": 30,
           "count": 4,
-          "rate": 0.10810810810810811
-        },
-        {
-          "number": 33,
-          "count": 4,
-          "rate": 0.10810810810810811
+          "rate": 0.10526315789473684
         },
         {
           "number": 34,
           "count": 4,
-          "rate": 0.10810810810810811
+          "rate": 0.10526315789473684
+        },
+        {
+          "number": 2,
+          "count": 3,
+          "rate": 0.07894736842105263
         },
         {
           "number": 7,
           "count": 3,
-          "rate": 0.08108108108108109
+          "rate": 0.07894736842105263
         },
         {
           "number": 12,
           "count": 3,
-          "rate": 0.08108108108108109
+          "rate": 0.07894736842105263
         },
         {
           "number": 25,
           "count": 3,
-          "rate": 0.08108108108108109
-        },
-        {
-          "number": 2,
-          "count": 2,
-          "rate": 0.05405405405405406
+          "rate": 0.07894736842105263
         },
         {
           "number": 22,
           "count": 2,
-          "rate": 0.05405405405405406
+          "rate": 0.05263157894736842
         },
         {
           "number": 24,
           "count": 2,
-          "rate": 0.05405405405405406
+          "rate": 0.05263157894736842
         }
       ],
       "3": [
         {
           "number": 22,
+          "count": 11,
+          "rate": 0.24444444444444444
+        },
+        {
+          "number": 28,
           "count": 10,
-          "rate": 0.2564102564102564
+          "rate": 0.2222222222222222
+        },
+        {
+          "number": 34,
+          "count": 10,
+          "rate": 0.2222222222222222
+        },
+        {
+          "number": 35,
+          "count": 10,
+          "rate": 0.2222222222222222
+        },
+        {
+          "number": 2,
+          "count": 9,
+          "rate": 0.2
         },
         {
           "number": 3,
           "count": 9,
-          "rate": 0.23076923076923078
-        },
-        {
-          "number": 35,
-          "count": 9,
-          "rate": 0.23076923076923078
-        },
-        {
-          "number": 2,
-          "count": 8,
-          "rate": 0.20512820512820512
+          "rate": 0.2
         },
         {
           "number": 10,
-          "count": 8,
-          "rate": 0.20512820512820512
+          "count": 9,
+          "rate": 0.2
         },
         {
           "number": 11,
-          "count": 8,
-          "rate": 0.20512820512820512
-        },
-        {
-          "number": 28,
-          "count": 8,
-          "rate": 0.20512820512820512
+          "count": 9,
+          "rate": 0.2
         },
         {
           "number": 15,
+          "count": 8,
+          "rate": 0.17777777777777778
+        },
+        {
+          "number": 6,
           "count": 7,
-          "rate": 0.1794871794871795
+          "rate": 0.15555555555555556
+        },
+        {
+          "number": 14,
+          "count": 7,
+          "rate": 0.15555555555555556
+        },
+        {
+          "number": 17,
+          "count": 7,
+          "rate": 0.15555555555555556
+        },
+        {
+          "number": 18,
+          "count": 7,
+          "rate": 0.15555555555555556
+        },
+        {
+          "number": 19,
+          "count": 7,
+          "rate": 0.15555555555555556
+        },
+        {
+          "number": 20,
+          "count": 7,
+          "rate": 0.15555555555555556
+        },
+        {
+          "number": 24,
+          "count": 7,
+          "rate": 0.15555555555555556
         },
         {
           "number": 26,
           "count": 7,
-          "rate": 0.1794871794871795
-        },
-        {
-          "number": 34,
-          "count": 7,
-          "rate": 0.1794871794871795
-        },
-        {
-          "number": 6,
-          "count": 6,
-          "rate": 0.15384615384615385
-        },
-        {
-          "number": 14,
-          "count": 6,
-          "rate": 0.15384615384615385
-        },
-        {
-          "number": 17,
-          "count": 6,
-          "rate": 0.15384615384615385
-        },
-        {
-          "number": 18,
-          "count": 6,
-          "rate": 0.15384615384615385
-        },
-        {
-          "number": 20,
-          "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.15555555555555556
         },
         {
           "number": 29,
-          "count": 6,
-          "rate": 0.15384615384615385
+          "count": 7,
+          "rate": 0.15555555555555556
         },
         {
           "number": 33,
+          "count": 7,
+          "rate": 0.15555555555555556
+        },
+        {
+          "number": 7,
           "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.13333333333333333
+        },
+        {
+          "number": 9,
+          "count": 6,
+          "rate": 0.13333333333333333
+        },
+        {
+          "number": 12,
+          "count": 6,
+          "rate": 0.13333333333333333
+        },
+        {
+          "number": 21,
+          "count": 6,
+          "rate": 0.13333333333333333
         },
         {
           "number": 1,
           "count": 5,
-          "rate": 0.1282051282051282
-        },
-        {
-          "number": 7,
-          "count": 5,
-          "rate": 0.1282051282051282
-        },
-        {
-          "number": 9,
-          "count": 5,
-          "rate": 0.1282051282051282
-        },
-        {
-          "number": 12,
-          "count": 5,
-          "rate": 0.1282051282051282
-        },
-        {
-          "number": 19,
-          "count": 5,
-          "rate": 0.1282051282051282
-        },
-        {
-          "number": 21,
-          "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.1111111111111111
         },
         {
           "number": 23,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.1111111111111111
         },
         {
-          "number": 24,
+          "number": 27,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.1111111111111111
         },
         {
           "number": 30,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.1111111111111111
+        },
+        {
+          "number": 4,
+          "count": 4,
+          "rate": 0.08888888888888889
+        },
+        {
+          "number": 5,
+          "count": 4,
+          "rate": 0.08888888888888889
         },
         {
           "number": 25,
           "count": 4,
-          "rate": 0.10256410256410256
-        },
-        {
-          "number": 27,
-          "count": 4,
-          "rate": 0.10256410256410256
-        },
-        {
-          "number": 4,
-          "count": 3,
-          "rate": 0.07692307692307693
-        },
-        {
-          "number": 5,
-          "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.08888888888888889
         },
         {
           "number": 13,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.06666666666666667
+        },
+        {
+          "number": 16,
+          "count": 3,
+          "rate": 0.06666666666666667
         },
         {
           "number": 31,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.06666666666666667
         },
         {
           "number": 32,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.06666666666666667
         },
         {
           "number": 8,
           "count": 2,
-          "rate": 0.05128205128205128
-        },
-        {
-          "number": 16,
-          "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.044444444444444446
         }
       ],
       "4": [
         {
-          "number": 29,
-          "count": 9,
-          "rate": 0.2571428571428571
+          "number": 32,
+          "count": 10,
+          "rate": 0.2702702702702703
         },
         {
-          "number": 32,
+          "number": 29,
           "count": 9,
-          "rate": 0.2571428571428571
+          "rate": 0.24324324324324326
+        },
+        {
+          "number": 4,
+          "count": 8,
+          "rate": 0.21621621621621623
         },
         {
           "number": 22,
           "count": 8,
-          "rate": 0.22857142857142856
+          "rate": 0.21621621621621623
         },
         {
-          "number": 4,
+          "number": 8,
           "count": 7,
-          "rate": 0.2
+          "rate": 0.1891891891891892
         },
         {
           "number": 17,
           "count": 7,
-          "rate": 0.2
+          "rate": 0.1891891891891892
         },
         {
           "number": 19,
           "count": 7,
-          "rate": 0.2
+          "rate": 0.1891891891891892
         },
         {
           "number": 23,
           "count": 7,
-          "rate": 0.2
+          "rate": 0.1891891891891892
         },
         {
           "number": 1,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
           "number": 3,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
+        },
+        {
+          "number": 5,
+          "count": 6,
+          "rate": 0.16216216216216217
         },
         {
           "number": 6,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
-          "number": 8,
+          "number": 11,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
           "number": 15,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
           "number": 21,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
           "number": 26,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
           "number": 30,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
           "number": 33,
           "count": 6,
-          "rate": 0.17142857142857143
+          "rate": 0.16216216216216217
         },
         {
-          "number": 5,
-          "count": 5,
-          "rate": 0.14285714285714285
+          "number": 34,
+          "count": 6,
+          "rate": 0.16216216216216217
         },
         {
           "number": 10,
           "count": 5,
-          "rate": 0.14285714285714285
-        },
-        {
-          "number": 11,
-          "count": 5,
-          "rate": 0.14285714285714285
+          "rate": 0.13513513513513514
         },
         {
           "number": 18,
           "count": 5,
-          "rate": 0.14285714285714285
+          "rate": 0.13513513513513514
         },
         {
           "number": 27,
           "count": 5,
-          "rate": 0.14285714285714285
-        },
-        {
-          "number": 34,
-          "count": 5,
-          "rate": 0.14285714285714285
+          "rate": 0.13513513513513514
         },
         {
           "number": 2,
           "count": 4,
-          "rate": 0.11428571428571428
+          "rate": 0.10810810810810811
         },
         {
           "number": 9,
           "count": 4,
-          "rate": 0.11428571428571428
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 13,
+          "count": 4,
+          "rate": 0.10810810810810811
         },
         {
           "number": 14,
           "count": 4,
-          "rate": 0.11428571428571428
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 20,
+          "count": 4,
+          "rate": 0.10810810810810811
         },
         {
           "number": 28,
           "count": 4,
-          "rate": 0.11428571428571428
+          "rate": 0.10810810810810811
+        },
+        {
+          "number": 35,
+          "count": 4,
+          "rate": 0.10810810810810811
         },
         {
           "number": 7,
           "count": 3,
-          "rate": 0.08571428571428572
-        },
-        {
-          "number": 20,
-          "count": 3,
-          "rate": 0.08571428571428572
+          "rate": 0.08108108108108109
         },
         {
           "number": 25,
           "count": 3,
-          "rate": 0.08571428571428572
-        },
-        {
-          "number": 35,
-          "count": 3,
-          "rate": 0.08571428571428572
+          "rate": 0.08108108108108109
         },
         {
           "number": 12,
           "count": 2,
-          "rate": 0.05714285714285714
-        },
-        {
-          "number": 13,
-          "count": 2,
-          "rate": 0.05714285714285714
+          "rate": 0.05405405405405406
         },
         {
           "number": 24,
           "count": 2,
-          "rate": 0.05714285714285714
+          "rate": 0.05405405405405406
         },
         {
           "number": 31,
           "count": 2,
-          "rate": 0.05714285714285714
+          "rate": 0.05405405405405406
         },
         {
           "number": 16,
           "count": 1,
-          "rate": 0.02857142857142857
+          "rate": 0.02702702702702703
         }
       ],
       "5": [
         {
           "number": 11,
-          "count": 10,
-          "rate": 0.29411764705882354
+          "count": 11,
+          "rate": 0.3142857142857143
         },
         {
           "number": 19,
           "count": 10,
-          "rate": 0.29411764705882354
+          "rate": 0.2857142857142857
+        },
+        {
+          "number": 6,
+          "count": 8,
+          "rate": 0.22857142857142856
         },
         {
           "number": 5,
           "count": 7,
-          "rate": 0.20588235294117646
-        },
-        {
-          "number": 6,
-          "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.2
         },
         {
           "number": 7,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.2
         },
         {
           "number": 25,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.2
         },
         {
           "number": 27,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.2
         },
         {
           "number": 29,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.2
         },
         {
           "number": 30,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.2
         },
         {
           "number": 35,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.2
         },
         {
           "number": 1,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.17142857142857143
         },
         {
           "number": 2,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.17142857142857143
         },
         {
           "number": 20,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.17142857142857143
+        },
+        {
+          "number": 21,
+          "count": 6,
+          "rate": 0.17142857142857143
         },
         {
           "number": 14,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.14285714285714285
         },
         {
           "number": 15,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.14285714285714285
         },
         {
           "number": 18,
           "count": 5,
-          "rate": 0.14705882352941177
-        },
-        {
-          "number": 21,
-          "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.14285714285714285
         },
         {
           "number": 26,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.14285714285714285
         },
         {
           "number": 33,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.14285714285714285
         },
         {
           "number": 34,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.14285714285714285
         },
         {
           "number": 8,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.11428571428571428
         },
         {
           "number": 22,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.11428571428571428
         },
         {
           "number": 23,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.11428571428571428
         },
         {
           "number": 24,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.11428571428571428
         },
         {
           "number": 28,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.11428571428571428
         },
         {
           "number": 31,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.11428571428571428
         },
         {
           "number": 10,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08571428571428572
         },
         {
           "number": 12,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08571428571428572
         },
         {
           "number": 13,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08571428571428572
+        },
+        {
+          "number": 3,
+          "count": 2,
+          "rate": 0.05714285714285714
         },
         {
           "number": 4,
           "count": 2,
-          "rate": 0.058823529411764705
+          "rate": 0.05714285714285714
+        },
+        {
+          "number": 9,
+          "count": 2,
+          "rate": 0.05714285714285714
         },
         {
           "number": 16,
           "count": 2,
-          "rate": 0.058823529411764705
+          "rate": 0.05714285714285714
         },
         {
           "number": 17,
           "count": 2,
-          "rate": 0.058823529411764705
-        },
-        {
-          "number": 3,
-          "count": 1,
-          "rate": 0.029411764705882353
-        },
-        {
-          "number": 9,
-          "count": 1,
-          "rate": 0.029411764705882353
+          "rate": 0.05714285714285714
         }
       ],
       "6": [
         {
           "number": 34,
           "count": 10,
-          "rate": 0.2564102564102564
+          "rate": 0.25
         },
         {
           "number": 5,
           "count": 9,
-          "rate": 0.23076923076923078
+          "rate": 0.225
         },
         {
           "number": 28,
           "count": 9,
-          "rate": 0.23076923076923078
+          "rate": 0.225
         },
         {
           "number": 7,
           "count": 8,
-          "rate": 0.20512820512820512
+          "rate": 0.2
+        },
+        {
+          "number": 10,
+          "count": 8,
+          "rate": 0.2
         },
         {
           "number": 12,
           "count": 8,
-          "rate": 0.20512820512820512
+          "rate": 0.2
         },
         {
           "number": 27,
           "count": 8,
-          "rate": 0.20512820512820512
+          "rate": 0.2
         },
         {
           "number": 6,
           "count": 7,
-          "rate": 0.1794871794871795
-        },
-        {
-          "number": 10,
-          "count": 7,
-          "rate": 0.1794871794871795
+          "rate": 0.175
         },
         {
           "number": 18,
           "count": 7,
-          "rate": 0.1794871794871795
+          "rate": 0.175
         },
         {
           "number": 23,
           "count": 7,
-          "rate": 0.1794871794871795
+          "rate": 0.175
         },
         {
           "number": 25,
           "count": 7,
-          "rate": 0.1794871794871795
+          "rate": 0.175
         },
         {
           "number": 29,
           "count": 7,
-          "rate": 0.1794871794871795
+          "rate": 0.175
         },
         {
           "number": 8,
           "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.15
         },
         {
           "number": 9,
           "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.15
         },
         {
           "number": 11,
           "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.15
+        },
+        {
+          "number": 16,
+          "count": 6,
+          "rate": 0.15
         },
         {
           "number": 17,
           "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.15
         },
         {
           "number": 19,
           "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.15
+        },
+        {
+          "number": 26,
+          "count": 6,
+          "rate": 0.15
         },
         {
           "number": 30,
           "count": 6,
-          "rate": 0.15384615384615385
+          "rate": 0.15
         },
         {
           "number": 3,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.125
+        },
+        {
+          "number": 13,
+          "count": 5,
+          "rate": 0.125
         },
         {
           "number": 14,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.125
         },
         {
-          "number": 16,
+          "number": 15,
           "count": 5,
-          "rate": 0.1282051282051282
-        },
-        {
-          "number": 26,
-          "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.125
         },
         {
           "number": 2,
           "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 4,
           "count": 4,
-          "rate": 0.10256410256410256
-        },
-        {
-          "number": 13,
-          "count": 4,
-          "rate": 0.10256410256410256
-        },
-        {
-          "number": 15,
-          "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 20,
           "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 22,
           "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 31,
           "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 35,
           "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 24,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.075
         },
         {
           "number": 32,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.075
         },
         {
           "number": 33,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.075
         },
         {
           "number": 1,
           "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.05
         },
         {
           "number": 21,
           "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.05
         }
       ],
       "7": [
         {
           "number": 4,
           "count": 10,
-          "rate": 0.30303030303030304
+          "rate": 0.29411764705882354
         },
         {
           "number": 26,
           "count": 10,
-          "rate": 0.30303030303030304
+          "rate": 0.29411764705882354
+        },
+        {
+          "number": 19,
+          "count": 8,
+          "rate": 0.23529411764705882
         },
         {
           "number": 6,
           "count": 7,
-          "rate": 0.21212121212121213
+          "rate": 0.20588235294117646
         },
         {
           "number": 11,
           "count": 7,
-          "rate": 0.21212121212121213
+          "rate": 0.20588235294117646
         },
         {
           "number": 12,
           "count": 7,
-          "rate": 0.21212121212121213
+          "rate": 0.20588235294117646
         },
         {
           "number": 14,
           "count": 7,
-          "rate": 0.21212121212121213
-        },
-        {
-          "number": 19,
-          "count": 7,
-          "rate": 0.21212121212121213
+          "rate": 0.20588235294117646
         },
         {
           "number": 25,
           "count": 7,
-          "rate": 0.21212121212121213
+          "rate": 0.20588235294117646
         },
         {
           "number": 8,
           "count": 6,
-          "rate": 0.18181818181818182
+          "rate": 0.17647058823529413
         },
         {
           "number": 1,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 9,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 10,
+          "count": 5,
+          "rate": 0.14705882352941177
+        },
+        {
+          "number": 15,
+          "count": 5,
+          "rate": 0.14705882352941177
         },
         {
           "number": 18,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 22,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 24,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 27,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 29,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 31,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 32,
           "count": 5,
-          "rate": 0.15151515151515152
-        },
-        {
-          "number": 10,
-          "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.14705882352941177
         },
         {
           "number": 13,
           "count": 4,
-          "rate": 0.12121212121212122
-        },
-        {
-          "number": 15,
-          "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.11764705882352941
         },
         {
           "number": 16,
           "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.11764705882352941
         },
         {
           "number": 20,
           "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.11764705882352941
+        },
+        {
+          "number": 23,
+          "count": 4,
+          "rate": 0.11764705882352941
         },
         {
           "number": 33,
           "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.11764705882352941
         },
         {
           "number": 34,
           "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.11764705882352941
         },
         {
           "number": 2,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 5,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 17,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
-          "number": 23,
+          "number": 21,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 28,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 35,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 3,
           "count": 2,
-          "rate": 0.06060606060606061
-        },
-        {
-          "number": 21,
-          "count": 2,
-          "rate": 0.06060606060606061
+          "rate": 0.058823529411764705
         },
         {
           "number": 30,
           "count": 2,
-          "rate": 0.06060606060606061
+          "rate": 0.058823529411764705
         }
       ],
       "8": [
         {
           "number": 15,
-          "count": 9,
-          "rate": 0.2647058823529412
+          "count": 10,
+          "rate": 0.2777777777777778
         },
         {
           "number": 17,
+          "count": 10,
+          "rate": 0.2777777777777778
+        },
+        {
+          "number": 33,
           "count": 9,
-          "rate": 0.2647058823529412
+          "rate": 0.25
         },
         {
           "number": 23,
           "count": 8,
-          "rate": 0.23529411764705882
-        },
-        {
-          "number": 33,
-          "count": 8,
-          "rate": 0.23529411764705882
+          "rate": 0.2222222222222222
         },
         {
           "number": 5,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.19444444444444445
         },
         {
           "number": 6,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.19444444444444445
         },
         {
           "number": 18,
           "count": 7,
-          "rate": 0.20588235294117646
+          "rate": 0.19444444444444445
+        },
+        {
+          "number": 22,
+          "count": 7,
+          "rate": 0.19444444444444445
         },
         {
           "number": 8,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.16666666666666666
         },
         {
           "number": 10,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.16666666666666666
         },
         {
-          "number": 22,
+          "number": 28,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.16666666666666666
+        },
+        {
+          "number": 29,
+          "count": 6,
+          "rate": 0.16666666666666666
         },
         {
           "number": 34,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.16666666666666666
         },
         {
           "number": 35,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.16666666666666666
         },
         {
           "number": 3,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.1388888888888889
+        },
+        {
+          "number": 4,
+          "count": 5,
+          "rate": 0.1388888888888889
         },
         {
           "number": 13,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.1388888888888889
         },
         {
           "number": 19,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.1388888888888889
         },
         {
           "number": 20,
           "count": 5,
-          "rate": 0.14705882352941177
+          "rate": 0.1388888888888889
+        },
+        {
+          "number": 21,
+          "count": 5,
+          "rate": 0.1388888888888889
         },
         {
           "number": 27,
           "count": 5,
-          "rate": 0.14705882352941177
-        },
-        {
-          "number": 28,
-          "count": 5,
-          "rate": 0.14705882352941177
-        },
-        {
-          "number": 29,
-          "count": 5,
-          "rate": 0.14705882352941177
-        },
-        {
-          "number": 4,
-          "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1388888888888889
         },
         {
           "number": 9,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
-          "number": 21,
+          "number": 12,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
           "number": 24,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
           "number": 26,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
           "number": 32,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
           "number": 1,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08333333333333333
+        },
+        {
+          "number": 2,
+          "count": 3,
+          "rate": 0.08333333333333333
         },
         {
           "number": 11,
           "count": 3,
-          "rate": 0.08823529411764706
-        },
-        {
-          "number": 12,
-          "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08333333333333333
         },
         {
           "number": 14,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08333333333333333
         },
         {
           "number": 16,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08333333333333333
         },
         {
           "number": 25,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08333333333333333
         },
         {
           "number": 30,
           "count": 3,
-          "rate": 0.08823529411764706
-        },
-        {
-          "number": 2,
-          "count": 2,
-          "rate": 0.058823529411764705
+          "rate": 0.08333333333333333
         },
         {
           "number": 31,
           "count": 2,
-          "rate": 0.058823529411764705
+          "rate": 0.05555555555555555
         },
         {
           "number": 7,
           "count": 1,
-          "rate": 0.029411764705882353
+          "rate": 0.027777777777777776
         }
       ],
       "9": [
         {
-          "number": 26,
+          "number": 7,
           "count": 12,
-          "rate": 0.24489795918367346
+          "rate": 0.24
         },
         {
-          "number": 7,
+          "number": 26,
+          "count": 12,
+          "rate": 0.24
+        },
+        {
+          "number": 33,
           "count": 11,
-          "rate": 0.22448979591836735
+          "rate": 0.22
         },
         {
           "number": 8,
           "count": 10,
-          "rate": 0.20408163265306123
+          "rate": 0.2
         },
         {
           "number": 12,
           "count": 10,
-          "rate": 0.20408163265306123
+          "rate": 0.2
         },
         {
           "number": 22,
           "count": 10,
-          "rate": 0.20408163265306123
-        },
-        {
-          "number": 33,
-          "count": 10,
-          "rate": 0.20408163265306123
+          "rate": 0.2
         },
         {
           "number": 10,
           "count": 9,
-          "rate": 0.1836734693877551
+          "rate": 0.18
         },
         {
           "number": 14,
           "count": 9,
-          "rate": 0.1836734693877551
+          "rate": 0.18
         },
         {
           "number": 15,
           "count": 9,
-          "rate": 0.1836734693877551
+          "rate": 0.18
         },
         {
           "number": 16,
           "count": 9,
-          "rate": 0.1836734693877551
+          "rate": 0.18
         },
         {
           "number": 24,
           "count": 9,
-          "rate": 0.1836734693877551
+          "rate": 0.18
         },
         {
           "number": 5,
           "count": 8,
-          "rate": 0.16326530612244897
+          "rate": 0.16
         },
         {
           "number": 13,
           "count": 8,
-          "rate": 0.16326530612244897
+          "rate": 0.16
         },
         {
           "number": 31,
           "count": 8,
-          "rate": 0.16326530612244897
+          "rate": 0.16
+        },
+        {
+          "number": 35,
+          "count": 8,
+          "rate": 0.16
         },
         {
           "number": 2,
           "count": 7,
-          "rate": 0.14285714285714285
+          "rate": 0.14
         },
         {
           "number": 4,
           "count": 7,
-          "rate": 0.14285714285714285
+          "rate": 0.14
         },
         {
           "number": 11,
           "count": 7,
-          "rate": 0.14285714285714285
+          "rate": 0.14
         },
         {
           "number": 19,
           "count": 7,
-          "rate": 0.14285714285714285
+          "rate": 0.14
         },
         {
           "number": 34,
           "count": 7,
-          "rate": 0.14285714285714285
-        },
-        {
-          "number": 35,
-          "count": 7,
-          "rate": 0.14285714285714285
+          "rate": 0.14
         },
         {
           "number": 1,
           "count": 6,
-          "rate": 0.12244897959183673
+          "rate": 0.12
+        },
+        {
+          "number": 9,
+          "count": 6,
+          "rate": 0.12
         },
         {
           "number": 18,
           "count": 6,
-          "rate": 0.12244897959183673
+          "rate": 0.12
         },
         {
           "number": 27,
           "count": 6,
-          "rate": 0.12244897959183673
+          "rate": 0.12
         },
         {
           "number": 28,
           "count": 6,
-          "rate": 0.12244897959183673
+          "rate": 0.12
         },
         {
           "number": 29,
           "count": 6,
-          "rate": 0.12244897959183673
-        },
-        {
-          "number": 9,
-          "count": 5,
-          "rate": 0.10204081632653061
+          "rate": 0.12
         },
         {
           "number": 20,
           "count": 5,
-          "rate": 0.10204081632653061
+          "rate": 0.1
         },
         {
           "number": 30,
           "count": 5,
-          "rate": 0.10204081632653061
+          "rate": 0.1
         },
         {
           "number": 3,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
         },
         {
           "number": 6,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
         },
         {
           "number": 17,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
         },
         {
           "number": 23,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
         },
         {
           "number": 25,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
+        },
+        {
+          "number": 32,
+          "count": 4,
+          "rate": 0.08
         },
         {
           "number": 21,
           "count": 3,
-          "rate": 0.061224489795918366
-        },
-        {
-          "number": 32,
-          "count": 3,
-          "rate": 0.061224489795918366
+          "rate": 0.06
         }
       ],
       "10": [
         {
           "number": 14,
           "count": 14,
-          "rate": 0.3181818181818182
+          "rate": 0.30434782608695654
         },
         {
           "number": 13,
           "count": 10,
-          "rate": 0.22727272727272727
+          "rate": 0.21739130434782608
         },
         {
           "number": 15,
           "count": 10,
-          "rate": 0.22727272727272727
+          "rate": 0.21739130434782608
         },
         {
           "number": 16,
           "count": 10,
-          "rate": 0.22727272727272727
+          "rate": 0.21739130434782608
+        },
+        {
+          "number": 21,
+          "count": 10,
+          "rate": 0.21739130434782608
         },
         {
           "number": 3,
           "count": 9,
-          "rate": 0.20454545454545456
+          "rate": 0.1956521739130435
+        },
+        {
+          "number": 6,
+          "count": 9,
+          "rate": 0.1956521739130435
         },
         {
           "number": 17,
           "count": 9,
-          "rate": 0.20454545454545456
+          "rate": 0.1956521739130435
         },
         {
-          "number": 21,
+          "number": 23,
           "count": 9,
-          "rate": 0.20454545454545456
-        },
-        {
-          "number": 6,
-          "count": 8,
-          "rate": 0.18181818181818182
+          "rate": 0.1956521739130435
         },
         {
           "number": 19,
           "count": 8,
-          "rate": 0.18181818181818182
-        },
-        {
-          "number": 23,
-          "count": 8,
-          "rate": 0.18181818181818182
+          "rate": 0.17391304347826086
         },
         {
           "number": 24,
           "count": 8,
-          "rate": 0.18181818181818182
+          "rate": 0.17391304347826086
         },
         {
           "number": 27,
           "count": 8,
-          "rate": 0.18181818181818182
+          "rate": 0.17391304347826086
+        },
+        {
+          "number": 2,
+          "count": 7,
+          "rate": 0.15217391304347827
         },
         {
           "number": 7,
           "count": 7,
-          "rate": 0.1590909090909091
+          "rate": 0.15217391304347827
         },
         {
           "number": 28,
           "count": 7,
-          "rate": 0.1590909090909091
+          "rate": 0.15217391304347827
         },
         {
           "number": 31,
           "count": 7,
-          "rate": 0.1590909090909091
-        },
-        {
-          "number": 2,
-          "count": 6,
-          "rate": 0.13636363636363635
+          "rate": 0.15217391304347827
         },
         {
           "number": 8,
           "count": 6,
-          "rate": 0.13636363636363635
+          "rate": 0.13043478260869565
+        },
+        {
+          "number": 9,
+          "count": 6,
+          "rate": 0.13043478260869565
+        },
+        {
+          "number": 20,
+          "count": 6,
+          "rate": 0.13043478260869565
         },
         {
           "number": 22,
           "count": 6,
-          "rate": 0.13636363636363635
+          "rate": 0.13043478260869565
         },
         {
           "number": 30,
           "count": 6,
-          "rate": 0.13636363636363635
+          "rate": 0.13043478260869565
+        },
+        {
+          "number": 33,
+          "count": 6,
+          "rate": 0.13043478260869565
         },
         {
           "number": 34,
           "count": 6,
-          "rate": 0.13636363636363635
+          "rate": 0.13043478260869565
         },
         {
           "number": 18,
           "count": 5,
-          "rate": 0.11363636363636363
-        },
-        {
-          "number": 20,
-          "count": 5,
-          "rate": 0.11363636363636363
+          "rate": 0.10869565217391304
         },
         {
           "number": 26,
           "count": 5,
-          "rate": 0.11363636363636363
+          "rate": 0.10869565217391304
         },
         {
           "number": 32,
           "count": 5,
-          "rate": 0.11363636363636363
-        },
-        {
-          "number": 33,
-          "count": 5,
-          "rate": 0.11363636363636363
+          "rate": 0.10869565217391304
         },
         {
           "number": 35,
           "count": 5,
-          "rate": 0.11363636363636363
+          "rate": 0.10869565217391304
         },
         {
           "number": 1,
           "count": 4,
-          "rate": 0.09090909090909091
+          "rate": 0.08695652173913043
         },
         {
           "number": 4,
           "count": 4,
-          "rate": 0.09090909090909091
+          "rate": 0.08695652173913043
         },
         {
-          "number": 9,
+          "number": 25,
           "count": 4,
-          "rate": 0.09090909090909091
+          "rate": 0.08695652173913043
         },
         {
           "number": 29,
           "count": 4,
-          "rate": 0.09090909090909091
+          "rate": 0.08695652173913043
         },
         {
           "number": 5,
           "count": 3,
-          "rate": 0.06818181818181818
+          "rate": 0.06521739130434782
         },
         {
           "number": 10,
           "count": 3,
-          "rate": 0.06818181818181818
-        },
-        {
-          "number": 25,
-          "count": 3,
-          "rate": 0.06818181818181818
+          "rate": 0.06521739130434782
         },
         {
           "number": 11,
           "count": 2,
-          "rate": 0.045454545454545456
+          "rate": 0.043478260869565216
         },
         {
           "number": 12,
-          "count": 1,
-          "rate": 0.022727272727272728
+          "count": 2,
+          "rate": 0.043478260869565216
         }
       ],
       "11": [
@@ -2561,177 +2561,177 @@
         {
           "number": 22,
           "count": 11,
-          "rate": 0.2682926829268293
+          "rate": 0.2619047619047619
         },
         {
           "number": 9,
           "count": 10,
-          "rate": 0.24390243902439024
+          "rate": 0.23809523809523808
         },
         {
           "number": 1,
           "count": 9,
-          "rate": 0.21951219512195122
+          "rate": 0.21428571428571427
         },
         {
           "number": 20,
           "count": 9,
-          "rate": 0.21951219512195122
+          "rate": 0.21428571428571427
         },
         {
           "number": 31,
-          "count": 8,
-          "rate": 0.1951219512195122
+          "count": 9,
+          "rate": 0.21428571428571427
         },
         {
           "number": 34,
           "count": 8,
-          "rate": 0.1951219512195122
+          "rate": 0.19047619047619047
         },
         {
           "number": 8,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 10,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 13,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 14,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 15,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 27,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 29,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 32,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 35,
           "count": 7,
-          "rate": 0.17073170731707318
+          "rate": 0.16666666666666666
         },
         {
           "number": 4,
           "count": 6,
-          "rate": 0.14634146341463414
+          "rate": 0.14285714285714285
         },
         {
           "number": 5,
           "count": 6,
-          "rate": 0.14634146341463414
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 11,
+          "count": 6,
+          "rate": 0.14285714285714285
         },
         {
           "number": 17,
           "count": 6,
-          "rate": 0.14634146341463414
+          "rate": 0.14285714285714285
         },
         {
           "number": 19,
           "count": 6,
-          "rate": 0.14634146341463414
+          "rate": 0.14285714285714285
         },
         {
           "number": 25,
           "count": 6,
-          "rate": 0.14634146341463414
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 26,
+          "count": 6,
+          "rate": 0.14285714285714285
+        },
+        {
+          "number": 28,
+          "count": 6,
+          "rate": 0.14285714285714285
         },
         {
           "number": 2,
           "count": 5,
-          "rate": 0.12195121951219512
+          "rate": 0.11904761904761904
         },
         {
           "number": 3,
           "count": 5,
-          "rate": 0.12195121951219512
-        },
-        {
-          "number": 11,
-          "count": 5,
-          "rate": 0.12195121951219512
+          "rate": 0.11904761904761904
         },
         {
           "number": 23,
           "count": 5,
-          "rate": 0.12195121951219512
-        },
-        {
-          "number": 26,
-          "count": 5,
-          "rate": 0.12195121951219512
-        },
-        {
-          "number": 28,
-          "count": 5,
-          "rate": 0.12195121951219512
+          "rate": 0.11904761904761904
         },
         {
           "number": 33,
           "count": 5,
-          "rate": 0.12195121951219512
+          "rate": 0.11904761904761904
+        },
+        {
+          "number": 18,
+          "count": 4,
+          "rate": 0.09523809523809523
         },
         {
           "number": 6,
           "count": 3,
-          "rate": 0.07317073170731707
+          "rate": 0.07142857142857142
         },
         {
           "number": 7,
           "count": 3,
-          "rate": 0.07317073170731707
+          "rate": 0.07142857142857142
         },
         {
           "number": 16,
           "count": 3,
-          "rate": 0.07317073170731707
-        },
-        {
-          "number": 18,
-          "count": 3,
-          "rate": 0.07317073170731707
+          "rate": 0.07142857142857142
         },
         {
           "number": 21,
           "count": 3,
-          "rate": 0.07317073170731707
+          "rate": 0.07142857142857142
         },
         {
           "number": 30,
           "count": 3,
-          "rate": 0.07317073170731707
+          "rate": 0.07142857142857142
         },
         {
           "number": 12,
           "count": 2,
-          "rate": 0.04878048780487805
+          "rate": 0.047619047619047616
         },
         {
           "number": 24,
           "count": 2,
-          "rate": 0.04878048780487805
+          "rate": 0.047619047619047616
         }
       ]
     },
@@ -2800,540 +2800,545 @@
       ],
       "2": [
         {
-          "number": 12,
+          "number": 3,
           "count": 7,
-          "rate": 0.1891891891891892
+          "rate": 0.18421052631578946
         },
         {
-          "number": 3,
-          "count": 6,
-          "rate": 0.16216216216216217
+          "number": 12,
+          "count": 7,
+          "rate": 0.18421052631578946
         },
         {
           "number": 11,
           "count": 4,
-          "rate": 0.10810810810810811
+          "rate": 0.10526315789473684
         },
         {
           "number": 5,
           "count": 3,
-          "rate": 0.08108108108108109
+          "rate": 0.07894736842105263
         },
         {
           "number": 6,
           "count": 3,
-          "rate": 0.08108108108108109
+          "rate": 0.07894736842105263
         },
         {
           "number": 7,
           "count": 3,
-          "rate": 0.08108108108108109
+          "rate": 0.07894736842105263
         },
         {
           "number": 9,
           "count": 3,
-          "rate": 0.08108108108108109
+          "rate": 0.07894736842105263
         },
         {
           "number": 1,
           "count": 2,
-          "rate": 0.05405405405405406
+          "rate": 0.05263157894736842
         },
         {
           "number": 4,
           "count": 2,
-          "rate": 0.05405405405405406
+          "rate": 0.05263157894736842
         },
         {
           "number": 10,
           "count": 2,
-          "rate": 0.05405405405405406
+          "rate": 0.05263157894736842
         },
         {
           "number": 2,
           "count": 1,
-          "rate": 0.02702702702702703
+          "rate": 0.02631578947368421
         },
         {
           "number": 8,
           "count": 1,
-          "rate": 0.02702702702702703
+          "rate": 0.02631578947368421
         }
       ],
       "3": [
         {
-          "number": 5,
-          "count": 7,
-          "rate": 0.1794871794871795
+          "number": 3,
+          "count": 9,
+          "rate": 0.2
         },
         {
-          "number": 3,
-          "count": 5,
-          "rate": 0.1282051282051282
+          "number": 5,
+          "count": 7,
+          "rate": 0.15555555555555556
         },
         {
           "number": 6,
-          "count": 5,
-          "rate": 0.1282051282051282
+          "count": 6,
+          "rate": 0.13333333333333333
         },
         {
           "number": 8,
-          "count": 4,
-          "rate": 0.10256410256410256
+          "count": 5,
+          "rate": 0.1111111111111111
         },
         {
           "number": 4,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.06666666666666667
         },
         {
           "number": 10,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.06666666666666667
         },
         {
           "number": 12,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.06666666666666667
         },
         {
           "number": 1,
           "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.044444444444444446
         },
         {
           "number": 7,
           "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.044444444444444446
         },
         {
           "number": 9,
           "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.044444444444444446
         },
         {
           "number": 11,
           "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.044444444444444446
         },
         {
           "number": 2,
           "count": 1,
-          "rate": 0.02564102564102564
+          "rate": 0.022222222222222223
         }
       ],
       "4": [
         {
           "number": 4,
           "count": 7,
-          "rate": 0.2
+          "rate": 0.19444444444444445
         },
         {
           "number": 6,
           "count": 5,
-          "rate": 0.14285714285714285
+          "rate": 0.1388888888888889
         },
         {
           "number": 8,
           "count": 5,
-          "rate": 0.14285714285714285
+          "rate": 0.1388888888888889
         },
         {
           "number": 9,
           "count": 4,
-          "rate": 0.11428571428571428
+          "rate": 0.1111111111111111
         },
         {
           "number": 3,
           "count": 3,
-          "rate": 0.08571428571428572
+          "rate": 0.08333333333333333
         },
         {
           "number": 7,
           "count": 3,
-          "rate": 0.08571428571428572
+          "rate": 0.08333333333333333
         },
         {
           "number": 2,
           "count": 2,
-          "rate": 0.05714285714285714
+          "rate": 0.05555555555555555
+        },
+        {
+          "number": 10,
+          "count": 2,
+          "rate": 0.05555555555555555
         },
         {
           "number": 11,
           "count": 2,
-          "rate": 0.05714285714285714
+          "rate": 0.05555555555555555
         },
         {
           "number": 1,
           "count": 1,
-          "rate": 0.02857142857142857
+          "rate": 0.027777777777777776
         },
         {
           "number": 5,
           "count": 1,
-          "rate": 0.02857142857142857
-        },
-        {
-          "number": 10,
-          "count": 1,
-          "rate": 0.02857142857142857
+          "rate": 0.027777777777777776
         },
         {
           "number": 12,
           "count": 1,
-          "rate": 0.02857142857142857
+          "rate": 0.027777777777777776
         }
       ],
       "5": [
         {
           "number": 10,
           "count": 8,
-          "rate": 0.24242424242424243
+          "rate": 0.22857142857142856
         },
         {
           "number": 1,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14285714285714285
         },
         {
           "number": 6,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14285714285714285
         },
         {
           "number": 3,
+          "count": 4,
+          "rate": 0.11428571428571428
+        },
+        {
+          "number": 4,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08571428571428572
         },
         {
           "number": 7,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08571428571428572
         },
         {
           "number": 2,
           "count": 2,
-          "rate": 0.06060606060606061
-        },
-        {
-          "number": 4,
-          "count": 2,
-          "rate": 0.06060606060606061
+          "rate": 0.05714285714285714
         },
         {
           "number": 12,
           "count": 2,
-          "rate": 0.06060606060606061
+          "rate": 0.05714285714285714
         },
         {
           "number": 8,
           "count": 1,
-          "rate": 0.030303030303030304
+          "rate": 0.02857142857142857
         },
         {
           "number": 9,
           "count": 1,
-          "rate": 0.030303030303030304
+          "rate": 0.02857142857142857
         },
         {
           "number": 11,
           "count": 1,
-          "rate": 0.030303030303030304
+          "rate": 0.02857142857142857
         }
       ],
       "6": [
         {
           "number": 6,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.125
         },
         {
           "number": 9,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.125
         },
         {
           "number": 11,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.125
         },
         {
           "number": 12,
           "count": 5,
-          "rate": 0.1282051282051282
+          "rate": 0.125
         },
         {
           "number": 2,
           "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 7,
           "count": 4,
-          "rate": 0.10256410256410256
+          "rate": 0.1
         },
         {
           "number": 1,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.075
         },
         {
           "number": 3,
           "count": 3,
-          "rate": 0.07692307692307693
+          "rate": 0.075
         },
         {
           "number": 5,
           "count": 2,
-          "rate": 0.05128205128205128
+          "rate": 0.05
+        },
+        {
+          "number": 8,
+          "count": 2,
+          "rate": 0.05
         },
         {
           "number": 10,
           "count": 2,
-          "rate": 0.05128205128205128
-        },
-        {
-          "number": 8,
-          "count": 1,
-          "rate": 0.02564102564102564
+          "rate": 0.05
         }
       ],
       "7": [
         {
           "number": 4,
           "count": 6,
-          "rate": 0.18181818181818182
+          "rate": 0.17647058823529413
         },
         {
           "number": 9,
           "count": 5,
-          "rate": 0.15151515151515152
+          "rate": 0.14705882352941177
         },
         {
           "number": 8,
           "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.11764705882352941
         },
         {
           "number": 12,
           "count": 4,
-          "rate": 0.12121212121212122
+          "rate": 0.11764705882352941
         },
         {
           "number": 1,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 2,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 10,
           "count": 3,
-          "rate": 0.09090909090909091
+          "rate": 0.08823529411764706
         },
         {
           "number": 3,
           "count": 2,
-          "rate": 0.06060606060606061
+          "rate": 0.058823529411764705
+        },
+        {
+          "number": 5,
+          "count": 1,
+          "rate": 0.029411764705882353
         },
         {
           "number": 6,
           "count": 1,
-          "rate": 0.030303030303030304
+          "rate": 0.029411764705882353
         },
         {
           "number": 7,
           "count": 1,
-          "rate": 0.030303030303030304
+          "rate": 0.029411764705882353
         },
         {
           "number": 11,
           "count": 1,
-          "rate": 0.030303030303030304
+          "rate": 0.029411764705882353
         }
       ],
       "8": [
         {
           "number": 2,
           "count": 6,
-          "rate": 0.17647058823529413
+          "rate": 0.16666666666666666
+        },
+        {
+          "number": 7,
+          "count": 4,
+          "rate": 0.1111111111111111
         },
         {
           "number": 8,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
           "number": 9,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
           "number": 10,
           "count": 4,
-          "rate": 0.11764705882352941
+          "rate": 0.1111111111111111
         },
         {
           "number": 6,
           "count": 3,
-          "rate": 0.08823529411764706
-        },
-        {
-          "number": 7,
-          "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08333333333333333
         },
         {
           "number": 12,
           "count": 3,
-          "rate": 0.08823529411764706
+          "rate": 0.08333333333333333
         },
         {
           "number": 3,
           "count": 2,
-          "rate": 0.058823529411764705
+          "rate": 0.05555555555555555
+        },
+        {
+          "number": 4,
+          "count": 2,
+          "rate": 0.05555555555555555
         },
         {
           "number": 11,
           "count": 2,
-          "rate": 0.058823529411764705
+          "rate": 0.05555555555555555
         },
         {
           "number": 1,
           "count": 1,
-          "rate": 0.029411764705882353
-        },
-        {
-          "number": 4,
-          "count": 1,
-          "rate": 0.029411764705882353
+          "rate": 0.027777777777777776
         },
         {
           "number": 5,
           "count": 1,
-          "rate": 0.029411764705882353
+          "rate": 0.027777777777777776
         }
       ],
       "9": [
         {
           "number": 10,
           "count": 6,
-          "rate": 0.12244897959183673
+          "rate": 0.12
+        },
+        {
+          "number": 12,
+          "count": 6,
+          "rate": 0.12
         },
         {
           "number": 4,
           "count": 5,
-          "rate": 0.10204081632653061
+          "rate": 0.1
         },
         {
           "number": 5,
           "count": 5,
-          "rate": 0.10204081632653061
+          "rate": 0.1
         },
         {
           "number": 7,
           "count": 5,
-          "rate": 0.10204081632653061
-        },
-        {
-          "number": 12,
-          "count": 5,
-          "rate": 0.10204081632653061
+          "rate": 0.1
         },
         {
           "number": 1,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
         },
         {
           "number": 6,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
         },
         {
           "number": 9,
           "count": 4,
-          "rate": 0.08163265306122448
+          "rate": 0.08
         },
         {
           "number": 2,
           "count": 3,
-          "rate": 0.061224489795918366
+          "rate": 0.06
         },
         {
           "number": 3,
           "count": 3,
-          "rate": 0.061224489795918366
+          "rate": 0.06
         },
         {
           "number": 11,
           "count": 3,
-          "rate": 0.061224489795918366
+          "rate": 0.06
         },
         {
           "number": 8,
           "count": 2,
-          "rate": 0.04081632653061224
+          "rate": 0.04
         }
       ],
       "10": [
         {
-          "number": 11,
+          "number": 9,
           "count": 7,
-          "rate": 0.1590909090909091
+          "rate": 0.15217391304347827
         },
         {
-          "number": 9,
-          "count": 6,
-          "rate": 0.13636363636363635
+          "number": 11,
+          "count": 7,
+          "rate": 0.15217391304347827
         },
         {
           "number": 10,
           "count": 6,
-          "rate": 0.13636363636363635
+          "rate": 0.13043478260869565
+        },
+        {
+          "number": 2,
+          "count": 5,
+          "rate": 0.10869565217391304
         },
         {
           "number": 1,
           "count": 4,
-          "rate": 0.09090909090909091
-        },
-        {
-          "number": 2,
-          "count": 4,
-          "rate": 0.09090909090909091
+          "rate": 0.08695652173913043
         },
         {
           "number": 4,
           "count": 4,
-          "rate": 0.09090909090909091
+          "rate": 0.08695652173913043
         },
         {
           "number": 5,
           "count": 4,
-          "rate": 0.09090909090909091
+          "rate": 0.08695652173913043
         },
         {
           "number": 3,
           "count": 3,
-          "rate": 0.06818181818181818
+          "rate": 0.06521739130434782
         },
         {
           "number": 6,
           "count": 3,
-          "rate": 0.06818181818181818
+          "rate": 0.06521739130434782
         },
         {
           "number": 7,
           "count": 2,
-          "rate": 0.045454545454545456
+          "rate": 0.043478260869565216
         },
         {
           "number": 12,
           "count": 1,
-          "rate": 0.022727272727272728
+          "rate": 0.021739130434782608
         }
       ],
       "11": [
@@ -3397,52 +3402,52 @@
         {
           "number": 9,
           "count": 8,
-          "rate": 0.1951219512195122
+          "rate": 0.19047619047619047
         },
         {
           "number": 1,
           "count": 5,
-          "rate": 0.12195121951219512
+          "rate": 0.11904761904761904
         },
         {
           "number": 8,
           "count": 5,
-          "rate": 0.12195121951219512
+          "rate": 0.11904761904761904
         },
         {
           "number": 12,
           "count": 5,
-          "rate": 0.12195121951219512
+          "rate": 0.11904761904761904
         },
         {
           "number": 3,
           "count": 4,
-          "rate": 0.0975609756097561
+          "rate": 0.09523809523809523
         },
         {
           "number": 5,
           "count": 4,
-          "rate": 0.0975609756097561
+          "rate": 0.09523809523809523
+        },
+        {
+          "number": 10,
+          "count": 4,
+          "rate": 0.09523809523809523
         },
         {
           "number": 2,
           "count": 3,
-          "rate": 0.07317073170731707
+          "rate": 0.07142857142857142
         },
         {
           "number": 7,
           "count": 3,
-          "rate": 0.07317073170731707
-        },
-        {
-          "number": 10,
-          "count": 3,
-          "rate": 0.07317073170731707
+          "rate": 0.07142857142857142
         },
         {
           "number": 11,
           "count": 1,
-          "rate": 0.024390243902439025
+          "rate": 0.023809523809523808
         }
       ]
     },
@@ -3503,110 +3508,110 @@
         "2": [
           {
             "number": 3,
-            "count": 5,
-            "rate": 0.22727272727272727
+            "count": 6,
+            "rate": 0.2608695652173913
           },
           {
             "number": 12,
             "count": 4,
-            "rate": 0.18181818181818182
+            "rate": 0.17391304347826086
           },
           {
             "number": 9,
             "count": 3,
-            "rate": 0.13636363636363635
+            "rate": 0.13043478260869565
           },
           {
             "number": 7,
             "count": 2,
-            "rate": 0.09090909090909091
+            "rate": 0.08695652173913043
           },
           {
             "number": 11,
             "count": 2,
-            "rate": 0.09090909090909091
+            "rate": 0.08695652173913043
           },
           {
             "number": 2,
             "count": 1,
-            "rate": 0.045454545454545456
+            "rate": 0.043478260869565216
           },
           {
             "number": 4,
             "count": 1,
-            "rate": 0.045454545454545456
+            "rate": 0.043478260869565216
           },
           {
             "number": 5,
             "count": 1,
-            "rate": 0.045454545454545456
+            "rate": 0.043478260869565216
           },
           {
             "number": 6,
             "count": 1,
-            "rate": 0.045454545454545456
+            "rate": 0.043478260869565216
           },
           {
             "number": 8,
             "count": 1,
-            "rate": 0.045454545454545456
+            "rate": 0.043478260869565216
           },
           {
             "number": 10,
             "count": 1,
-            "rate": 0.045454545454545456
+            "rate": 0.043478260869565216
           }
         ],
         "3": [
           {
             "number": 3,
+            "count": 5,
+            "rate": 0.22727272727272727
+          },
+          {
+            "number": 6,
             "count": 3,
-            "rate": 0.15789473684210525
+            "rate": 0.13636363636363635
           },
           {
             "number": 8,
             "count": 3,
-            "rate": 0.15789473684210525
+            "rate": 0.13636363636363635
           },
           {
             "number": 1,
             "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.09090909090909091
           },
           {
             "number": 5,
             "count": 2,
-            "rate": 0.10526315789473684
-          },
-          {
-            "number": 6,
-            "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.09090909090909091
           },
           {
             "number": 7,
             "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.09090909090909091
           },
           {
             "number": 11,
             "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.09090909090909091
           },
           {
             "number": 2,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.045454545454545456
           },
           {
             "number": 9,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.045454545454545456
           },
           {
             "number": 12,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.045454545454545456
           }
         ],
         "4": [
@@ -3665,42 +3670,42 @@
           {
             "number": 10,
             "count": 5,
-            "rate": 0.2777777777777778
+            "rate": 0.2631578947368421
           },
           {
             "number": 1,
             "count": 3,
-            "rate": 0.16666666666666666
+            "rate": 0.15789473684210525
+          },
+          {
+            "number": 4,
+            "count": 3,
+            "rate": 0.15789473684210525
           },
           {
             "number": 3,
             "count": 2,
-            "rate": 0.1111111111111111
-          },
-          {
-            "number": 4,
-            "count": 2,
-            "rate": 0.1111111111111111
+            "rate": 0.10526315789473684
           },
           {
             "number": 6,
             "count": 2,
-            "rate": 0.1111111111111111
+            "rate": 0.10526315789473684
           },
           {
             "number": 7,
             "count": 2,
-            "rate": 0.1111111111111111
+            "rate": 0.10526315789473684
           },
           {
             "number": 8,
             "count": 1,
-            "rate": 0.05555555555555555
+            "rate": 0.05263157894736842
           },
           {
             "number": 12,
             "count": 1,
-            "rate": 0.05555555555555555
+            "rate": 0.05263157894736842
           }
         ],
         "6": [
@@ -3806,37 +3811,42 @@
           {
             "number": 2,
             "count": 3,
-            "rate": 0.2727272727272727
+            "rate": 0.23076923076923078
+          },
+          {
+            "number": 4,
+            "count": 2,
+            "rate": 0.15384615384615385
           },
           {
             "number": 10,
             "count": 2,
-            "rate": 0.18181818181818182
+            "rate": 0.15384615384615385
           },
           {
             "number": 12,
             "count": 2,
-            "rate": 0.18181818181818182
+            "rate": 0.15384615384615385
           },
           {
             "number": 1,
             "count": 1,
-            "rate": 0.09090909090909091
-          },
-          {
-            "number": 4,
-            "count": 1,
-            "rate": 0.09090909090909091
+            "rate": 0.07692307692307693
           },
           {
             "number": 6,
             "count": 1,
-            "rate": 0.09090909090909091
+            "rate": 0.07692307692307693
+          },
+          {
+            "number": 7,
+            "count": 1,
+            "rate": 0.07692307692307693
           },
           {
             "number": 8,
             "count": 1,
-            "rate": 0.09090909090909091
+            "rate": 0.07692307692307693
           }
         ],
         "9": [
@@ -3894,58 +3904,58 @@
         "10": [
           {
             "number": 9,
-            "count": 3,
-            "rate": 0.15789473684210525
+            "count": 4,
+            "rate": 0.2
           },
           {
             "number": 10,
             "count": 3,
-            "rate": 0.15789473684210525
+            "rate": 0.15
           },
           {
             "number": 4,
             "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.1
           },
           {
             "number": 5,
             "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.1
           },
           {
             "number": 6,
             "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.1
           },
           {
             "number": 11,
             "count": 2,
-            "rate": 0.10526315789473684
+            "rate": 0.1
           },
           {
             "number": 1,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.05
           },
           {
             "number": 2,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.05
           },
           {
             "number": 3,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.05
           },
           {
             "number": 7,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.05
           },
           {
             "number": 12,
             "count": 1,
-            "rate": 0.05263157894736842
+            "rate": 0.05
           }
         ],
         "11": [
@@ -3999,42 +4009,42 @@
           {
             "number": 9,
             "count": 7,
-            "rate": 0.3333333333333333
+            "rate": 0.3181818181818182
+          },
+          {
+            "number": 10,
+            "count": 4,
+            "rate": 0.18181818181818182
           },
           {
             "number": 8,
             "count": 3,
-            "rate": 0.14285714285714285
-          },
-          {
-            "number": 10,
-            "count": 3,
-            "rate": 0.14285714285714285
+            "rate": 0.13636363636363635
           },
           {
             "number": 1,
             "count": 2,
-            "rate": 0.09523809523809523
+            "rate": 0.09090909090909091
           },
           {
             "number": 2,
             "count": 2,
-            "rate": 0.09523809523809523
+            "rate": 0.09090909090909091
           },
           {
             "number": 12,
             "count": 2,
-            "rate": 0.09523809523809523
+            "rate": 0.09090909090909091
           },
           {
             "number": 5,
             "count": 1,
-            "rate": 0.047619047619047616
+            "rate": 0.045454545454545456
           },
           {
             "number": 7,
             "count": 1,
-            "rate": 0.047619047619047616
+            "rate": 0.045454545454545456
           }
         ]
       },
@@ -4142,230 +4152,245 @@
           {
             "number": 5,
             "count": 5,
-            "rate": 0.25
+            "rate": 0.21739130434782608
+          },
+          {
+            "number": 3,
+            "count": 4,
+            "rate": 0.17391304347826086
           },
           {
             "number": 4,
             "count": 3,
-            "rate": 0.15
+            "rate": 0.13043478260869565
           },
           {
             "number": 6,
             "count": 3,
-            "rate": 0.15
+            "rate": 0.13043478260869565
           },
           {
             "number": 10,
             "count": 3,
-            "rate": 0.15
+            "rate": 0.13043478260869565
           },
           {
-            "number": 3,
+            "number": 8,
             "count": 2,
-            "rate": 0.1
+            "rate": 0.08695652173913043
           },
           {
             "number": 12,
             "count": 2,
-            "rate": 0.1
-          },
-          {
-            "number": 8,
-            "count": 1,
-            "rate": 0.05
+            "rate": 0.08695652173913043
           },
           {
             "number": 9,
             "count": 1,
-            "rate": 0.05
+            "rate": 0.043478260869565216
           }
         ],
         "4": [
           {
             "number": 4,
             "count": 4,
-            "rate": 0.23529411764705882
+            "rate": 0.2222222222222222
           },
           {
             "number": 3,
             "count": 2,
-            "rate": 0.11764705882352941
+            "rate": 0.1111111111111111
           },
           {
             "number": 6,
             "count": 2,
-            "rate": 0.11764705882352941
+            "rate": 0.1111111111111111
           },
           {
             "number": 7,
             "count": 2,
-            "rate": 0.11764705882352941
+            "rate": 0.1111111111111111
           },
           {
             "number": 9,
             "count": 2,
-            "rate": 0.11764705882352941
+            "rate": 0.1111111111111111
           },
           {
             "number": 11,
             "count": 2,
-            "rate": 0.11764705882352941
+            "rate": 0.1111111111111111
           },
           {
             "number": 1,
             "count": 1,
-            "rate": 0.058823529411764705
+            "rate": 0.05555555555555555
           },
           {
             "number": 2,
             "count": 1,
-            "rate": 0.058823529411764705
+            "rate": 0.05555555555555555
           },
           {
             "number": 8,
             "count": 1,
-            "rate": 0.058823529411764705
+            "rate": 0.05555555555555555
+          },
+          {
+            "number": 10,
+            "count": 1,
+            "rate": 0.05555555555555555
           }
         ],
         "5": [
           {
             "number": 6,
             "count": 3,
-            "rate": 0.2
+            "rate": 0.1875
           },
           {
             "number": 10,
             "count": 3,
-            "rate": 0.2
+            "rate": 0.1875
           },
           {
             "number": 1,
             "count": 2,
-            "rate": 0.13333333333333333
+            "rate": 0.125
           },
           {
             "number": 2,
             "count": 2,
-            "rate": 0.13333333333333333
+            "rate": 0.125
           },
           {
             "number": 3,
-            "count": 1,
-            "rate": 0.06666666666666667
+            "count": 2,
+            "rate": 0.125
           },
           {
             "number": 7,
             "count": 1,
-            "rate": 0.06666666666666667
+            "rate": 0.0625
           },
           {
             "number": 9,
             "count": 1,
-            "rate": 0.06666666666666667
+            "rate": 0.0625
           },
           {
             "number": 11,
             "count": 1,
-            "rate": 0.06666666666666667
+            "rate": 0.0625
           },
           {
             "number": 12,
             "count": 1,
-            "rate": 0.06666666666666667
+            "rate": 0.0625
           }
         ],
         "6": [
           {
             "number": 11,
             "count": 4,
-            "rate": 0.2
+            "rate": 0.19047619047619047
           },
           {
             "number": 1,
             "count": 3,
-            "rate": 0.15
+            "rate": 0.14285714285714285
           },
           {
             "number": 9,
             "count": 3,
-            "rate": 0.15
+            "rate": 0.14285714285714285
           },
           {
             "number": 12,
             "count": 3,
-            "rate": 0.15
+            "rate": 0.14285714285714285
           },
           {
             "number": 2,
             "count": 2,
-            "rate": 0.1
+            "rate": 0.09523809523809523
           },
           {
             "number": 7,
             "count": 2,
-            "rate": 0.1
+            "rate": 0.09523809523809523
           },
           {
             "number": 5,
             "count": 1,
-            "rate": 0.05
+            "rate": 0.047619047619047616
           },
           {
             "number": 6,
             "count": 1,
-            "rate": 0.05
+            "rate": 0.047619047619047616
+          },
+          {
+            "number": 8,
+            "count": 1,
+            "rate": 0.047619047619047616
           },
           {
             "number": 10,
             "count": 1,
-            "rate": 0.05
+            "rate": 0.047619047619047616
           }
         ],
         "7": [
           {
             "number": 4,
             "count": 4,
-            "rate": 0.25
+            "rate": 0.23529411764705882
           },
           {
             "number": 1,
             "count": 2,
-            "rate": 0.125
+            "rate": 0.11764705882352941
           },
           {
             "number": 2,
             "count": 2,
-            "rate": 0.125
+            "rate": 0.11764705882352941
           },
           {
             "number": 9,
             "count": 2,
-            "rate": 0.125
+            "rate": 0.11764705882352941
           },
           {
             "number": 12,
             "count": 2,
-            "rate": 0.125
+            "rate": 0.11764705882352941
           },
           {
             "number": 3,
             "count": 1,
-            "rate": 0.0625
+            "rate": 0.058823529411764705
+          },
+          {
+            "number": 5,
+            "count": 1,
+            "rate": 0.058823529411764705
           },
           {
             "number": 7,
             "count": 1,
-            "rate": 0.0625
+            "rate": 0.058823529411764705
           },
           {
             "number": 8,
             "count": 1,
-            "rate": 0.0625
+            "rate": 0.058823529411764705
           },
           {
             "number": 11,
             "count": 1,
-            "rate": 0.0625
+            "rate": 0.058823529411764705
           }
         ],
         "8": [
@@ -4424,114 +4449,114 @@
           {
             "number": 6,
             "count": 4,
-            "rate": 0.13793103448275862
+            "rate": 0.13333333333333333
+          },
+          {
+            "number": 12,
+            "count": 4,
+            "rate": 0.13333333333333333
           },
           {
             "number": 1,
             "count": 3,
-            "rate": 0.10344827586206896
+            "rate": 0.1
           },
           {
             "number": 5,
             "count": 3,
-            "rate": 0.10344827586206896
+            "rate": 0.1
           },
           {
             "number": 7,
             "count": 3,
-            "rate": 0.10344827586206896
+            "rate": 0.1
           },
           {
             "number": 11,
             "count": 3,
-            "rate": 0.10344827586206896
-          },
-          {
-            "number": 12,
-            "count": 3,
-            "rate": 0.10344827586206896
+            "rate": 0.1
           },
           {
             "number": 3,
             "count": 2,
-            "rate": 0.06896551724137931
+            "rate": 0.06666666666666667
           },
           {
             "number": 4,
             "count": 2,
-            "rate": 0.06896551724137931
+            "rate": 0.06666666666666667
           },
           {
             "number": 9,
             "count": 2,
-            "rate": 0.06896551724137931
+            "rate": 0.06666666666666667
           },
           {
             "number": 10,
             "count": 2,
-            "rate": 0.06896551724137931
+            "rate": 0.06666666666666667
           },
           {
             "number": 2,
             "count": 1,
-            "rate": 0.034482758620689655
+            "rate": 0.03333333333333333
           },
           {
             "number": 8,
             "count": 1,
-            "rate": 0.034482758620689655
+            "rate": 0.03333333333333333
           }
         ],
         "10": [
           {
             "number": 11,
             "count": 5,
-            "rate": 0.2
+            "rate": 0.19230769230769232
+          },
+          {
+            "number": 2,
+            "count": 4,
+            "rate": 0.15384615384615385
           },
           {
             "number": 1,
             "count": 3,
-            "rate": 0.12
-          },
-          {
-            "number": 2,
-            "count": 3,
-            "rate": 0.12
+            "rate": 0.11538461538461539
           },
           {
             "number": 9,
             "count": 3,
-            "rate": 0.12
+            "rate": 0.11538461538461539
           },
           {
             "number": 10,
             "count": 3,
-            "rate": 0.12
+            "rate": 0.11538461538461539
           },
           {
             "number": 3,
             "count": 2,
-            "rate": 0.08
+            "rate": 0.07692307692307693
           },
           {
             "number": 4,
             "count": 2,
-            "rate": 0.08
+            "rate": 0.07692307692307693
           },
           {
             "number": 5,
             "count": 2,
-            "rate": 0.08
+            "rate": 0.07692307692307693
           },
           {
             "number": 6,
             "count": 1,
-            "rate": 0.04
+            "rate": 0.038461538461538464
           },
           {
             "number": 7,
             "count": 1,
-            "rate": 0.04
+            "rate": 0.038461538461538464
           }
         ],
         "11": [
@@ -4611,179 +4636,179 @@
       }
     },
     "specialBacktest": {
-      "evaluated": 156,
-      "top3Hits": 42,
-      "top3HitRate": 0.2692307692307692,
+      "evaluated": 174,
+      "top3Hits": 47,
+      "top3HitRate": 0.27011494252873564,
       "baselineTop3Rate": 0.25
     },
     "comboBacktests": [
       {
         "id": "overdue",
         "label": "Quá hạn tuyệt đối",
-        "evaluated": 156,
-        "orangeHitRate": 0.07692307692307693,
-        "averageGreenHits": 0.3974358974358974,
-        "anyGreenHitRate": 0.34615384615384615,
-        "jointHitRate": 0.03205128205128205,
+        "evaluated": 174,
+        "orangeHitRate": 0.06896551724137931,
+        "averageGreenHits": 0.40804597701149425,
+        "anyGreenHitRate": 0.3505747126436782,
+        "jointHitRate": 0.028735632183908046,
         "fullComboHitRate": 0
       },
       {
         "id": "normalized-overdue",
         "label": "Quá hạn / chu kỳ trung bình",
-        "evaluated": 156,
-        "orangeHitRate": 0.0641025641025641,
-        "averageGreenHits": 0.42948717948717946,
-        "anyGreenHitRate": 0.3717948717948718,
-        "jointHitRate": 0.02564102564102564,
+        "evaluated": 174,
+        "orangeHitRate": 0.05747126436781609,
+        "averageGreenHits": 0.4367816091954023,
+        "anyGreenHitRate": 0.3735632183908046,
+        "jointHitRate": 0.022988505747126436,
         "fullComboHitRate": 0
       },
       {
         "id": "recent-frequency",
         "label": "Tần suất ngắn hạn (30 kỳ)",
-        "evaluated": 156,
-        "orangeHitRate": 0.0641025641025641,
-        "averageGreenHits": 0.46794871794871795,
-        "anyGreenHitRate": 0.41025641025641024,
-        "jointHitRate": 0.00641025641025641,
+        "evaluated": 174,
+        "orangeHitRate": 0.06896551724137931,
+        "averageGreenHits": 0.4482758620689655,
+        "anyGreenHitRate": 0.39655172413793105,
+        "jointHitRate": 0.005747126436781609,
         "fullComboHitRate": 0
       },
       {
         "id": "long-frequency",
         "label": "Tần suất dài hạn (120 kỳ)",
-        "evaluated": 156,
-        "orangeHitRate": 0.08333333333333333,
-        "averageGreenHits": 0.40384615384615385,
-        "anyGreenHitRate": 0.34615384615384615,
-        "jointHitRate": 0.02564102564102564,
+        "evaluated": 174,
+        "orangeHitRate": 0.08620689655172414,
+        "averageGreenHits": 0.39080459770114945,
+        "anyGreenHitRate": 0.3390804597701149,
+        "jointHitRate": 0.028735632183908046,
         "fullComboHitRate": 0
       },
       {
         "id": "transition",
         "label": "Transition sau cam gần nhất",
-        "evaluated": 156,
-        "orangeHitRate": 0.08974358974358974,
-        "averageGreenHits": 0.42948717948717946,
-        "anyGreenHitRate": 0.3782051282051282,
-        "jointHitRate": 0.02564102564102564,
+        "evaluated": 174,
+        "orangeHitRate": 0.09195402298850575,
+        "averageGreenHits": 0.41954022988505746,
+        "anyGreenHitRate": 0.3735632183908046,
+        "jointHitRate": 0.022988505747126436,
         "fullComboHitRate": 0
       },
       {
         "id": "hour-frequency",
         "label": "Tần suất theo giờ quay",
-        "evaluated": 156,
-        "orangeHitRate": 0.08333333333333333,
-        "averageGreenHits": 0.41025641025641024,
-        "anyGreenHitRate": 0.36538461538461536,
-        "jointHitRate": 0.019230769230769232,
+        "evaluated": 174,
+        "orangeHitRate": 0.08045977011494253,
+        "averageGreenHits": 0.39655172413793105,
+        "anyGreenHitRate": 0.3563218390804598,
+        "jointHitRate": 0.022988505747126436,
         "fullComboHitRate": 0
       },
       {
         "id": "decay-frequency",
         "label": "Tần suất suy giảm theo thời gian",
-        "evaluated": 156,
-        "orangeHitRate": 0.08974358974358974,
-        "averageGreenHits": 0.4423076923076923,
-        "anyGreenHitRate": 0.3717948717948718,
-        "jointHitRate": 0.019230769230769232,
+        "evaluated": 174,
+        "orangeHitRate": 0.09770114942528736,
+        "averageGreenHits": 0.41954022988505746,
+        "anyGreenHitRate": 0.3563218390804598,
+        "jointHitRate": 0.017241379310344827,
         "fullComboHitRate": 0
       },
       {
         "id": "pair-transition",
         "label": "Transition theo 2 cam gần nhất",
-        "evaluated": 156,
-        "orangeHitRate": 0.05128205128205128,
-        "averageGreenHits": 0.46794871794871795,
-        "anyGreenHitRate": 0.41025641025641024,
-        "jointHitRate": 0.01282051282051282,
+        "evaluated": 174,
+        "orangeHitRate": 0.05172413793103448,
+        "averageGreenHits": 0.4425287356321839,
+        "anyGreenHitRate": 0.3850574712643678,
+        "jointHitRate": 0.011494252873563218,
         "fullComboHitRate": 0
       },
       {
         "id": "hour-transition",
         "label": "Transition theo giờ quay",
-        "evaluated": 156,
-        "orangeHitRate": 0.07692307692307693,
-        "averageGreenHits": 0.41025641025641024,
-        "anyGreenHitRate": 0.358974358974359,
-        "jointHitRate": 0.01282051282051282,
+        "evaluated": 174,
+        "orangeHitRate": 0.09195402298850575,
+        "averageGreenHits": 0.39655172413793105,
+        "anyGreenHitRate": 0.3505747126436782,
+        "jointHitRate": 0.017241379310344827,
         "fullComboHitRate": 0
       },
       {
         "id": "transition-overdue",
         "label": "Kết hợp transition + quá hạn",
-        "evaluated": 156,
-        "orangeHitRate": 0.07692307692307693,
-        "averageGreenHits": 0.42948717948717946,
-        "anyGreenHitRate": 0.36538461538461536,
-        "jointHitRate": 0.03205128205128205,
+        "evaluated": 174,
+        "orangeHitRate": 0.07471264367816093,
+        "averageGreenHits": 0.4425287356321839,
+        "anyGreenHitRate": 0.367816091954023,
+        "jointHitRate": 0.034482758620689655,
         "fullComboHitRate": 0
       },
       {
         "id": "ensemble",
         "label": "Ensemble: transition + gần đây + chu kỳ",
-        "evaluated": 156,
-        "orangeHitRate": 0.08974358974358974,
-        "averageGreenHits": 0.391025641025641,
-        "anyGreenHitRate": 0.33974358974358976,
-        "jointHitRate": 0.02564102564102564,
+        "evaluated": 174,
+        "orangeHitRate": 0.09770114942528736,
+        "averageGreenHits": 0.3793103448275862,
+        "anyGreenHitRate": 0.3333333333333333,
+        "jointHitRate": 0.022988505747126436,
         "fullComboHitRate": 0
       }
     ],
     "coverageBacktest": {
-      "evaluated": 156,
-      "greenAnyHitRate": 0.9551282051282052,
-      "greenAtLeast3HitRate": 0.4166666666666667,
-      "averageGreenHits": 2.1923076923076925,
-      "orangeAnyHitRate": 0.25,
-      "anyTicketJointHitRate": 0.1282051282051282,
+      "evaluated": 174,
+      "greenAnyHitRate": 0.9482758620689655,
+      "greenAtLeast3HitRate": 0.41379310344827586,
+      "averageGreenHits": 2.189655172413793,
+      "orangeAnyHitRate": 0.26436781609195403,
+      "anyTicketJointHitRate": 0.13218390804597702,
       "ticketStats": [
         {
-          "greenAnyHitRate": 0.5576923076923077,
-          "averageGreenHits": 0.7051282051282052,
-          "orangeHitRate": 0.07692307692307693,
-          "jointHitRate": 0.038461538461538464
+          "greenAnyHitRate": 0.5574712643678161,
+          "averageGreenHits": 0.7011494252873564,
+          "orangeHitRate": 0.08620689655172414,
+          "jointHitRate": 0.04597701149425287
         },
         {
-          "greenAnyHitRate": 0.5769230769230769,
-          "averageGreenHits": 0.7948717948717948,
-          "orangeHitRate": 0.10897435897435898,
-          "jointHitRate": 0.05128205128205128
+          "greenAnyHitRate": 0.5747126436781609,
+          "averageGreenHits": 0.7758620689655172,
+          "orangeHitRate": 0.11494252873563218,
+          "jointHitRate": 0.05172413793103448
         },
         {
-          "greenAnyHitRate": 0.5448717948717948,
-          "averageGreenHits": 0.6923076923076923,
-          "orangeHitRate": 0.0641025641025641,
-          "jointHitRate": 0.038461538461538464
+          "greenAnyHitRate": 0.5459770114942529,
+          "averageGreenHits": 0.7126436781609196,
+          "orangeHitRate": 0.06321839080459771,
+          "jointHitRate": 0.034482758620689655
         }
       ],
       "tickets": [
         {
-          "orange": 10,
+          "orange": 4,
           "greens": [
-            14,
-            15,
-            16,
-            3,
-            17
+            32,
+            29,
+            4,
+            22,
+            19
           ]
         },
         {
-          "orange": 1,
+          "orange": 9,
           "greens": [
-            13,
-            27,
-            25,
-            23,
-            31
-          ]
-        },
-        {
-          "orange": 6,
-          "greens": [
-            34,
-            28,
-            5,
+            26,
             7,
+            33,
+            8,
             12
+          ]
+        },
+        {
+          "orange": 8,
+          "greens": [
+            15,
+            17,
+            23,
+            18,
+            6
           ]
         }
       ]
@@ -4791,98 +4816,1564 @@
     "greenForecast": {
       "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
       "greens": [
-        27,
-        6,
-        31,
-        14,
-        35
+        28,
+        33,
+        34,
+        15,
+        27
       ],
-      "orange": 10
+      "orange": 8
     },
     "greenForecasts": [
       {
         "model": "Bayesian: tần suất gần đây có làm mượt",
         "greens": [
-          27,
-          23,
-          35,
-          22,
-          15
+          33,
+          15,
+          9,
+          11,
+          21
         ],
         "orange": 8
       },
       {
         "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
         "greens": [
-          27,
-          6,
-          31,
-          14,
-          35
+          28,
+          33,
+          34,
+          15,
+          27
         ],
-        "orange": 10
+        "orange": 8
       }
     ],
     "greenBacktest": {
-      "evaluated": 156,
-      "greenAnyHitRate": 0.5576923076923077,
-      "greenAtLeast3HitRate": 0.01282051282051282,
-      "averageGreenHits": 0.7115384615384616,
-      "orangeHitRate": 0.0641025641025641,
-      "jointHitRate": 0.03205128205128205
+      "evaluated": 174,
+      "greenAnyHitRate": 0.5574712643678161,
+      "greenAtLeast3HitRate": 0.011494252873563218,
+      "averageGreenHits": 0.7068965517241379,
+      "orangeHitRate": 0.08045977011494253,
+      "jointHitRate": 0.04597701149425287
     },
     "greenModelBacktests": [
       {
         "id": "bayesian",
         "label": "Bayesian làm mượt",
-        "evaluated": 156,
-        "greenAnyHitRate": 0.5512820512820513,
+        "evaluated": 174,
+        "greenAnyHitRate": 0.5459770114942529,
         "greenAtLeast3HitRate": 0,
-        "averageGreenHits": 0.6602564102564102,
-        "orangeHitRate": 0.08974358974358974,
-        "jointHitRate": 0.02564102564102564,
+        "averageGreenHits": 0.6551724137931034,
+        "orangeHitRate": 0.09770114942528736,
+        "jointHitRate": 0.034482758620689655,
         "baselineGreenAnyHitRate": 0.5610229429015008,
         "baselineGreenAtLeast3HitRate": 0.013864930136277384
       },
       {
         "id": "ensemble",
         "label": "Ensemble lịch sử",
-        "evaluated": 156,
-        "greenAnyHitRate": 0.5576923076923077,
-        "greenAtLeast3HitRate": 0.01282051282051282,
-        "averageGreenHits": 0.7115384615384616,
-        "orangeHitRate": 0.0641025641025641,
-        "jointHitRate": 0.03205128205128205,
+        "evaluated": 174,
+        "greenAnyHitRate": 0.5574712643678161,
+        "greenAtLeast3HitRate": 0.011494252873563218,
+        "averageGreenHits": 0.7068965517241379,
+        "orangeHitRate": 0.08045977011494253,
+        "jointHitRate": 0.04597701149425287,
         "baselineGreenAnyHitRate": 0.5610229429015008,
         "baselineGreenAtLeast3HitRate": 0.013864930136277384
+      }
+    ],
+    "predictionHistory": [
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          33,
+          15,
+          9,
+          21,
+          34
+        ],
+        "orange": 8,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          28,
+          34,
+          33,
+          27,
+          15
+        ],
+        "orange": 8,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          14,
+          13,
+          15
+        ],
+        "orange": 10,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 3,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          14,
+          21,
+          13,
+          15,
+          16
+        ],
+        "orange": 10,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          22,
+          35,
+          3,
+          10,
+          11
+        ],
+        "orange": 3,
+        "greenHits": 2,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00808",
+        "targetDrawId": "LOTTO535-00809",
+        "targetTimestamp": "2026-08-07T13:00:00.000Z",
+        "greens": [
+          34,
+          28,
+          5,
+          27,
+          7
+        ],
+        "orange": 6,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          33,
+          15,
+          34,
+          28,
+          23
+        ],
+        "orange": 8,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          28,
+          27,
+          34,
+          33,
+          35
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          32,
+          29,
+          22
+        ],
+        "orange": 4,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          33,
+          8,
+          12
+        ],
+        "orange": 9,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          32,
+          29,
+          4,
+          19,
+          23
+        ],
+        "orange": 4,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00807",
+        "targetDrawId": "LOTTO535-00808",
+        "targetTimestamp": "2026-08-06T21:00:00.000Z",
+        "greens": [
+          22,
+          9,
+          31,
+          20,
+          1
+        ],
+        "orange": 12,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          33,
+          34,
+          28,
+          15,
+          9
+        ],
+        "orange": 8,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          28,
+          27,
+          35,
+          34,
+          33
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          3,
+          31,
+          16
+        ],
+        "orange": 2,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          33,
+          22,
+          8
+        ],
+        "orange": 9,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          3,
+          31,
+          23,
+          16,
+          17
+        ],
+        "orange": 2,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00806",
+        "targetDrawId": "LOTTO535-00807",
+        "targetTimestamp": "2026-08-06T13:00:00.000Z",
+        "greens": [
+          14,
+          21,
+          13,
+          15,
+          6
+        ],
+        "orange": 10,
+        "greenHits": 2,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          34,
+          28,
+          33,
+          15,
+          9
+        ],
+        "orange": 8,
+        "greenHits": 1,
+        "orangeHit": true
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          28,
+          27,
+          33,
+          35,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          34,
+          5,
+          28
+        ],
+        "orange": 6,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          33,
+          8,
+          12
+        ],
+        "orange": 9,
+        "greenHits": 2,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          22,
+          9,
+          31,
+          20,
+          1
+        ],
+        "orange": 12,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00805",
+        "targetDrawId": "LOTTO535-00806",
+        "targetTimestamp": "2026-08-05T21:00:00.000Z",
+        "greens": [
+          34,
+          28,
+          5,
+          10,
+          27
+        ],
+        "orange": 6,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          34,
+          28,
+          33,
+          9,
+          23
+        ],
+        "orange": 8,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          28,
+          27,
+          33,
+          35,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          22,
+          35,
+          3,
+          10,
+          2
+        ],
+        "orange": 3,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          19,
+          11,
+          27,
+          29,
+          6
+        ],
+        "orange": 5,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00804",
+        "targetDrawId": "LOTTO535-00805",
+        "targetTimestamp": "2026-08-05T13:00:00.000Z",
+        "greens": [
+          34,
+          28,
+          5,
+          7,
+          12
+        ],
+        "orange": 6,
+        "greenHits": 0,
+        "orangeHit": true
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          28,
+          33,
+          34,
+          23,
+          15
+        ],
+        "orange": 8,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          27,
+          28,
+          33,
+          22,
+          35
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": true
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          35
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": true
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          22,
+          28,
+          35
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": true
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          22,
+          35,
+          3,
+          10,
+          2
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": true
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          19,
+          11,
+          27,
+          29,
+          6
+        ],
+        "orange": 5,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00803",
+        "targetDrawId": "LOTTO535-00804",
+        "targetTimestamp": "2026-08-04T21:00:00.000Z",
+        "greens": [
+          34,
+          28,
+          5,
+          7,
+          12
+        ],
+        "orange": 6,
+        "greenHits": 2,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          28,
+          33,
+          23,
+          35,
+          9
+        ],
+        "orange": 8,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          27,
+          28,
+          15,
+          22,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 2,
+        "orangeHit": true
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          22,
+          9,
+          1
+        ],
+        "orange": 12,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          7,
+          26,
+          33
+        ],
+        "orange": 9,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          22,
+          9,
+          31,
+          20,
+          1
+        ],
+        "orange": 12,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          35,
+          28,
+          3,
+          11,
+          10
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": true
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00802",
+        "targetDrawId": "LOTTO535-00803",
+        "targetTimestamp": "2026-08-04T13:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          33,
+          8,
+          12
+        ],
+        "orange": 9,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          28,
+          33,
+          35,
+          9,
+          27
+        ],
+        "orange": 11,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          27,
+          28,
+          22,
+          15,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          7,
+          26,
+          33
+        ],
+        "orange": 9,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          7,
+          26,
+          33
+        ],
+        "orange": 9,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          33,
+          22,
+          8
+        ],
+        "orange": 9,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          14,
+          21,
+          13,
+          16,
+          23
+        ],
+        "orange": 10,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00801",
+        "targetDrawId": "LOTTO535-00802",
+        "targetTimestamp": "2026-08-03T21:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          15,
+          18,
+          32
+        ],
+        "orange": 11,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          28,
+          33,
+          35,
+          27,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          27,
+          22,
+          28,
+          15,
+          4
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          7,
+          26,
+          33
+        ],
+        "orange": 9,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          7,
+          26,
+          33
+        ],
+        "orange": 9,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          33,
+          8,
+          12
+        ],
+        "orange": 9,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          22,
+          9,
+          31,
+          20,
+          1
+        ],
+        "orange": 12,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00800",
+        "targetDrawId": "LOTTO535-00801",
+        "targetTimestamp": "2026-08-03T13:00:00.000Z",
+        "greens": [
+          35,
+          28,
+          3,
+          11,
+          10
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          28,
+          33,
+          35,
+          27,
+          34
+        ],
+        "orange": 3,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          27,
+          28,
+          22,
+          11,
+          15
+        ],
+        "orange": 3,
+        "greenHits": 2,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          14,
+          13,
+          15
+        ],
+        "orange": 10,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          7,
+          26,
+          33
+        ],
+        "orange": 9,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          14,
+          13,
+          15,
+          16,
+          23
+        ],
+        "orange": 10,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          19,
+          11,
+          27,
+          29,
+          5
+        ],
+        "orange": 5,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00799",
+        "targetDrawId": "LOTTO535-00800",
+        "targetTimestamp": "2026-08-02T21:00:00.000Z",
+        "greens": [
+          26,
+          4,
+          6,
+          25,
+          12
+        ],
+        "orange": 7,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          28,
+          27,
+          34,
+          33,
+          23
+        ],
+        "orange": 6,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          27,
+          22,
+          28,
+          35,
+          11
+        ],
+        "orange": 3,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          8
+        ],
+        "orange": 9,
+        "greenHits": 1,
+        "orangeHit": true
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          22,
+          33,
+          8
+        ],
+        "orange": 9,
+        "greenHits": 2,
+        "orangeHit": true
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          14,
+          13,
+          15,
+          16,
+          23
+        ],
+        "orange": 10,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00798",
+        "targetDrawId": "LOTTO535-00799",
+        "targetTimestamp": "2026-08-02T13:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          21,
+          32,
+          18
+        ],
+        "orange": 11,
+        "greenHits": 2,
+        "orangeHit": false
+      },
+      {
+        "model": "Bayesian: tần suất gần đây có làm mượt",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          28,
+          27,
+          34,
+          35,
+          15
+        ],
+        "orange": 8,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          27,
+          22,
+          28,
+          35,
+          23
+        ],
+        "orange": 3,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Transition sau cam gần nhất",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          32,
+          29,
+          22
+        ],
+        "orange": 4,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Tần suất dài hạn (120 kỳ)",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          8
+        ],
+        "orange": 9,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Quá hạn / chu kỳ trung bình",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          35,
+          4,
+          13
+        ],
+        "orange": 11,
+        "greenHits": 0,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 1",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          32,
+          29,
+          8,
+          19,
+          23
+        ],
+        "orange": 4,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 2",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          26,
+          7,
+          33,
+          15,
+          12
+        ],
+        "orange": 9,
+        "greenHits": 1,
+        "orangeHit": false
+      },
+      {
+        "model": "Vé phủ 3",
+        "basedOnDrawId": "LOTTO535-00797",
+        "targetDrawId": "LOTTO535-00798",
+        "targetTimestamp": "2026-08-01T21:00:00.000Z",
+        "greens": [
+          22,
+          35,
+          28,
+          3,
+          10
+        ],
+        "orange": 3,
+        "greenHits": 0,
+        "orangeHit": false
       }
     ],
     "recommendations": [
       {
         "model": "Transition sau cam gần nhất",
-        "orange": 10,
+        "orange": 4,
         "greens": [
-          14,
-          13,
-          15
+          32,
+          29,
+          4
         ]
       },
       {
         "model": "Tần suất dài hạn (120 kỳ)",
-        "orange": 9,
+        "orange": 3,
         "greens": [
-          26,
-          7,
-          8
+          22,
+          28,
+          34
         ]
       },
       {
         "model": "Quá hạn / chu kỳ trung bình",
-        "orange": 3,
+        "orange": 11,
         "greens": [
-          22,
-          3,
-          35
+          35,
+          4,
+          13
         ]
       }
     ],
@@ -4892,7 +6383,15 @@
         "count": 16
       },
       {
+        "key": "14,19",
+        "count": 16
+      },
+      {
         "key": "3,35",
+        "count": 16
+      },
+      {
+        "key": "15,19",
         "count": 16
       },
       {
@@ -4912,11 +6411,15 @@
         "count": 15
       },
       {
-        "key": "14,19",
+        "key": "19,21",
         "count": 15
       },
       {
         "key": "4,6",
+        "count": 15
+      },
+      {
+        "key": "3,6",
         "count": 15
       },
       {
@@ -4932,6 +6435,10 @@
         "count": 14
       },
       {
+        "key": "13,35",
+        "count": 14
+      },
+      {
         "key": "13,19",
         "count": 14
       },
@@ -4944,10 +6451,6 @@
         "count": 14
       },
       {
-        "key": "19,21",
-        "count": 14
-      },
-      {
         "key": "11,27",
         "count": 14
       },
@@ -4956,7 +6459,7 @@
         "count": 14
       },
       {
-        "key": "3,6",
+        "key": "15,26",
         "count": 14
       },
       {
@@ -4964,7 +6467,7 @@
         "count": 14
       },
       {
-        "key": "15,19",
+        "key": "18,33",
         "count": 14
       },
       {
@@ -4973,10 +6476,6 @@
       },
       {
         "key": "13,14",
-        "count": 13
-      },
-      {
-        "key": "13,35",
         "count": 13
       },
       {
@@ -5008,6 +6507,10 @@
         "count": 13
       },
       {
+        "key": "22,29",
+        "count": 13
+      },
+      {
         "key": "14,22",
         "count": 13
       },
@@ -5024,12 +6527,20 @@
         "count": 13
       },
       {
-        "key": "15,26",
+        "key": "10,15",
         "count": 13
       },
       {
-        "key": "18,33",
+        "key": "10,18",
         "count": 13
+      },
+      {
+        "key": "9,23",
+        "count": 13
+      },
+      {
+        "key": "15,16",
+        "count": 12
       },
       {
         "key": "8,27",
@@ -5044,6 +6555,10 @@
         "count": 12
       },
       {
+        "key": "10,26",
+        "count": 12
+      },
+      {
         "key": "7,22",
         "count": 12
       },
@@ -5052,58 +6567,34 @@
         "count": 12
       },
       {
+        "key": "17,34",
+        "count": 12
+      },
+      {
         "key": "13,29",
         "count": 12
       },
       {
-        "key": "22,34",
-        "count": 12
-      },
-      {
-        "key": "23,26",
-        "count": 12
-      },
-      {
-        "key": "2,24",
-        "count": 12
-      },
-      {
-        "key": "2,34",
-        "count": 12
-      },
-      {
-        "key": "15,24",
-        "count": 12
-      },
-      {
-        "key": "22,29",
-        "count": 12
-      },
-      {
-        "key": "4,26",
-        "count": 12
-      },
-      {
-        "key": "2,29",
+        "key": "33,35",
         "count": 12
       }
     ],
     "distributions": {
       "oddEven": {
-        "3 odd / 2 even": 174,
-        "2 odd / 3 even": 123,
-        "4 odd / 1 even": 71,
-        "1 odd / 4 even": 68,
+        "3 odd / 2 even": 181,
+        "2 odd / 3 even": 127,
+        "4 odd / 1 even": 75,
+        "1 odd / 4 even": 71,
         "0 odd / 5 even": 6,
         "5 odd / 0 even": 14
       },
       "highLow": {
-        "0 high / 5 low": 10,
-        "2 high / 3 low": 138,
-        "5 high / 0 low": 11,
-        "3 high / 2 low": 151,
-        "4 high / 1 low": 64,
-        "1 high / 4 low": 82
+        "0 high / 5 low": 11,
+        "2 high / 3 low": 144,
+        "5 high / 0 low": 12,
+        "3 high / 2 low": 158,
+        "4 high / 1 low": 65,
+        "1 high / 4 low": 84
       },
       "sums": [
         61,
@@ -5561,7 +7052,25 @@
         120,
         121,
         86,
-        92
+        92,
+        125,
+        59,
+        103,
+        111,
+        110,
+        92,
+        91,
+        116,
+        114,
+        69,
+        107,
+        88,
+        91,
+        80,
+        73,
+        88,
+        50,
+        83
       ]
     },
     "rollingMeans": [
@@ -6020,7 +7529,25 @@
       88.3,
       91.3,
       92.2,
-      90.1
+      90.1,
+      90.7,
+      91.1,
+      95.9,
+      99.7,
+      101.6,
+      101.9,
+      99,
+      98.5,
+      101.3,
+      99,
+      97.2,
+      100.1,
+      98.9,
+      95.8,
+      92.1,
+      91.7,
+      87.6,
+      84.3
     ]
   }
 }
