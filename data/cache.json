@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-07T06:37:24.289Z",
+  "generatedAt": "2026-08-07T06:43:59.534Z",
   "statistics": {
-    "generatedAt": "2026-08-07T06:37:21.443Z",
+    "generatedAt": "2026-08-07T06:43:55.592Z",
     "drawCount": 474,
     "frequency": [
       {
@@ -221,10 +221,10 @@
         "count": 40,
         "drawsSinceLatest": 22,
         "maxGapDraws": 44,
-        "daysSinceLatest": 10.73427587962963,
+        "daysSinceLatest": 10.738837719907407,
         "averageGapDraws": 11.35897435897436,
         "averageIntervalDays": 5.683760683760684,
-        "overdueDays": 5.050515195868946,
+        "overdueDays": 5.055077036146723,
         "recurrencePercentile": 79.48717948717949
       },
       {
@@ -232,10 +232,10 @@
         "count": 38,
         "drawsSinceLatest": 7,
         "maxGapDraws": 36,
-        "daysSinceLatest": 3.4009425462962963,
+        "daysSinceLatest": 3.405504386574074,
         "averageGapDraws": 11.675675675675675,
         "averageIntervalDays": 5.837837837837838,
-        "overdueDays": -2.4368952915415414,
+        "overdueDays": -2.4323334512637635,
         "recurrencePercentile": 37.83783783783784
       },
       {
@@ -243,10 +243,10 @@
         "count": 45,
         "drawsSinceLatest": 5,
         "maxGapDraws": 45,
-        "daysSinceLatest": 2.4009425462962963,
+        "daysSinceLatest": 2.405504386574074,
         "averageGapDraws": 10.181818181818182,
         "averageIntervalDays": 5.090909090909091,
-        "overdueDays": -2.6899665446127945,
+        "overdueDays": -2.6854047043350167,
         "recurrencePercentile": 40.909090909090914
       },
       {
@@ -254,10 +254,10 @@
         "count": 37,
         "drawsSinceLatest": 0,
         "maxGapDraws": 65,
-        "daysSinceLatest": -0.26572412037037035,
+        "daysSinceLatest": -0.26116228009259257,
         "averageGapDraws": 11.583333333333334,
         "averageIntervalDays": 5.796296296296296,
-        "overdueDays": -6.062020416666666,
+        "overdueDays": -6.057458576388888,
         "recurrencePercentile": 0
       },
       {
@@ -265,10 +265,10 @@
         "count": 35,
         "drawsSinceLatest": 1,
         "maxGapDraws": 40,
-        "daysSinceLatest": 0.4009425462962963,
+        "daysSinceLatest": 0.40550438657407406,
         "averageGapDraws": 13.558823529411764,
         "averageIntervalDays": 6.7745098039215685,
-        "overdueDays": -6.373567257625273,
+        "overdueDays": -6.369005417347495,
         "recurrencePercentile": 0
       },
       {
@@ -276,10 +276,10 @@
         "count": 40,
         "drawsSinceLatest": 4,
         "maxGapDraws": 33,
-        "daysSinceLatest": 1.7342758796296296,
+        "daysSinceLatest": 1.7388377199074074,
         "averageGapDraws": 12,
         "averageIntervalDays": 6,
-        "overdueDays": -4.26572412037037,
+        "overdueDays": -4.261162280092592,
         "recurrencePercentile": 25.64102564102564
       },
       {
@@ -287,10 +287,10 @@
         "count": 34,
         "drawsSinceLatest": 2,
         "maxGapDraws": 62,
-        "daysSinceLatest": 0.7342758796296296,
+        "daysSinceLatest": 0.7388377199074074,
         "averageGapDraws": 14.212121212121213,
         "averageIntervalDays": 7.111111111111112,
-        "overdueDays": -6.376835231481482,
+        "overdueDays": -6.372273391203704,
         "recurrencePercentile": 3.0303030303030303
       },
       {
@@ -298,10 +298,10 @@
         "count": 36,
         "drawsSinceLatest": 3,
         "maxGapDraws": 94,
-        "daysSinceLatest": 1.4009425462962963,
+        "daysSinceLatest": 1.4055043865740742,
         "averageGapDraws": 13.17142857142857,
         "averageIntervalDays": 6.5809523809523816,
-        "overdueDays": -5.180009834656085,
+        "overdueDays": -5.175447994378308,
         "recurrencePercentile": 20
       },
       {
@@ -309,10 +309,10 @@
         "count": 50,
         "drawsSinceLatest": 10,
         "maxGapDraws": 36,
-        "daysSinceLatest": 4.73427587962963,
+        "daysSinceLatest": 4.738837719907408,
         "averageGapDraws": 9.387755102040817,
         "averageIntervalDays": 4.6938775510204085,
-        "overdueDays": 0.04039832860922132,
+        "overdueDays": 0.04496016888699916,
         "recurrencePercentile": 59.183673469387756
       },
       {
@@ -320,10 +320,10 @@
         "count": 46,
         "drawsSinceLatest": 8,
         "maxGapDraws": 45,
-        "daysSinceLatest": 3.73427587962963,
+        "daysSinceLatest": 3.738837719907407,
         "averageGapDraws": 10.333333333333334,
         "averageIntervalDays": 5.17037037037037,
-        "overdueDays": -1.4360944907407402,
+        "overdueDays": -1.4315326504629629,
         "recurrencePercentile": 55.55555555555556
       },
       {
@@ -331,10 +331,10 @@
         "count": 31,
         "drawsSinceLatest": 53,
         "maxGapDraws": 69,
-        "daysSinceLatest": 26.400942546296296,
+        "daysSinceLatest": 26.405504386574073,
         "averageGapDraws": 13.8,
         "averageIntervalDays": 6.9,
-        "overdueDays": 19.500942546296294,
+        "overdueDays": 19.505504386574074,
         "recurrencePercentile": 96.66666666666667
       },
       {
@@ -342,10 +342,10 @@
         "count": 42,
         "drawsSinceLatest": 9,
         "maxGapDraws": 37,
-        "daysSinceLatest": 4.400942546296296,
+        "daysSinceLatest": 4.405504386574074,
         "averageGapDraws": 10.585365853658537,
         "averageIntervalDays": 5.2926829268292686,
-        "overdueDays": -0.8917403805329727,
+        "overdueDays": -0.8871785402551948,
         "recurrencePercentile": 53.65853658536586
       }
     ],
@@ -356,10 +356,10 @@
           "count": 19,
           "drawsSinceLatest": 11,
           "maxGapDraws": 40,
-          "daysSinceLatest": 10.734275960648148,
+          "daysSinceLatest": 10.738837881944445,
           "averageGapDraws": 11.333333333333334,
           "averageIntervalDays": 11.333333333333334,
-          "overdueDays": -0.599057372685186,
+          "overdueDays": -0.5944954513888892,
           "recurrencePercentile": 61.111111111111114
         },
         {
@@ -367,10 +367,10 @@
           "count": 15,
           "drawsSinceLatest": 54,
           "maxGapDraws": 37,
-          "daysSinceLatest": 53.73427596064815,
+          "daysSinceLatest": 53.73883788194444,
           "averageGapDraws": 10.357142857142858,
           "averageIntervalDays": 10.357142857142858,
-          "overdueDays": 43.37713310350529,
+          "overdueDays": 43.38169502480159,
           "recurrencePercentile": 100
         },
         {
@@ -378,10 +378,10 @@
           "count": 23,
           "drawsSinceLatest": 3,
           "maxGapDraws": 39,
-          "daysSinceLatest": 2.734275960648148,
+          "daysSinceLatest": 2.7388378819444443,
           "averageGapDraws": 10.136363636363637,
           "averageIntervalDays": 10.136363636363637,
-          "overdueDays": -7.402087675715489,
+          "overdueDays": -7.397525754419192,
           "recurrencePercentile": 18.181818181818183
         },
         {
@@ -389,10 +389,10 @@
           "count": 19,
           "drawsSinceLatest": 0,
           "maxGapDraws": 43,
-          "daysSinceLatest": -0.26572403935185185,
+          "daysSinceLatest": -0.26116211805555556,
           "averageGapDraws": 9.722222222222221,
           "averageIntervalDays": 9.722222222222221,
-          "overdueDays": -9.987946261574074,
+          "overdueDays": -9.983384340277777,
           "recurrencePercentile": 0
         },
         {
@@ -400,10 +400,10 @@
           "count": 16,
           "drawsSinceLatest": 9,
           "maxGapDraws": 42,
-          "daysSinceLatest": 8.734275960648148,
+          "daysSinceLatest": 8.738837881944445,
           "averageGapDraws": 14.8,
           "averageIntervalDays": 14.8,
-          "overdueDays": -6.065724039351853,
+          "overdueDays": -6.061162118055556,
           "recurrencePercentile": 40
         },
         {
@@ -411,10 +411,10 @@
           "count": 21,
           "drawsSinceLatest": 2,
           "maxGapDraws": 41,
-          "daysSinceLatest": 1.7342759606481482,
+          "daysSinceLatest": 1.7388378819444446,
           "averageGapDraws": 11.7,
           "averageIntervalDays": 11.7,
-          "overdueDays": -9.965724039351851,
+          "overdueDays": -9.961162118055555,
           "recurrencePercentile": 0
         },
         {
@@ -422,10 +422,10 @@
           "count": 17,
           "drawsSinceLatest": 1,
           "maxGapDraws": 44,
-          "daysSinceLatest": 0.7342759606481482,
+          "daysSinceLatest": 0.7388378819444444,
           "averageGapDraws": 12.9375,
           "averageIntervalDays": 12.9375,
-          "overdueDays": -12.203224039351852,
+          "overdueDays": -12.198662118055555,
           "recurrencePercentile": 0
         },
         {
@@ -433,10 +433,10 @@
           "count": 23,
           "drawsSinceLatest": 14,
           "maxGapDraws": 47,
-          "daysSinceLatest": 13.734275960648148,
+          "daysSinceLatest": 13.738837881944445,
           "averageGapDraws": 9.909090909090908,
           "averageIntervalDays": 9.909090909090908,
-          "overdueDays": 3.8251850515572396,
+          "overdueDays": 3.8297469728535365,
           "recurrencePercentile": 77.27272727272727
         },
         {
@@ -444,10 +444,10 @@
           "count": 30,
           "drawsSinceLatest": 5,
           "maxGapDraws": 35,
-          "daysSinceLatest": 4.734275960648148,
+          "daysSinceLatest": 4.738837881944445,
           "averageGapDraws": 7.931034482758621,
           "averageIntervalDays": 7.931034482758621,
-          "overdueDays": -3.196758522110473,
+          "overdueDays": -3.192196600814176,
           "recurrencePercentile": 41.37931034482759
         },
         {
@@ -455,10 +455,10 @@
           "count": 26,
           "drawsSinceLatest": 4,
           "maxGapDraws": 53,
-          "daysSinceLatest": 3.734275960648148,
+          "daysSinceLatest": 3.7388378819444443,
           "averageGapDraws": 9.2,
           "averageIntervalDays": 9.2,
-          "overdueDays": -5.465724039351851,
+          "overdueDays": -5.4611621180555545,
           "recurrencePercentile": 24
         },
         {
@@ -466,10 +466,10 @@
           "count": 8,
           "drawsSinceLatest": 61,
           "maxGapDraws": 54,
-          "daysSinceLatest": 60.73427596064815,
+          "daysSinceLatest": 60.73883788194444,
           "averageGapDraws": 24.142857142857142,
           "averageIntervalDays": 24.142857142857142,
-          "overdueDays": 36.59141881779101,
+          "overdueDays": 36.595980739087295,
           "recurrencePercentile": 100
         },
         {
@@ -477,10 +477,10 @@
           "count": 20,
           "drawsSinceLatest": 13,
           "maxGapDraws": 37,
-          "daysSinceLatest": 12.734275960648148,
+          "daysSinceLatest": 12.738837881944445,
           "averageGapDraws": 10.789473684210526,
           "averageIntervalDays": 10.789473684210526,
-          "overdueDays": 1.9448022764376223,
+          "overdueDays": 1.9493641977339191,
           "recurrencePercentile": 68.42105263157895
         }
       ],
@@ -490,10 +490,10 @@
           "count": 21,
           "drawsSinceLatest": 12,
           "maxGapDraws": 22,
-          "daysSinceLatest": 12.400942627314814,
+          "daysSinceLatest": 12.405504560185186,
           "averageGapDraws": 11,
           "averageIntervalDays": 11,
-          "overdueDays": 1.400942627314814,
+          "overdueDays": 1.4055045601851859,
           "recurrencePercentile": 65
         },
         {
@@ -501,10 +501,10 @@
           "count": 23,
           "drawsSinceLatest": 3,
           "maxGapDraws": 28,
-          "daysSinceLatest": 3.400942627314815,
+          "daysSinceLatest": 3.405504560185185,
           "averageGapDraws": 9.818181818181818,
           "averageIntervalDays": 9.818181818181818,
-          "overdueDays": -6.4172391908670035,
+          "overdueDays": -6.412677257996633,
           "recurrencePercentile": 13.636363636363635
         },
         {
@@ -512,10 +512,10 @@
           "count": 22,
           "drawsSinceLatest": 2,
           "maxGapDraws": 43,
-          "daysSinceLatest": 2.400942627314815,
+          "daysSinceLatest": 2.405504560185185,
           "averageGapDraws": 10.666666666666666,
           "averageIntervalDays": 10.666666666666666,
-          "overdueDays": -8.265724039351852,
+          "overdueDays": -8.261162106481482,
           "recurrencePercentile": 14.285714285714285
         },
         {
@@ -523,10 +523,10 @@
           "count": 18,
           "drawsSinceLatest": 15,
           "maxGapDraws": 33,
-          "daysSinceLatest": 15.400942627314814,
+          "daysSinceLatest": 15.405504560185186,
           "averageGapDraws": 11.352941176470589,
           "averageIntervalDays": 11.352941176470589,
-          "overdueDays": 4.048001450844225,
+          "overdueDays": 4.052563383714597,
           "recurrencePercentile": 70.58823529411765
         },
         {
@@ -534,10 +534,10 @@
           "count": 19,
           "drawsSinceLatest": 0,
           "maxGapDraws": 43,
-          "daysSinceLatest": 0.40094262731481484,
+          "daysSinceLatest": 0.40550456018518516,
           "averageGapDraws": 12.5,
           "averageIntervalDays": 12.5,
-          "overdueDays": -12.099057372685186,
+          "overdueDays": -12.094495439814814,
           "recurrencePercentile": 0
         },
         {
@@ -545,10 +545,10 @@
           "count": 19,
           "drawsSinceLatest": 44,
           "maxGapDraws": 25,
-          "daysSinceLatest": 44.40094262731481,
+          "daysSinceLatest": 44.405504560185186,
           "averageGapDraws": 9.555555555555555,
           "averageIntervalDays": 9.555555555555555,
-          "overdueDays": 34.845387071759255,
+          "overdueDays": 34.84994900462963,
           "recurrencePercentile": 100
         },
         {
@@ -556,10 +556,10 @@
           "count": 17,
           "drawsSinceLatest": 14,
           "maxGapDraws": 55,
-          "daysSinceLatest": 14.400942627314814,
+          "daysSinceLatest": 14.405504560185186,
           "averageGapDraws": 13.8125,
           "averageIntervalDays": 13.8125,
-          "overdueDays": 0.588442627314814,
+          "overdueDays": 0.5930045601851859,
           "recurrencePercentile": 75
         },
         {
@@ -567,10 +567,10 @@
           "count": 13,
           "drawsSinceLatest": 1,
           "maxGapDraws": 78,
-          "daysSinceLatest": 1.400942627314815,
+          "daysSinceLatest": 1.4055045601851852,
           "averageGapDraws": 18.5,
           "averageIntervalDays": 18.5,
-          "overdueDays": -17.099057372685184,
+          "overdueDays": -17.094495439814814,
           "recurrencePercentile": 0
         },
         {
@@ -578,10 +578,10 @@
           "count": 20,
           "drawsSinceLatest": 9,
           "maxGapDraws": 60,
-          "daysSinceLatest": 9.400942627314814,
+          "daysSinceLatest": 9.405504560185186,
           "averageGapDraws": 11.842105263157896,
           "averageIntervalDays": 11.842105263157896,
-          "overdueDays": -2.4411626358430816,
+          "overdueDays": -2.4366007029727097,
           "recurrencePercentile": 57.89473684210527
         },
         {
@@ -589,10 +589,10 @@
           "count": 20,
           "drawsSinceLatest": 5,
           "maxGapDraws": 46,
-          "daysSinceLatest": 5.400942627314815,
+          "daysSinceLatest": 5.405504560185185,
           "averageGapDraws": 12.157894736842104,
           "averageIntervalDays": 12.157894736842104,
-          "overdueDays": -6.7569521095272895,
+          "overdueDays": -6.752390176656919,
           "recurrencePercentile": 31.57894736842105
         },
         {
@@ -600,10 +600,10 @@
           "count": 23,
           "drawsSinceLatest": 26,
           "maxGapDraws": 49,
-          "daysSinceLatest": 26.400942627314816,
+          "daysSinceLatest": 26.405504560185186,
           "averageGapDraws": 9.409090909090908,
           "averageIntervalDays": 9.409090909090908,
-          "overdueDays": 16.991851718223906,
+          "overdueDays": 16.99641365109428,
           "recurrencePercentile": 95.45454545454545
         },
         {
@@ -611,10 +611,10 @@
           "count": 22,
           "drawsSinceLatest": 4,
           "maxGapDraws": 37,
-          "daysSinceLatest": 4.400942627314815,
+          "daysSinceLatest": 4.405504560185185,
           "averageGapDraws": 10.333333333333334,
           "averageIntervalDays": 10.333333333333334,
-          "overdueDays": -5.932390706018519,
+          "overdueDays": -5.927828773148149,
           "recurrencePercentile": 38.095238095238095
         }
       ]
@@ -4813,6 +4813,132 @@
         }
       ]
     },
+    "coverageBacktests": [
+      {
+        "id": "conditional",
+        "label": "Đi cùng ĐB + độ đi chung",
+        "evaluated": 174,
+        "greenAnyHitRate": 0.9482758620689655,
+        "greenAtLeast3HitRate": 0.41379310344827586,
+        "averageGreenHits": 2.189655172413793,
+        "orangeAnyHitRate": 0.26436781609195403,
+        "anyTicketJointHitRate": 0.13218390804597702,
+        "ticketStats": [
+          {
+            "greenAnyHitRate": 0.5574712643678161,
+            "averageGreenHits": 0.7011494252873564,
+            "orangeHitRate": 0.08620689655172414,
+            "jointHitRate": 0.04597701149425287
+          },
+          {
+            "greenAnyHitRate": 0.5747126436781609,
+            "averageGreenHits": 0.7758620689655172,
+            "orangeHitRate": 0.11494252873563218,
+            "jointHitRate": 0.05172413793103448
+          },
+          {
+            "greenAnyHitRate": 0.5459770114942529,
+            "averageGreenHits": 0.7126436781609196,
+            "orangeHitRate": 0.06321839080459771,
+            "jointHitRate": 0.034482758620689655
+          }
+        ],
+        "tickets": [
+          {
+            "orange": 4,
+            "greens": [
+              32,
+              29,
+              4,
+              22,
+              19
+            ]
+          },
+          {
+            "orange": 9,
+            "greens": [
+              26,
+              7,
+              33,
+              8,
+              12
+            ]
+          },
+          {
+            "orange": 8,
+            "greens": [
+              15,
+              17,
+              23,
+              18,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "momentum",
+        "label": "Momentum 60 kỳ + liên kết ĐB",
+        "evaluated": 174,
+        "greenAnyHitRate": 0.9597701149425287,
+        "greenAtLeast3HitRate": 0.3275862068965517,
+        "averageGreenHits": 2.045977011494253,
+        "orangeAnyHitRate": 0.26436781609195403,
+        "anyTicketJointHitRate": 0.12643678160919541,
+        "ticketStats": [
+          {
+            "greenAnyHitRate": 0.4942528735632184,
+            "averageGreenHits": 0.6264367816091954,
+            "orangeHitRate": 0.08620689655172414,
+            "jointHitRate": 0.028735632183908046
+          },
+          {
+            "greenAnyHitRate": 0.5689655172413793,
+            "averageGreenHits": 0.7241379310344828,
+            "orangeHitRate": 0.11494252873563218,
+            "jointHitRate": 0.06321839080459771
+          },
+          {
+            "greenAnyHitRate": 0.5747126436781609,
+            "averageGreenHits": 0.6954022988505747,
+            "orangeHitRate": 0.06321839080459771,
+            "jointHitRate": 0.034482758620689655
+          }
+        ],
+        "tickets": [
+          {
+            "orange": 4,
+            "greens": [
+              32,
+              4,
+              29,
+              22,
+              19
+            ]
+          },
+          {
+            "orange": 9,
+            "greens": [
+              33,
+              7,
+              26,
+              12,
+              10
+            ]
+          },
+          {
+            "orange": 8,
+            "greens": [
+              15,
+              17,
+              23,
+              28,
+              6
+            ]
+          }
+        ]
+      }
+    ],
     "greenForecast": {
       "model": "Ensemble: Bayesian + dài hạn + chu kỳ + đi chung",
       "greens": [

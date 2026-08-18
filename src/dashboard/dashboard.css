@@ -2,3 +2,4 @@
 .transition-filters{display:flex;gap:.5rem;margin:.75rem 0}.transition-filters button{background:rgba(148,163,184,.25);color:inherit}.transition-filters .active-filter{background:#2dd4bf;color:#10213a}
 .ticket-input{width:min(100%,34rem);box-sizing:border-box;padding:.7rem;border-radius:.5rem;border:1px solid #64748b;background:rgba(15,23,42,.3);color:inherit;font:inherit}
 .iching-result{margin-top:1rem;padding:.75rem 1rem .75rem 4.5rem;border-radius:.5rem;background:rgba(251,146,60,.12);position:relative}.iching-result:before{content:'☯';position:absolute;left:1rem;top:.6rem;color:#fb923c;font-size:2.5rem;line-height:1}
+.pair-note{display:flex;align-items:center;gap:.45rem;margin:.45rem 0;font-size:.9rem}.pair-note .ball{width:1.7rem;height:1.7rem;font-size:.8rem}
