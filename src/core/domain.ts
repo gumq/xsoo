@@ -27,5 +27,56 @@ export interface CoverageTicket { orange: number; greens: number[]; }
 export interface CoverageTicketBacktest { greenAnyHitRate: number; averageGreenHits: number; orangeHitRate: number; jointHitRate: number; }
 export interface CoverageBacktest { evaluated: number; greenAnyHitRate: number; greenAtLeast3HitRate: number; averageGreenHits: number; orangeAnyHitRate: number; anyTicketJointHitRate: number; ticketStats: CoverageTicketBacktest[]; tickets: CoverageTicket[]; }
 export interface CoverageStrategyBacktest extends CoverageBacktest { id: string; label: string; }
-export interface Statistics { generatedAt: string; drawCount: number; frequency: NumberMetric[]; specialFrequency: SpecialMetric[]; specialByHour: Record<string, SpecialMetric[]>; specialAssociations: Record<string, SpecialAssociation[]>; mainAssociations: Record<string, SpecialAssociation[]>; monthlyDominantSpecials: MonthlyDominantSpecial[]; recentPatternAnalysis: RecentPatternAnalysis; specialTransitions: Record<string, SpecialAssociation[]>; specialTransitionsByHour: Record<string, Record<string, SpecialAssociation[]>>; specialBacktest: SpecialBacktest; comboBacktests: ComboBacktest[]; coverageBacktest: CoverageBacktest; coverageBacktests: CoverageStrategyBacktest[]; greenForecast: GreenForecast; greenForecasts: GreenForecast[]; greenBacktest: GreenBacktest; greenModelBacktests: GreenModelBacktest[]; predictionHistory: PredictionHistoryItem[]; recommendations: Recommendation[]; pairs: Array<{ key: string; count: number }>; distributions: { oddEven: Record<string, number>; highLow: Record<string, number>; sums: number[]; }; rollingMeans: number[]; }
+export interface TopNumber { number: number; count: number; rate: number; }
+export interface PairCount { pair: [number, number]; count: number; }
+export interface DayOfMonthAnalysis {
+  day: number; totalDraws: number;
+  topMainNumbers: TopNumber[]; topSpecialNumbers: TopNumber[];
+  oddRatio: number; evenRatio: number;
+  consecutivePairRate: number; consecutivePairs: PairCount[];
+  tabooMainNumbers: number[]; tabooSpecialNumbers: number[];
+  oddGroupRate: number; evenGroupRate: number;
+  under30Rate: number;
+  specialOddRatio: number;
+  specialEvenRatio: number;
+  oddEvenDistribution: Record<string, number>;
+  dominantOddEvenPattern: string;
+}
+export interface MonthAnalysis {
+  month: number; totalDraws: number;
+  dominantMainNumbers: TopNumber[]; dominantSpecialNumbers: TopNumber[];
+  oddRatio: number; evenRatio: number;
+  consecutivePairRate: number;
+  tabooSequences: string[]; tabooNumbers: number[];
+  oddGroupRate: number; evenGroupRate: number;
+  under30Rate: number;
+  specialOddRatio: number;
+  specialEvenRatio: number;
+  oddEvenDistribution: Record<string, number>;
+  dominantOddEvenPattern: string;
+}
+export interface CalendarTicket {
+  ticketIndex: number;
+  greens: number[];
+  orange: number;
+}
+
+export interface CalendarForecast {
+  basedOnDay: number;
+  basedOnMonth: number;
+  candidatePool18: number[];
+  tickets: CalendarTicket[];
+  suggestedGreens: number[];
+  suggestedOrange: number;
+  reasoning: string[];
+  avoidNumbers: number[];
+  avoidSequences: string[];
+}
+export interface CalendarAnalysis {
+  dayOfMonthAnalysis: DayOfMonthAnalysis[];
+  monthAnalysis: MonthAnalysis[];
+  calendarForecast: CalendarForecast;
+  calendarForecasts?: CalendarForecast[];
+}
+export interface Statistics { generatedAt: string; drawCount: number; frequency: NumberMetric[]; specialFrequency: SpecialMetric[]; specialByHour: Record<string, SpecialMetric[]>; specialAssociations: Record<string, SpecialAssociation[]>; mainAssociations: Record<string, SpecialAssociation[]>; monthlyDominantSpecials: MonthlyDominantSpecial[]; recentPatternAnalysis: RecentPatternAnalysis; specialTransitions: Record<string, SpecialAssociation[]>; specialTransitionsByHour: Record<string, Record<string, SpecialAssociation[]>>; specialBacktest: SpecialBacktest; comboBacktests: ComboBacktest[]; coverageBacktest: CoverageBacktest; coverageBacktests: CoverageStrategyBacktest[]; greenForecast: GreenForecast; greenForecasts: GreenForecast[]; greenBacktest: GreenBacktest; greenModelBacktests: GreenModelBacktest[]; predictionHistory: PredictionHistoryItem[]; recommendations: Recommendation[]; pairs: Array<{ key: string; count: number }>; distributions: { oddEven: Record<string, number>; highLow: Record<string, number>; sums: number[]; }; rollingMeans: number[]; calendarAnalysis: CalendarAnalysis; }
 export interface Cache { generatedAt: string; statistics: Statistics; }

@@ -8530,5 +8530,563 @@
       "validatedAt": "2026-08-07T06:31:53.531Z",
       "schemaVersion": "1"
     }
+  },
+  {
+    "drawId": "LOTTO535-00810",
+    "date": "2026-08-07",
+    "timestamp": "2026-08-07T21:00:00.000Z",
+    "mainNumbers": [
+      2,
+      4,
+      7,
+      18,
+      29
+    ],
+    "specialNumber": 10,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/07-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:59.932Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00812",
+    "date": "2026-08-08",
+    "timestamp": "2026-08-08T21:00:00.000Z",
+    "mainNumbers": [
+      6,
+      10,
+      13,
+      14,
+      19
+    ],
+    "specialNumber": 8,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/10-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:50.497Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00813",
+    "date": "2026-08-09",
+    "timestamp": "2026-08-09T13:00:00.000Z",
+    "mainNumbers": [
+      4,
+      13,
+      21,
+      23,
+      28
+    ],
+    "specialNumber": 1,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/10-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:50.497Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00814",
+    "date": "2026-08-09",
+    "timestamp": "2026-08-09T21:00:00.000Z",
+    "mainNumbers": [
+      1,
+      16,
+      19,
+      29,
+      33
+    ],
+    "specialNumber": 1,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/10-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:50.497Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00815",
+    "date": "2026-08-10",
+    "timestamp": "2026-08-10T13:00:00.000Z",
+    "mainNumbers": [
+      23,
+      25,
+      28,
+      31,
+      35
+    ],
+    "specialNumber": 3,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/10-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:50.497Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00816",
+    "date": "2026-08-10",
+    "timestamp": "2026-08-10T21:00:00.000Z",
+    "mainNumbers": [
+      2,
+      8,
+      22,
+      23,
+      30
+    ],
+    "specialNumber": 12,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/10-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:50.497Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00818",
+    "date": "2026-08-11",
+    "timestamp": "2026-08-11T21:00:00.000Z",
+    "mainNumbers": [
+      11,
+      14,
+      15,
+      21,
+      28
+    ],
+    "specialNumber": 10,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/13-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:41.378Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00819",
+    "date": "2026-08-12",
+    "timestamp": "2026-08-12T13:00:00.000Z",
+    "mainNumbers": [
+      7,
+      9,
+      17,
+      22,
+      33
+    ],
+    "specialNumber": 3,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/13-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:41.378Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00820",
+    "date": "2026-08-12",
+    "timestamp": "2026-08-12T21:00:00.000Z",
+    "mainNumbers": [
+      13,
+      18,
+      20,
+      23,
+      32
+    ],
+    "specialNumber": 2,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/13-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:41.378Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00821",
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:00:00.000Z",
+    "mainNumbers": [
+      8,
+      13,
+      15,
+      23,
+      34
+    ],
+    "specialNumber": 2,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/13-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:41.378Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00822",
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:00:00.000Z",
+    "mainNumbers": [
+      1,
+      7,
+      17,
+      26,
+      32
+    ],
+    "specialNumber": 7,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/13-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:41.378Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00824",
+    "date": "2026-08-14",
+    "timestamp": "2026-08-14T21:00:00.000Z",
+    "mainNumbers": [
+      3,
+      5,
+      7,
+      25,
+      33
+    ],
+    "specialNumber": 9,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/16-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:32.227Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00825",
+    "date": "2026-08-15",
+    "timestamp": "2026-08-15T13:00:00.000Z",
+    "mainNumbers": [
+      2,
+      3,
+      6,
+      16,
+      35
+    ],
+    "specialNumber": 7,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/16-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:32.227Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00826",
+    "date": "2026-08-15",
+    "timestamp": "2026-08-15T21:00:00.000Z",
+    "mainNumbers": [
+      8,
+      10,
+      17,
+      20,
+      28
+    ],
+    "specialNumber": 9,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/16-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:32.227Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00827",
+    "date": "2026-08-16",
+    "timestamp": "2026-08-16T13:00:00.000Z",
+    "mainNumbers": [
+      9,
+      20,
+      24,
+      30,
+      33
+    ],
+    "specialNumber": 2,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/16-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:32.227Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00828",
+    "date": "2026-08-16",
+    "timestamp": "2026-08-16T21:00:00.000Z",
+    "mainNumbers": [
+      3,
+      17,
+      19,
+      26,
+      34
+    ],
+    "specialNumber": 9,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/16-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:32.227Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00830",
+    "date": "2026-08-17",
+    "timestamp": "2026-08-17T21:00:00.000Z",
+    "mainNumbers": [
+      3,
+      9,
+      13,
+      22,
+      30
+    ],
+    "specialNumber": 7,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/19-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:22.894Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00831",
+    "date": "2026-08-18",
+    "timestamp": "2026-08-18T13:00:00.000Z",
+    "mainNumbers": [
+      3,
+      16,
+      21,
+      29,
+      35
+    ],
+    "specialNumber": 5,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/19-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:22.894Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00832",
+    "date": "2026-08-18",
+    "timestamp": "2026-08-18T21:00:00.000Z",
+    "mainNumbers": [
+      5,
+      10,
+      25,
+      26,
+      35
+    ],
+    "specialNumber": 5,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/19-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:22.894Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00833",
+    "date": "2026-08-19",
+    "timestamp": "2026-08-19T13:00:00.000Z",
+    "mainNumbers": [
+      1,
+      8,
+      22,
+      26,
+      34
+    ],
+    "specialNumber": 9,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/19-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:22.894Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00834",
+    "date": "2026-08-19",
+    "timestamp": "2026-08-19T21:00:00.000Z",
+    "mainNumbers": [
+      1,
+      19,
+      28,
+      29,
+      31
+    ],
+    "specialNumber": 12,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/19-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:22.894Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00836",
+    "date": "2026-08-20",
+    "timestamp": "2026-08-20T21:00:00.000Z",
+    "mainNumbers": [
+      2,
+      16,
+      18,
+      22,
+      35
+    ],
+    "specialNumber": 10,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/22-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:12.969Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00837",
+    "date": "2026-08-21",
+    "timestamp": "2026-08-21T13:00:00.000Z",
+    "mainNumbers": [
+      12,
+      13,
+      19,
+      23,
+      30
+    ],
+    "specialNumber": 11,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/22-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:12.969Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00838",
+    "date": "2026-08-21",
+    "timestamp": "2026-08-21T21:00:00.000Z",
+    "mainNumbers": [
+      2,
+      10,
+      11,
+      13,
+      22
+    ],
+    "specialNumber": 4,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/22-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:12.969Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00839",
+    "date": "2026-08-22",
+    "timestamp": "2026-08-22T13:00:00.000Z",
+    "mainNumbers": [
+      1,
+      3,
+      14,
+      32,
+      35
+    ],
+    "specialNumber": 12,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/22-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:12.969Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00840",
+    "date": "2026-08-22",
+    "timestamp": "2026-08-22T21:00:00.000Z",
+    "mainNumbers": [
+      9,
+      16,
+      28,
+      30,
+      31
+    ],
+    "specialNumber": 7,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/22-08-2026.html",
+      "validatedAt": "2026-09-05T03:30:12.969Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00841",
+    "date": "2026-08-23",
+    "timestamp": "2026-08-23T13:00:00.000Z",
+    "mainNumbers": [
+      2,
+      6,
+      12,
+      15,
+      24
+    ],
+    "specialNumber": 9,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/05-09-2026.html",
+      "validatedAt": "2026-09-05T03:25:58.460Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00842",
+    "date": "2026-08-23",
+    "timestamp": "2026-08-23T21:00:00.000Z",
+    "mainNumbers": [
+      3,
+      5,
+      13,
+      26,
+      34
+    ],
+    "specialNumber": 3,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/05-09-2026.html",
+      "validatedAt": "2026-09-05T03:25:58.460Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00843",
+    "date": "2026-08-24",
+    "timestamp": "2026-08-24T13:00:00.000Z",
+    "mainNumbers": [
+      1,
+      21,
+      22,
+      24,
+      25
+    ],
+    "specialNumber": 5,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/05-09-2026.html",
+      "validatedAt": "2026-09-05T03:25:58.460Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00844",
+    "date": "2026-08-24",
+    "timestamp": "2026-08-24T21:00:00.000Z",
+    "mainNumbers": [
+      1,
+      7,
+      13,
+      24,
+      33
+    ],
+    "specialNumber": 11,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/05-09-2026.html",
+      "validatedAt": "2026-09-05T03:25:58.460Z",
+      "schemaVersion": "1"
+    }
+  },
+  {
+    "drawId": "LOTTO535-00845",
+    "date": "2026-08-25",
+    "timestamp": "2026-08-25T13:00:00.000Z",
+    "mainNumbers": [
+      13,
+      14,
+      16,
+      20,
+      31
+    ],
+    "specialNumber": 5,
+    "validation": {
+      "source": "https://www.ketquadientoan.com/ket-qua-xo-so-dien-toan-lotto-535/05-09-2026.html",
+      "validatedAt": "2026-09-05T03:25:58.459Z",
+      "schemaVersion": "1"
+    }
   }
 ]

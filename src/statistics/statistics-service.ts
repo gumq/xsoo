@@ -1,4 +1,5 @@
 import type { EventRecord, EventRules, SpecialAssociation, SpecialMetric, Statistics } from '../core/domain';
+import { CalendarAnalysisService } from './calendar-analysis-service';
 
 const average = (values: number[]) => values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
 const combinations = (numbers: number[], size: number): string[] => size === 1 ? numbers.map(String) : numbers.flatMap((value, index) => combinations(numbers.slice(index + 1), size - 1).map((rest) => `${value},${rest}`));
@@ -8,11 +9,195 @@ const hour = (record: EventRecord) => record.timestamp.slice(11, 13);
 export class StatisticsService {
   public constructor(private readonly rules: EventRules) {}
   /**
-   * Creates three non-overlapping tickets from historical conditional associations.
-   * Consecutive values receive no artificial bonus: lottery ball positions are unordered,
-   * so only observed co-occurrence with the selected special ball and current ticket matters.
+   * Creates three non-overlapping tickets combining conditional associations with
+   * calendar day/month rules: eliminates taboo numbers, prioritizes dominant day numbers,
+   * enforces odd/even distribution and size (< 30) rules, and avoids taboo sequences.
    */
-  private coverageTickets(train: readonly EventRecord[], method: 'conditional' | 'momentum' = 'conditional'): import('../core/domain').CoverageTicket[] {
+  private coverageTickets(
+    train: readonly EventRecord[],
+    method: 'conditional' | 'momentum' | 'calendar' = 'calendar',
+    targetDate?: string,
+  ): import('../core/domain').CoverageTicket[] {
+    if (method === 'calendar') {
+      const lastRecord = train.at(-1);
+      let targetD: Date;
+      if (targetDate) {
+        targetD = new Date(`${targetDate.slice(0, 10)}T00:00:00Z`);
+      } else if (lastRecord) {
+        const lastD = new Date(lastRecord.timestamp);
+        if (lastD.getUTCHours() >= 20 || lastRecord.timestamp.includes('21:00')) {
+          targetD = new Date(lastD.getTime() + 16 * 3600 * 1000);
+        } else {
+          targetD = lastD;
+        }
+      } else {
+        targetD = new Date();
+      }
+      const targetDay = targetD.getUTCDate();
+      const targetMonth = targetD.getUTCMonth() + 1;
+
+      // Day & month records in train
+      const dayRecords = train.filter((r) => new Date(r.date).getUTCDate() === targetDay);
+      const monthRecords = train.filter((r) => new Date(r.date).getUTCMonth() + 1 === targetMonth);
+
+      const dayMainCounts = new Map<number, number>();
+      const daySpecialCounts = new Map<number, number>();
+      let dayOdd = 0; let dayTotal = 0; let dayUnder30 = 0;
+      let daySpecialOdd = 0; let daySpecialEven = 0;
+
+      dayRecords.forEach((r) => {
+        r.mainNumbers.forEach((n) => {
+          dayMainCounts.set(n, (dayMainCounts.get(n) ?? 0) + 1);
+          if (n % 2 !== 0) dayOdd += 1;
+          if (n < 30) dayUnder30 += 1;
+          dayTotal += 1;
+        });
+        daySpecialCounts.set(r.specialNumber, (daySpecialCounts.get(r.specialNumber) ?? 0) + 1);
+        if (r.specialNumber % 2 !== 0) daySpecialOdd += 1;
+        else daySpecialEven += 1;
+      });
+
+      const monthMainCounts = new Map<number, number>();
+      monthRecords.forEach((r) => {
+        r.mainNumbers.forEach((n) => monthMainCounts.set(n, (monthMainCounts.get(n) ?? 0) + 1));
+      });
+
+      // 1. Taboo main numbers (limit to at most 10 so we retain plenty of candidate diversity)
+      const tabooNumbers = new Set<number>();
+      if (dayRecords.length >= 4) {
+        for (let n = this.rules.mainMin; n <= this.rules.mainMax; n += 1) {
+          if ((dayMainCounts.get(n) ?? 0) === 0 && (monthMainCounts.get(n) ?? 0) <= 1) {
+            tabooNumbers.add(n);
+          }
+        }
+      }
+      const finalTaboo = new Set([...tabooNumbers].slice(0, 10));
+
+      // Taboo specials
+      const tabooSpecials = new Set<number>();
+      if (dayRecords.length >= 4) {
+        for (let s = this.rules.specialMin; s <= this.rules.specialMax; s += 1) {
+          if ((daySpecialCounts.get(s) ?? 0) === 0) tabooSpecials.add(s);
+        }
+      }
+
+      // 2. Select 3 special numbers (orange)
+      const last = train.at(-1)?.specialNumber;
+      const transitions = new Map<number, number>();
+      train.forEach((r, i) => {
+        if (i && train[i - 1].specialNumber === last) {
+          transitions.set(r.specialNumber, (transitions.get(r.specialNumber) ?? 0) + 1);
+        }
+      });
+      const recent60 = train.slice(-60);
+      const recentSpecialCounts = new Map<number, number>();
+      recent60.forEach((r) => recentSpecialCounts.set(r.specialNumber, (recentSpecialCounts.get(r.specialNumber) ?? 0) + 1));
+      const maxTrans = Math.max(1, ...transitions.values());
+      const maxRec = Math.max(1, ...recentSpecialCounts.values());
+
+      const preferSpecialEven = daySpecialEven > daySpecialOdd;
+      const preferSpecialOdd = daySpecialOdd > daySpecialEven;
+
+      const allSpecials = Array.from(
+        { length: this.rules.specialMax - this.rules.specialMin + 1 },
+        (_, i) => i + this.rules.specialMin,
+      );
+      const candidateSpecials = allSpecials.filter((s) => tabooSpecials.size <= 8 ? !tabooSpecials.has(s) : true);
+
+      const scoredSpecials = candidateSpecials.map((s) => {
+        const transScore = (transitions.get(s) ?? 0) / maxTrans;
+        const recScore = (recentSpecialCounts.get(s) ?? 0) / maxRec;
+        let parityBonus = 0;
+        if (preferSpecialEven && s % 2 === 0) parityBonus = 0.15;
+        else if (preferSpecialOdd && s % 2 !== 0) parityBonus = 0.15;
+        return { s, score: 0.55 * transScore + 0.30 * recScore + parityBonus };
+      }).sort((a, b) => b.score - a.score || a.s - b.s);
+
+      const specials = scoredSpecials.slice(0, 3).map((x) => x.s);
+
+      // 3. Build 3 tickets
+      const globalCounts = new Map<number, number>();
+      const momentumCounts = new Map<number, number>();
+      const pairCounts = new Map<string, number>();
+      const pairKey = (a: number, b: number) => (a < b ? `${a},${b}` : `${b},${a}`);
+
+      train.forEach((r, i) => {
+        r.mainNumbers.forEach((n) => {
+          globalCounts.set(n, (globalCounts.get(n) ?? 0) + 1);
+          if (i >= train.length - 60) momentumCounts.set(n, (momentumCounts.get(n) ?? 0) + 1);
+        });
+        combinations(r.mainNumbers, 2).forEach((pair) => pairCounts.set(pair, (pairCounts.get(pair) ?? 0) + 1));
+      });
+
+      const dayTopNumbers = [...dayMainCounts.entries()]
+        .filter(([n]) => !finalTaboo.has(n))
+        .sort((a, b) => b[1] - a[1] || a[0] - b[0])
+        .map((x) => x[0]);
+
+      const tickets = specials.map((orange) => ({
+        orange,
+        greens: [] as number[],
+        records: train.filter((r) => r.specialNumber === orange),
+      }));
+
+      // Target odd count per ticket: default 3 odd / 2 even unless day data shows otherwise
+      const dayOddRatio = dayTotal ? dayOdd / dayTotal : 0.5;
+      const dayUnder30Ratio = dayTotal ? dayUnder30 / dayTotal : 0.82;
+      const targetOdd = dayOddRatio >= 0.55 ? 3 : dayOddRatio <= 0.45 ? 2 : 3;
+
+      // Seed top day numbers into tickets
+      for (let t = 0; t < 3; t += 1) {
+        if (dayTopNumbers[t] !== undefined) {
+          tickets[t].greens.push(dayTopNumbers[t]);
+        }
+      }
+      const used = new Set<number>(tickets.flatMap((t) => t.greens));
+
+      // Round-robin filling for remaining 4 numbers per ticket
+      for (let round = 1; round < this.rules.mainCount; round += 1) {
+        tickets.forEach((ticket) => {
+          const condCounts = new Map<number, number>();
+          ticket.records.forEach((r) => r.mainNumbers.forEach((n) => condCounts.set(n, (condCounts.get(n) ?? 0) + 1)));
+          const condTotal = Math.max(1, ticket.records.length);
+          const curOdd = ticket.greens.filter((n) => n % 2 !== 0).length;
+          const curU30 = ticket.greens.filter((n) => n < 30).length;
+
+          const candidates = Array.from(
+            { length: this.rules.mainMax - this.rules.mainMin + 1 },
+            (_, i) => i + this.rules.mainMin,
+          ).filter((n) => !used.has(n) && !finalTaboo.has(n));
+
+          const scored = candidates.map((n) => {
+            const isOdd = n % 2 !== 0;
+            const isU30 = n < 30;
+            const cond = (condCounts.get(n) ?? 0) / condTotal;
+            const mom = (momentumCounts.get(n) ?? 0) / 60;
+            const syn = ticket.greens.length
+              ? average(ticket.greens.map((g) => (pairCounts.get(pairKey(g, n)) ?? 0) / Math.max(1, train.length)))
+              : 0;
+            const dayBonus = (dayMainCounts.get(n) ?? 0) / Math.max(1, dayRecords.length);
+
+            let parityBonus = 0;
+            if (curOdd < targetOdd && isOdd) parityBonus = 0.12;
+            else if (curOdd >= targetOdd && !isOdd) parityBonus = 0.12;
+
+            const u30Bonus = curU30 < 4 && isU30 ? (dayUnder30Ratio > 0.8 ? 0.10 : 0.06) : 0;
+
+            const totalScore = 0.40 * cond + 0.20 * mom + 0.15 * syn + 0.15 * dayBonus + parityBonus + u30Bonus;
+            return { n, totalScore };
+          }).sort((a, b) => b.totalScore - a.totalScore || a.n - b.n);
+
+          const chosen = scored[0]?.n;
+          if (chosen !== undefined) {
+            ticket.greens.push(chosen);
+            used.add(chosen);
+          }
+        });
+      }
+
+      return tickets.map(({ orange, greens }) => ({ orange, greens: greens.sort((a, b) => a - b) }));
+    }
+
     const metrics = this.specialMetrics(train);
     const last = train.at(-1)!.specialNumber;
     const transitions = new Map<number, number>();
@@ -46,12 +231,12 @@ export class StatisticsService {
       const selected = candidates.sort((a, b) => score(b) - score(a) || a - b)[0];
       if (selected !== undefined) { ticket.greens.push(selected); used.add(selected); }
     });
-    return tickets.map(({ orange, greens }) => ({ orange, greens }));
+    return tickets.map(({ orange, greens }) => ({ orange, greens: greens.sort((a, b) => a - b) }));
   }
-  private coverageBacktest(records: readonly EventRecord[], method: 'conditional' | 'momentum' = 'conditional'): Statistics['coverageBacktest'] {
+  private coverageBacktest(records: readonly EventRecord[], method: 'conditional' | 'momentum' | 'calendar' = 'calendar'): Statistics['coverageBacktest'] {
     const start = 300; const ticketHits = Array.from({ length: 3 }, () => ({ greenAny: 0, green: 0, orange: 0, joint: 0 })); let greenAny = 0; let greenAtLeast3 = 0; let greenHits = 0; let orangeAny = 0; let joint = 0;
     for (let index = start; index < records.length; index += 1) {
-      const tickets = this.coverageTickets(records.slice(0, index), method); const actual = records[index]; const allGreens = new Set(tickets.flatMap((ticket) => ticket.greens)); const totalGreenHits = actual.mainNumbers.filter((number) => allGreens.has(number)).length;
+      const tickets = this.coverageTickets(records.slice(0, index), method, records[index].date); const actual = records[index]; const allGreens = new Set(tickets.flatMap((ticket) => ticket.greens)); const totalGreenHits = actual.mainNumbers.filter((number) => allGreens.has(number)).length;
       greenAny += Number(totalGreenHits > 0); greenAtLeast3 += Number(totalGreenHits >= 3); greenHits += totalGreenHits; orangeAny += Number(tickets.some((ticket) => ticket.orange === actual.specialNumber));
       tickets.forEach((ticket, ticketIndex) => { const hits = ticket.greens.filter((number) => actual.mainNumbers.includes(number)).length; const orangeHit = ticket.orange === actual.specialNumber; ticketHits[ticketIndex].greenAny += Number(hits > 0); ticketHits[ticketIndex].green += hits; ticketHits[ticketIndex].orange += Number(orangeHit); ticketHits[ticketIndex].joint += Number(orangeHit && hits > 0); });
       joint += Number(tickets.some((ticket) => ticket.orange === actual.specialNumber && ticket.greens.some((number) => actual.mainNumbers.includes(number))));
@@ -60,7 +245,15 @@ export class StatisticsService {
     return { evaluated, greenAnyHitRate: rate(greenAny), greenAtLeast3HitRate: rate(greenAtLeast3), averageGreenHits: rate(greenHits), orangeAnyHitRate: rate(orangeAny), anyTicketJointHitRate: rate(joint), ticketStats: ticketHits.map((value) => ({ greenAnyHitRate: rate(value.greenAny), averageGreenHits: rate(value.green), orangeHitRate: rate(value.orange), jointHitRate: rate(value.joint) })), tickets: records.length >= start ? this.coverageTickets(records, method) : [] };
   }
   private coverageStrategyBacktests(records: readonly EventRecord[]): Statistics['coverageBacktests'] {
-    return (['conditional', 'momentum'] as const).map((id) => ({ id, label: id === 'conditional' ? 'Đi cùng ĐB + độ đi chung' : 'Momentum 60 kỳ + liên kết ĐB', ...this.coverageBacktest(records, id) }));
+    return (['calendar', 'conditional', 'momentum'] as const).map((id) => ({
+      id,
+      label: id === 'calendar'
+        ? 'Lọc cấm kị + Quy luật ngày/tháng (Mới)'
+        : id === 'conditional'
+        ? 'Đi cùng ĐB + độ đi chung'
+        : 'Momentum 60 kỳ + liên kết ĐB',
+      ...this.coverageBacktest(records, id),
+    }));
   }
   /** Five-green ensemble, then a special ball inferred from its historical co-occurrence. */
   private greenForecast(train: readonly EventRecord[], model: 'bayesian' | 'ensemble' = 'ensemble'): Statistics['greenForecast'] {
@@ -100,12 +293,27 @@ export class StatisticsService {
       const add = (model: string, greens: number[], orange: number) => items.push({ model, basedOnDrawId: train.at(-1)!.drawId, targetDrawId: actual.drawId, targetTimestamp: actual.timestamp, greens, orange, greenHits: greens.filter((number) => actual.mainNumbers.includes(number)).length, orangeHit: orange === actual.specialNumber });
       (['bayesian', 'ensemble'] as const).forEach((model) => { const forecast = this.greenForecast(train, model); add(forecast.model, forecast.greens, forecast.orange); });
       this.recommendations(train).forEach((forecast) => add(forecast.model, forecast.greens, forecast.orange));
-      this.coverageTickets(train).forEach((ticket, ticketIndex) => add(`Vé phủ ${ticketIndex + 1}`, ticket.greens, ticket.orange));
+      this.coverageTickets(train, 'calendar', actual.date).forEach((ticket, ticketIndex) => add(`Vé phủ ${ticketIndex + 1}`, ticket.greens, ticket.orange));
     }
     return items.sort((a, b) => b.targetTimestamp.localeCompare(a.targetTimestamp));
   }
   private recentPatternAnalysis(records: readonly EventRecord[]): Statistics['recentPatternAnalysis'] {
-    const latestDate = records.at(-1)?.date ?? ''; const cutoff = new Date(`${latestDate}T00:00:00Z`); cutoff.setUTCDate(cutoff.getUTCDate() - 29); const startDate = cutoff.toISOString().slice(0, 10); const recent = records.filter((record) => record.date >= startDate);
+    const today = new Date();
+    const targetEnd = new Date(today);
+    targetEnd.setUTCDate(targetEnd.getUTCDate() - 1);
+    const targetStart = new Date(targetEnd);
+    targetStart.setUTCDate(targetStart.getUTCDate() - 29);
+    let startDate = targetStart.toISOString().slice(0, 10);
+    let endDate = targetEnd.toISOString().slice(0, 10);
+    let recent = records.filter((record) => record.date >= startDate && record.date <= endDate);
+    if (recent.length < 10) {
+      const latestDate = records.at(-1)?.date ?? '';
+      const cutoff = new Date(`${latestDate}T00:00:00Z`);
+      cutoff.setUTCDate(cutoff.getUTCDate() - 29);
+      startDate = cutoff.toISOString().slice(0, 10);
+      endDate = latestDate;
+      recent = records.filter((record) => record.date >= startDate);
+    }
     const mainCounts = new Map<number, number>(); const pairCounts = new Map<string, number>(); const specialLinks = new Map<string, number>();
     recent.forEach((record) => { record.mainNumbers.forEach((number) => { mainCounts.set(number, (mainCounts.get(number) ?? 0) + 1); specialLinks.set(`${number},${record.specialNumber}`, (specialLinks.get(`${number},${record.specialNumber}`) ?? 0) + 1); }); combinations(record.mainNumbers, 2).forEach((pair) => pairCounts.set(pair, (pairCounts.get(pair) ?? 0) + 1)); });
     const hotMainPairs = [...pairCounts].map(([key, count]) => { const [first, second] = key.split(',').map(Number); return { first, second, count }; }).sort((a, b) => b.count - a.count || a.first - b.first || a.second - b.second).slice(0, 12);
@@ -113,7 +321,7 @@ export class StatisticsService {
     const maxPair = Math.max(1, ...pairCounts.values()); const maxMain = Math.max(1, ...mainCounts.values()); const seeds = hotMainPairs.slice(0, 3);
     const candidates = seeds.map((seed) => { const greens = [seed.first, seed.second]; while (greens.length < this.rules.mainCount) { const next = Array.from({ length: this.rules.mainMax }, (_, index) => index + 1).filter((number) => !greens.includes(number)).sort((a, b) => { const score = (number: number) => .70 * average(greens.map((selected) => (pairCounts.get(selected < number ? `${selected},${number}` : `${number},${selected}`) ?? 0) / maxPair)) + .30 * ((mainCounts.get(number) ?? 0) / maxMain); return score(b) - score(a) || a - b; })[0]; greens.push(next); }
       const orange = Array.from({ length: this.rules.specialMax }, (_, index) => index + 1).sort((a, b) => { const score = (special: number) => greens.reduce((sum, green) => sum + (specialLinks.get(`${green},${special}`) ?? 0), 0); return score(b) - score(a) || a - b; })[0]; return { orange, greens }; });
-    return { startDate, endDate: latestDate, drawCount: recent.length, hotMainPairs, hotSpecialLinks, candidates };
+    return { startDate, endDate, drawCount: recent.length, hotMainPairs, hotSpecialLinks, candidates };
   }
   private specialMetrics(records: readonly EventRecord[], now = new Date()): SpecialMetric[] {
     const count = new Map<number, number>(); const latest = new Map<number, { index: number; date: Date }>(); const gaps = new Map<number, number[]>(); const gapDays = new Map<number, number[]>();
@@ -157,6 +365,7 @@ export class StatisticsService {
     const mainAssociations = Object.fromEntries(frequency.map((metric) => [String(metric.number), convert(mainAssociationCounts.get(metric.number) ?? new Map(), metric.count)]));
     const monthlyDominantSpecials = [...new Set(records.map((record) => record.date.slice(0, 7)))].sort().map((month) => { const monthRecords = records.filter((record) => record.date.startsWith(month)); const monthCounts = new Map<number, number>(); monthRecords.forEach((record) => monthCounts.set(record.specialNumber, (monthCounts.get(record.specialNumber) ?? 0) + 1)); const count = Math.max(...monthCounts.values()); const numbers = [...monthCounts].filter(([, value]) => value === count).map(([number]) => number).sort((a, b) => a - b); return { month, numbers, count, drawCount: monthRecords.length }; });
     const greenForecasts = [this.greenForecast(records, 'bayesian'), this.greenForecast(records, 'ensemble')];
-    return { generatedAt: new Date().toISOString(), drawCount: records.length, frequency, specialFrequency, specialByHour: { '13': this.specialMetrics(records.filter((record) => hour(record) === '13')), '21': this.specialMetrics(records.filter((record) => hour(record) === '21')) }, specialAssociations, mainAssociations, monthlyDominantSpecials, recentPatternAnalysis: this.recentPatternAnalysis(records), specialTransitions, specialTransitionsByHour, specialBacktest: this.backtest(records), comboBacktests: this.comboBacktests(records), coverageBacktest: this.coverageBacktest(records), coverageBacktests: this.coverageStrategyBacktests(records), greenForecast: greenForecasts[1], greenForecasts, greenBacktest: this.greenBacktest(records), greenModelBacktests: this.greenModelBacktests(records), predictionHistory: this.predictionHistory(records), recommendations: this.recommendations(records), pairs: [...pairCounts].map(([key, count]) => ({ key, count })).sort((a, b) => b.count - a.count).slice(0, 50), distributions: { oddEven, highLow, sums }, rollingMeans };
+    const calendarAnalysis = new CalendarAnalysisService(this.rules).build(records);
+    return { generatedAt: new Date().toISOString(), drawCount: records.length, frequency, specialFrequency, specialByHour: { '13': this.specialMetrics(records.filter((record) => hour(record) === '13')), '21': this.specialMetrics(records.filter((record) => hour(record) === '21')) }, specialAssociations, mainAssociations, monthlyDominantSpecials, recentPatternAnalysis: this.recentPatternAnalysis(records), specialTransitions, specialTransitionsByHour, specialBacktest: this.backtest(records), comboBacktests: this.comboBacktests(records), coverageBacktest: this.coverageBacktest(records), coverageBacktests: this.coverageStrategyBacktests(records), greenForecast: greenForecasts[1], greenForecasts, greenBacktest: this.greenBacktest(records), greenModelBacktests: this.greenModelBacktests(records), predictionHistory: this.predictionHistory(records), recommendations: this.recommendations(records), pairs: [...pairCounts].map(([key, count]) => ({ key, count })).sort((a, b) => b.count - a.count).slice(0, 50), distributions: { oddEven, highLow, sums }, rollingMeans, calendarAnalysis };
   }
 }

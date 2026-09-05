@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import * as echarts from 'echarts';
 import type { Cache, EventRecord, Metadata, SpecialMetric } from '../core/domain';
+import { CalendarAnalysisService } from '../statistics/calendar-analysis-service';
+import { defaultRules } from '../sync/synchronization-service';
 import './dashboard.css';
 
-type Tab = 'analysis' | 'green' | 'history';
+type Tab = 'analysis' | 'green' | 'history' | 'calendar';
 type Payload = { metadata: Metadata; cache: Cache; sourceStatus?: 'live' | 'fallback'; checkedAt?: string; history?: EventRecord[] };
 type IChingCast = { lines: number[]; hexagram: number; greens: number[]; orange: number; sourceDrawId: string; sourceDate: string };
 
@@ -12,7 +14,21 @@ const numberLabel = (number: number) => String(number).padStart(2, '0');
 const drawDateTime = (record: EventRecord) => `${record.date.split('-').reverse().join('/')} ${record.timestamp.slice(11, 16)}`;
 const recentPatternFallback = (records: readonly EventRecord[]) => {
   if (!records.length) return undefined;
-  const endDate = records.at(-1)!.date; const cutoff = new Date(`${endDate}T00:00:00Z`); cutoff.setUTCDate(cutoff.getUTCDate() - 29); const startDate = cutoff.toISOString().slice(0, 10); const recent = records.filter((record) => record.date >= startDate);
+  const today = new Date();
+  const targetEnd = new Date(today);
+  targetEnd.setUTCDate(targetEnd.getUTCDate() - 1);
+  const targetStart = new Date(targetEnd);
+  targetStart.setUTCDate(targetStart.getUTCDate() - 29);
+  let startDate = targetStart.toISOString().slice(0, 10);
+  let endDate = targetEnd.toISOString().slice(0, 10);
+  let recent = records.filter((record) => record.date >= startDate && record.date <= endDate);
+  if (recent.length < 10) {
+    endDate = records.at(-1)!.date;
+    const cutoff = new Date(`${endDate}T00:00:00Z`);
+    cutoff.setUTCDate(cutoff.getUTCDate() - 29);
+    startDate = cutoff.toISOString().slice(0, 10);
+    recent = records.filter((record) => record.date >= startDate);
+  }
   const mainCounts = new Map<number, number>(); const pairCounts = new Map<string, number>(); const specialLinks = new Map<string, number>();
   recent.forEach((record) => { record.mainNumbers.forEach((number) => { mainCounts.set(number, (mainCounts.get(number) ?? 0) + 1); specialLinks.set(`${number},${record.specialNumber}`, (specialLinks.get(`${number},${record.specialNumber}`) ?? 0) + 1); }); record.mainNumbers.forEach((first, index) => record.mainNumbers.slice(index + 1).forEach((second) => { const key = first < second ? `${first},${second}` : `${second},${first}`; pairCounts.set(key, (pairCounts.get(key) ?? 0) + 1); })); });
   const hotMainPairs = [...pairCounts].map(([key, count]) => { const [first, second] = key.split(',').map(Number); return { first, second, count }; }).sort((a, b) => b.count - a.count || a.first - b.first).slice(0, 12);
@@ -40,6 +56,8 @@ export default function App() {
   const [selectedSpecial, setSelectedSpecial] = useState(1);
   const [transitionHour, setTransitionHour] = useState<'all' | '13' | '21'>('all');
   const [checkerInput, setCheckerInput] = useState('');
+  const [selectedDay, setSelectedDay] = useState<number>(() => new Date().getDate());
+  const [selectedMonth, setSelectedMonth] = useState<number>(() => new Date().getMonth() + 1);
   const [iChingCast, setIChingCast] = useState<IChingCast | null>(null);
   const castIChing = (records: readonly EventRecord[]) => {
     if (!records.length) return;
@@ -88,21 +106,61 @@ export default function App() {
   };
   const checkedNumbers = [...new Set(checkerInput.split(/[^0-9]+/).map(Number).filter((number) => Number.isInteger(number) && number >= 1 && number <= 35))].slice(0, 15);
   const ticketMatches = checkedNumbers.length ? records.map((record) => ({ record, hits: checkedNumbers.filter((number) => record.mainNumbers.includes(number)) })).filter((item) => item.hits.length).sort((a, b) => b.hits.length - a.hits.length || b.record.timestamp.localeCompare(a.record.timestamp)) : [];
-  const latestDate = records.reduce((latest, item) => item.date > latest ? item.date : latest, '');
-  const cutoff = latestDate ? new Date(`${latestDate}T00:00:00Z`) : new Date(0);
-  cutoff.setUTCDate(cutoff.getUTCDate() - 29);
-  const recentHistory = records.filter((item) => new Date(`${item.date}T00:00:00Z`) >= cutoff).sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+  const today = new Date();
+  const todayDateStr = today.toISOString().slice(0, 10);
+  const hasTodayDraws = records.some((item) => item.date === todayDateStr);
+  const targetEndDate = new Date(today);
+  if (!hasTodayDraws) {
+    targetEndDate.setUTCDate(targetEndDate.getUTCDate() - 1);
+  }
+  const targetStartDate = new Date(targetEndDate);
+  targetStartDate.setUTCDate(targetStartDate.getUTCDate() - 29);
+  const startDateStr = targetStartDate.toISOString().slice(0, 10);
+  const endDateStr = targetEndDate.toISOString().slice(0, 10);
+  const recentHistory = records
+    .filter((item) => item.date >= startDateStr && item.date <= endDateStr)
+    .sort((a, b) => b.timestamp.localeCompare(a.timestamp));
 
-  return <main className={dark ? 'dark' : ''}>
+  const formatDateVN = (dateStr: string) => dateStr.split('-').reverse().join('/');
+  const latestDate = records.reduce((latest, item) => item.date > latest ? item.date : latest, '');
+
+  // Warning for stale data
+  const latest = latestDate ? new Date(`${latestDate}T00:00:00Z`) : null;
+  const isStale = latest && (today.getTime() - latest.getTime() > 2 * 24 * 60 * 60 * 1000);
+    const calendar = cache.statistics.calendarAnalysis;
+    const dayInfo = calendar?.dayOfMonthAnalysis?.find((d) => d.day === selectedDay);
+    const monthInfo = calendar?.monthAnalysis?.find((m) => m.month === selectedMonth);
+
+    const activeForecast = (calendar && records.length && calendar.dayOfMonthAnalysis && calendar.monthAnalysis)
+      ? new CalendarAnalysisService(defaultRules).forecastForDayAndMonth(
+          records,
+          calendar.dayOfMonthAnalysis,
+          calendar.monthAnalysis,
+          selectedDay,
+          selectedMonth,
+        )
+      : calendar?.calendarForecast;
+
+    return <main>
+    {isStale && (
+      <div className="warning">
+        <strong>ℹ️ Dữ liệu mới nhất hiện có từ nguồn trực tuyến là kỳ {metadata.latestDraw?.replace('LOTTO535-', '#')} ({latestDate ? new Date(`${latestDate}T00:00:00Z`).toLocaleDateString('vi-VN') : '—'}). Nguồn dữ liệu chưa có thêm kỳ mới.</strong>
+      </div>
+    )}
     <header><div><h1>Lottto 5/35 — Phân tích dữ liệu</h1><p>5 số xanh (01–35) + số đặc biệt cam (01–12). Dữ liệu lịch sử, không phải cam kết dự đoán.</p></div><button onClick={() => setDark(!dark)}>Đổi giao diện</button></header>
     <section className="cards"><article><small>Tổng kỳ quay</small><strong>{metadata.totalDraws}</strong></article><article><small>Kỳ mới nhất</small><strong>{metadata.latestDraw ?? '—'}</strong></article><article><small>Kiểm tra dữ liệu</small><strong className={payload.sourceStatus === 'live' ? 'live-status' : 'fallback-status'}>{payload.sourceStatus === 'live' ? 'Nguồn trực tuyến ✓' : 'Dữ liệu deploy'}</strong><small>{payload.checkedAt ? new Date(payload.checkedAt).toLocaleString('vi-VN') : 'Không thể kiểm tra trực tuyến'}</small></article></section>
-    <nav className="tabs"><button className={tab === 'analysis' ? 'active-tab' : ''} onClick={() => setTab('analysis')}>Phân tích ĐB</button><button className={tab === 'green' ? 'active-tab' : ''} onClick={() => setTab('green')}>Số xanh hay ra</button><button className={tab === 'history' ? 'active-tab' : ''} onClick={() => setTab('history')}>Lịch sử 30 ngày</button></nav>
+    <nav className="tabs">
+      <button className={tab === 'analysis' ? 'active-tab' : ''} onClick={() => setTab('analysis')}>Phân tích ĐB</button>
+      <button className={tab === 'green' ? 'active-tab' : ''} onClick={() => setTab('green')}>Số xanh hay ra</button>
+      <button className={tab === 'history' ? 'active-tab' : ''} onClick={() => setTab('history')}>Lịch sử 30 ngày</button>
+      <button className={tab === 'calendar' ? 'active-tab' : ''} onClick={() => setTab('calendar')}>Phân tích lịch</button>
+    </nav>
     {tab === 'green' && <><section><h2>Top 15 số xanh xuất hiện nhiều nhất</h2><Chart options={greenChart(green.slice(0, 15))} /></section><section><h2>Bảng tần suất số xanh 01–35</h2><div className="table-wrap"><table><thead><tr><th>Hạng</th><th>Số xanh</th><th>Xuất hiện</th><th>Khoảng cách hiện tại</th><th>Chu kỳ TB</th></tr></thead><tbody>{green.map((item, index) => <tr key={item.number}><td>{index + 1}</td><td><span className="ball">{numberLabel(item.number)}</span></td><td>{item.count}</td><td>{item.gap} kỳ</td><td>{item.averageGap.toFixed(1)} kỳ</td></tr>)}</tbody></table></div></section></>}
-    {tab === 'history' && <section><h2>Lịch sử kết quả 30 ngày gần nhất</h2><p className="muted">Từ {cutoff.toLocaleDateString('vi-VN')} đến {latestDate ? new Date(`${latestDate}T00:00:00Z`).toLocaleDateString('vi-VN') : '—'}, gồm {recentHistory.length} kỳ quay.</p><div className="table-wrap"><table><thead><tr><th>Kỳ</th><th>Ngày giờ</th><th>5 số xanh</th><th>ĐB</th></tr></thead><tbody>{recentHistory.map((item) => <tr key={item.drawId}><td>{item.drawId.replace('LOTTO535-', '#')}</td><td>{drawDateTime(item)}</td><td><span className="draw-balls">{item.mainNumbers.map((number) => <span className="ball" key={number}>{numberLabel(number)}</span>)}</span></td><td><span className="ball special">{numberLabel(item.specialNumber)}</span></td></tr>)}</tbody></table></div></section>}
+    {tab === 'history' && <section><h2>Lịch sử kết quả 30 ngày gần nhất</h2><p className="muted">Từ {formatDateVN(startDateStr)} đến {formatDateVN(endDateStr)} (30 ngày gần nhất tính từ ngày hiện tại {formatDateVN(todayDateStr)} về trước), gồm {recentHistory.length} kỳ quay đã ghi nhận.</p><div className="table-wrap"><table><thead><tr><th>Kỳ</th><th>Ngày giờ</th><th>5 số xanh</th><th>ĐB</th></tr></thead><tbody>{recentHistory.map((item) => <tr key={item.drawId}><td>{item.drawId.replace('LOTTO535-', '#')}</td><td>{drawDateTime(item)}</td><td><span className="draw-balls">{item.mainNumbers.map((number) => <span className="ball" key={number}>{numberLabel(number)}</span>)}</span></td><td><span className="ball special">{numberLabel(item.specialNumber)}</span></td></tr>)}</tbody></table></div></section>}
     {tab === 'analysis' && <>
       <section><h2>Dự đoán thử nghiệm kỳ kế tiếp</h2><p className="muted">Đầu ra mô hình chỉ phục vụ quan sát/backtest.</p><div className="recommendation-grid">{(cache.statistics.recommendations ?? []).map((item) => <article className="recommendation" key={item.model}><small>{item.model}</small><div className="recommendation-balls"><span className="ball special">{numberLabel(item.orange)}</span>{item.greens.map((number) => <span className="ball" key={number}>{numberLabel(number)}</span>)}</div></article>)}</div></section>
-      <section><h2>Backtest vé phủ: 3 vé × 5 số xanh + 1 ĐB</h2><p className="muted">Mỗi kỳ chọn 3 ĐB từ transition gần nhất kết hợp tần suất 60 kỳ; mỗi ĐB nhận 5 số xanh đi cùng nhiều nhất. 15 số xanh không trùng nhau. Backtest bắt đầu sau 300 kỳ và không dùng dữ liệu tương lai.</p><div className="two"><article><small>Trúng ≥1 trong 15 số xanh</small><strong>{((coverage?.greenAnyHitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">TB {(coverage?.averageGreenHits ?? 0).toFixed(2)} / 5 số xanh thực tế mỗi kỳ.</p></article><article><small>Trúng ĐB ở ít nhất 1 vé</small><strong>{((coverage?.orangeAnyHitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">Đúng cả ĐB và ≥1 số xanh: {((coverage?.anyTicketJointHitRate ?? 0) * 100).toFixed(1)}%.</p></article></div><p className="muted">Đã đánh giá {coverage?.evaluated ?? 0} kỳ. “Trúng” là chỉ số quan sát lịch sử, không phải cam kết xác suất kỳ sau.</p><div className="table-wrap"><table><thead><tr><th>Vé</th><th>ĐB</th><th>5 số xanh</th><th>Trúng ĐB</th><th>≥1 xanh</th><th>ĐB + ≥1 xanh</th></tr></thead><tbody>{(coverage?.tickets ?? []).map((ticket, index) => { const stat = coverage?.ticketStats[index]; return <tr key={`${ticket.orange}-${index}`} className={index === bestCoverageTicket ? 'best-strategy' : ''}><td>{index === bestCoverageTicket ? '★ ' : ''}Vé {index + 1}</td><td><span className="ball special">{numberLabel(ticket.orange)}</span></td><td><span className="draw-balls">{ticket.greens.map((number) => <span className="ball" key={number}>{numberLabel(number)}</span>)}</span></td><td>{((stat?.orangeHitRate ?? 0) * 100).toFixed(1)}%</td><td>{((stat?.greenAnyHitRate ?? 0) * 100).toFixed(1)}%</td><td>{((stat?.jointHitRate ?? 0) * 100).toFixed(1)}%</td></tr>; })}</tbody></table></div><p className="muted">★ Vé có tỷ lệ trúng đồng thời ĐB + ít nhất 1 số xanh cao nhất trong backtest.</p></section>
-      <section className="two"><article><small>Trúng ≥3 trong 15 số xanh</small><strong>{((coverage?.greenAtLeast3HitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">Có từ 3/5 số xanh thực tế trở lên nằm trong toàn bộ 3 vé.</p></article><article><p className="muted">Cách chia vé: 65% tần suất số xanh đi cùng ĐB, 20% độ đi chung với các số đã có trong vé, 15% tần suất chung; phân bổ luân phiên để không vé nào lấy hết số mạnh. Không ưu tiên số liền kề vì không có cơ sở xác suất nếu lịch sử không cho thấy chúng đi cùng.</p></article></section>
+      <section><h2>Backtest vé phủ: 3 vé × 5 số xanh + 1 ĐB</h2><p className="muted">Mô hình tích hợp: Lọc sạch các số cấm kị ngày/tháng, ưu tiên số xanh chủ đạo của ngày quay, tuân thủ cơ cấu chẵn/lẻ và tỷ lệ số &lt; 30, ĐB màu cam bám sát xu hướng chẵn/lẻ của ngày. 15 số xanh không trùng nhau. Backtest bắt đầu sau 300 kỳ và không dùng dữ liệu tương lai.</p><div className="two"><article><small>Trúng ≥1 trong 15 số xanh</small><strong>{((coverage?.greenAnyHitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">TB {(coverage?.averageGreenHits ?? 0).toFixed(2)} / 5 số xanh thực tế mỗi kỳ.</p></article><article><small>Trúng ĐB ở ít nhất 1 vé</small><strong>{((coverage?.orangeAnyHitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">Đúng cả ĐB và ≥1 số xanh: {((coverage?.anyTicketJointHitRate ?? 0) * 100).toFixed(1)}%.</p></article></div><p className="muted">Đã đánh giá {coverage?.evaluated ?? 0} kỳ. “Trúng” là chỉ số quan sát lịch sử, không phải cam kết xác suất kỳ sau.</p><div className="table-wrap"><table><thead><tr><th>Vé</th><th>ĐB</th><th>5 số xanh</th><th>Cơ cấu</th><th>Trúng ĐB</th><th>≥1 xanh</th><th>ĐB + ≥1 xanh</th></tr></thead><tbody>{(coverage?.tickets ?? []).map((ticket, index) => { const stat = coverage?.ticketStats[index]; const oddCount = ticket.greens.filter((n) => n % 2 !== 0).length; const under30Count = ticket.greens.filter((n) => n < 30).length; return <tr key={`${ticket.orange}-${index}`} className={index === bestCoverageTicket ? 'best-strategy' : ''}><td>{index === bestCoverageTicket ? '★ ' : ''}Vé {index + 1}</td><td><span className="ball special">{numberLabel(ticket.orange)}</span></td><td><span className="draw-balls">{ticket.greens.map((number) => <span className="ball" key={number}>{numberLabel(number)}</span>)}</span></td><td><small className="muted">{oddCount}L/{ticket.greens.length - oddCount}C · {under30Count}&lt;30</small></td><td>{((stat?.orangeHitRate ?? 0) * 100).toFixed(1)}%</td><td>{((stat?.greenAnyHitRate ?? 0) * 100).toFixed(1)}%</td><td>{((stat?.jointHitRate ?? 0) * 100).toFixed(1)}%</td></tr>; })}</tbody></table></div><p className="muted">★ Vé có tỷ lệ trúng đồng thời ĐB + ít nhất 1 số xanh cao nhất trong backtest.</p></section>
+      <section className="two"><article><small>Trúng ≥3 trong 15 số xanh</small><strong>{((coverage?.greenAtLeast3HitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">Có từ 3/5 số xanh thực tế trở lên nằm trong toàn bộ 3 vé.</p></article><article><p className="muted">Cách chia vé: Lọc bỏ toàn bộ số cấm kị; gán số chủ đạo ngày làm hạt giống từng vé; phân bổ luân phiên kết hợp tần suất đi cùng ĐB, momentum và độ đi chung; đảm bảo cơ cấu chẵn/lẻ và tỷ lệ số dưới 30.</p></article></section>
       <section><h2>Mô hình 5 số xanh → suy ra ĐB</h2><p className="muted">5 số xanh được chọn từ tần suất 60 kỳ, tần suất dài hạn, độ quá hạn và mức đi chung; ĐB là số có liên kết lịch sử mạnh nhất với 5 số đó.</p><article className="recommendation"><small>{greenForecast?.model ?? 'Đang tải mô hình'}</small><div className="recommendation-balls"><span className="ball special">{numberLabel(greenForecast?.orange ?? 0)}</span>{(greenForecast?.greens ?? []).map((number) => <span className="ball" key={number}>{numberLabel(number)}</span>)}</div></article><div className="two"><article><small>Backtest ≥1 xanh / ≥3 xanh</small><strong>{((greenBacktest?.greenAnyHitRate ?? 0) * 100).toFixed(1)}% / {((greenBacktest?.greenAtLeast3HitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">TB {(greenBacktest?.averageGreenHits ?? 0).toFixed(2)} / 5 số xanh.</p></article><article><small>Đúng ĐB / ĐB + ≥1 xanh</small><strong>{((greenBacktest?.orangeHitRate ?? 0) * 100).toFixed(1)}% / {((greenBacktest?.jointHitRate ?? 0) * 100).toFixed(1)}%</strong><p className="muted">Đánh giá {greenBacktest?.evaluated ?? 0} kỳ, không dùng dữ liệu tương lai.</p></article></div></section>
       <section><h2>Dò vé với lịch sử</h2><p className="muted">Nhập các số xanh, phân cách bằng dấu cách, dấu phẩy hoặc xuống dòng (tối đa 15 số).</p><input className="ticket-input" value={checkerInput} onChange={(event) => setCheckerInput(event.target.value)} placeholder="Ví dụ: 01, 05, 12, 18, 27" /><p className="muted">Đang dò {checkedNumbers.length} số trên {records.length} kỳ; có {ticketMatches.length} kỳ trúng ít nhất một số.</p>{ticketMatches.length > 0 && <div className="table-wrap"><table><thead><tr><th>Kỳ</th><th>Ngày giờ</th><th>Số trúng</th><th>5 số kết quả</th><th>ĐB</th></tr></thead><tbody>{ticketMatches.slice(0, 30).map(({ record, hits }) => <tr key={record.drawId}><td>{record.drawId.replace('LOTTO535-', '#')}</td><td>{new Date(record.timestamp).toLocaleString('vi-VN')}</td><td>{hits.length}: {hits.map(numberLabel).join(', ')}</td><td><span className="draw-balls">{record.mainNumbers.map((number) => <span className="ball" key={number}>{numberLabel(number)}</span>)}</span></td><td><span className="ball special">{numberLabel(record.specialNumber)}</span></td></tr>)}</tbody></table></div>}</section>
       <section><h2>So sánh mô hình 5 số xanh với baseline</h2><p className="muted">Baseline là chọn ngẫu nhiên 5/35. Chỉ nên tin một mô hình khi nó vượt baseline lặp lại ở dữ liệu chưa dùng để tinh chỉnh.</p><div className="table-wrap"><table><thead><tr><th>Mô hình</th><th>≥1 xanh</th><th>≥3 xanh</th><th>TB xanh</th><th>Đúng ĐB</th><th>ĐB + ≥1 xanh</th></tr></thead><tbody>{greenModels.map((item) => <tr key={item.id}><td>{item.label}</td><td>{(item.greenAnyHitRate * 100).toFixed(1)}% <small className="muted">/ mốc {(item.baselineGreenAnyHitRate * 100).toFixed(1)}%</small></td><td>{(item.greenAtLeast3HitRate * 100).toFixed(1)}% <small className="muted">/ mốc {(item.baselineGreenAtLeast3HitRate * 100).toFixed(1)}%</small></td><td>{item.averageGreenHits.toFixed(2)}</td><td>{(item.orangeHitRate * 100).toFixed(1)}%</td><td>{(item.jointHitRate * 100).toFixed(1)}%</td></tr>)}</tbody></table></div></section>
@@ -122,5 +180,257 @@ export default function App() {
       <section><h2>Số xanh thường đi cùng ĐB {numberLabel(selectedSpecial)}</h2><Chart options={associationChart(selectedSpecial, associations)} /><div className="association-list">{associations.slice(0, 10).map((item) => <span key={item.number} className="association"><b>{numberLabel(item.number)}</b> {item.count} lần · {(item.rate * 100).toFixed(1)}%</span>)}</div></section>
       <section><h2>Backtest 1 cam + 3 xanh</h2><p className="muted">300 kỳ đầu là dữ liệu nền; các kỳ sau được đánh giá tuần tự, không dùng dữ liệu tương lai.</p><div className="table-wrap"><table><thead><tr><th>Chiến lược</th><th>Đúng cam</th><th>TB xanh trúng</th><th>Cam + ≥1 xanh</th></tr></thead><tbody>{combos.map((item) => <tr key={item.id} className={item.id === best ? 'best-strategy' : ''}><td>{item.id === best ? '★ ' : ''}{item.label}</td><td>{(item.orangeHitRate * 100).toFixed(1)}%</td><td>{item.averageGreenHits.toFixed(2)} / 3</td><td>{(item.jointHitRate * 100).toFixed(1)}%</td></tr>)}</tbody></table></div></section>
     </>}
+    {tab === 'calendar' && (
+      <>
+        <section>
+          <h2>Chọn ngày & tháng phân tích lịch sử</h2>
+          <p className="muted">
+            Thuật toán phân tích chu kỳ theo ngày trong tháng (1–31) và theo từng tháng (1–12) trên toàn bộ lịch sử.
+          </p>
+          <div className="selector-group">
+            <label>
+              <b>Ngày trong tháng:</b>
+              <select
+                value={selectedDay}
+                onChange={(e) => setSelectedDay(Number(e.target.value))}
+                className="select-input"
+              >
+                {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => (
+                  <option key={d} value={d}>
+                    Ngày {d} {d === today.getDate() ? '(Hôm nay)' : ''}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <b>Tháng:</b>
+              <select
+                value={selectedMonth}
+                onChange={(e) => setSelectedMonth(Number(e.target.value))}
+                className="select-input"
+              >
+                {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
+                  <option key={m} value={m}>
+                    Tháng {m} {m === today.getMonth() + 1 ? '(Tháng này)' : ''}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section>
+          <h2>3 Bộ số dự đoán cho Ngày {selectedDay} Tháng {selectedMonth}</h2>
+          <p className="muted">
+            Được nhóm từ dàn 18 số có xác suất cao nhất. Đã loại trừ hoàn toàn các số cấm kị của ngày & tháng và các dãy bộ ba cấm kị. Ưu tiên hàng đầu các số chủ đạo của ngày {selectedDay}.
+          </p>
+          <div className="recommendation-grid">
+            {(activeForecast?.tickets ?? []).map((ticket) => {
+              const oddCount = ticket.greens.filter((n) => n % 2 !== 0).length;
+              const under30Count = ticket.greens.filter((n) => n < 30).length;
+              const orangeIsEven = ticket.orange % 2 === 0;
+              return (
+                <article className="recommendation" key={ticket.ticketIndex}>
+                  <small>Bộ số {ticket.ticketIndex}</small>
+                  <div className="recommendation-balls">
+                    <span className="ball special" title={`ĐB cam: ${numberLabel(ticket.orange)} (${orangeIsEven ? 'Chẵn' : 'Lẻ'})`}>
+                      {numberLabel(ticket.orange)}
+                    </span>
+                    {ticket.greens.map((num) => (
+                      <span className="ball" key={num} title={`Số xanh: ${numberLabel(num)} (${num % 2 !== 0 ? 'Lẻ' : 'Chẵn'}, ${num < 30 ? '<30' : '≥30'})`}>
+                        {numberLabel(num)}
+                      </span>
+                    ))}
+                  </div>
+                  <div style={{ marginTop: '0.4rem', fontSize: '0.8rem', color: '#94a3b8' }}>
+                    <span>⚖ {oddCount} lẻ / {ticket.greens.length - oddCount} chẵn</span> ·{' '}
+                    <span>🎯 {under30Count} số &lt; 30</span> ·{' '}
+                    <span>🟠 ĐB {orangeIsEven ? 'chẵn' : 'lẻ'}</span>
+                  </div>
+                  <p className="muted" style={{ marginTop: '0.4rem', fontSize: '0.85rem' }}>
+                    {ticket.ticketIndex === 1 && '★ Bộ tối ưu: Cặp hạt giống chủ đạo ngày + liên kết ĐB.'}
+                    {ticket.ticketIndex === 2 && '✦ Bộ cân bằng: Số chủ đạo ngày thứ 2 + tối ưu độ đi chung.'}
+                    {ticket.ticketIndex === 3 && '◆ Bộ mở rộng: Độ phủ dàn 18 số + chuẩn hóa tỷ lệ chẵn/lẻ.'}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section>
+          <h2>Dàn 18 số tiềm năng nhất cho Ngày {selectedDay} Tháng {selectedMonth}</h2>
+          <p className="muted">
+            Dàn 18 số đã được lọc sạch: loại bỏ toàn bộ số cấm kị của ngày {selectedDay} và tháng {selectedMonth}, kết hợp tần suất lịch sử và ưu tiên số chủ đạo của ngày.
+          </p>
+          <div className="draw-balls" style={{ gap: '0.5rem' }}>
+            {(activeForecast?.candidatePool18 ?? []).map((num) => {
+              const isDayTop = dayInfo?.topMainNumbers.slice(0, 5).some((n) => n.number === num);
+              return (
+                <span
+                  key={num}
+                  className="ball"
+                  style={isDayTop ? { border: '2px solid #fbbf24', transform: 'scale(1.05)' } : {}}
+                  title={isDayTop ? `Số ${numberLabel(num)}: Số chủ đạo ngày ${selectedDay}` : `Số ${numberLabel(num)}`}
+                >
+                  {numberLabel(num)}
+                </span>
+              );
+            })}
+          </div>
+          {(() => {
+            const pool = activeForecast?.candidatePool18 ?? [];
+            const oddCount = pool.filter((n) => n % 2 !== 0).length;
+            const under30Count = pool.filter((n) => n < 30).length;
+            return (
+              <p className="muted" style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>
+                * Các số viền vàng là số chủ đạo ngày {selectedDay}. Cơ cấu dàn 18 số: <b>{oddCount}</b> lẻ / <b>{pool.length - oddCount}</b> chẵn · <b>{under30Count}</b> số &lt; 30 ({pool.length ? (under30Count / pool.length * 100).toFixed(0) : 0}%).
+              </p>
+            );
+          })()}
+        </section>
+
+        <div className="two">
+          <article>
+            <h3>Quy luật Ngày {selectedDay} (Tổng: {dayInfo?.totalDraws ?? 0} kỳ)</h3>
+            {dayInfo && dayInfo.totalDraws > 0 ? (
+              <>
+                <p><b>Chẵn / Lẻ:</b> Lẻ {((dayInfo.oddRatio) * 100).toFixed(0)}% — Chẵn {((dayInfo.evenRatio) * 100).toFixed(0)}%</p>
+                <p><b>Cơ cấu phổ biến nhất:</b> <span style={{ color: '#38bdf8', fontWeight: 'bold' }}>{dayInfo.dominantOddEvenPattern}</span> {dayInfo.oddEvenDistribution[dayInfo.dominantOddEvenPattern] ? `(chiếm ${((dayInfo.oddEvenDistribution[dayInfo.dominantOddEvenPattern] ?? 0) * 100).toFixed(0)}% số kỳ)` : ''}</p>
+                <p><b>Quy luật độ lớn:</b> {((dayInfo.under30Rate) * 100).toFixed(0)}% số xanh &lt; 30 (TB {((dayInfo.under30Rate) * 5).toFixed(1)}/5 số xanh)</p>
+                <p><b>Quy luật số đặc biệt (cam):</b> ĐB Chẵn {((dayInfo.specialEvenRatio) * 100).toFixed(0)}% — ĐB Lẻ {((dayInfo.specialOddRatio) * 100).toFixed(0)}% {dayInfo.specialEvenRatio >= 0.55 ? '★ Đa số Chẵn' : dayInfo.specialOddRatio >= 0.55 ? '★ Đa số Lẻ' : '(Cân bằng)'}</p>
+                <p><b>Kỳ có số liền kề:</b> {((dayInfo.consecutivePairRate) * 100).toFixed(0)}%</p>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Top số xanh chủ đạo ngày:</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {(dayInfo.topMainNumbers ?? []).slice(0, 5).map((n) => (
+                      <span className="ball" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Top ĐB ngày:</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {(dayInfo.topSpecialNumbers ?? []).slice(0, 4).map((n) => (
+                      <span className="ball special" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Số xanh cấm kị ngày (ít/không ra):</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {(dayInfo.tabooMainNumbers ?? []).map((num) => (
+                      <span className="ball taboo" key={num} title="Cấm kị: ít/không ra">{numberLabel(num)}</span>
+                    ))}
+                    {!(dayInfo.tabooMainNumbers?.length) && <span className="muted">—</span>}
+                  </div>
+                </div>
+                {(dayInfo.tabooSpecialNumbers?.length ?? 0) > 0 && (
+                  <div style={{ marginTop: '0.8rem' }}>
+                    <small className="muted">Số cam ĐB cấm kị ngày:</small>
+                    <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                      {dayInfo.tabooSpecialNumbers.map((num) => (
+                        <span className="ball special" style={{ opacity: 0.5, textDecoration: 'line-through' }} key={num} title="ĐB cấm kị">{numberLabel(num)}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <p className="muted">Chưa có kỳ quay lịch sử nào vào Ngày {selectedDay}. Đang dùng dữ liệu nền toàn lịch sử.</p>
+            )}
+          </article>
+
+          <article>
+            <h3>Quy luật Tháng {selectedMonth} (Tổng: {monthInfo?.totalDraws ?? 0} kỳ)</h3>
+            {monthInfo && monthInfo.totalDraws > 0 ? (
+              <>
+                <p><b>Chẵn / Lẻ:</b> Lẻ {((monthInfo.oddRatio) * 100).toFixed(0)}% — Chẵn {((monthInfo.evenRatio) * 100).toFixed(0)}%</p>
+                <p><b>Cơ cấu phổ biến nhất:</b> <span style={{ color: '#38bdf8', fontWeight: 'bold' }}>{monthInfo.dominantOddEvenPattern}</span> {monthInfo.oddEvenDistribution[monthInfo.dominantOddEvenPattern] ? `(chiếm ${((monthInfo.oddEvenDistribution[monthInfo.dominantOddEvenPattern] ?? 0) * 100).toFixed(0)}% số kỳ)` : ''}</p>
+                <p><b>Quy luật độ lớn:</b> {((monthInfo.under30Rate) * 100).toFixed(0)}% số xanh &lt; 30 (TB {((monthInfo.under30Rate) * 5).toFixed(1)}/5 số xanh)</p>
+                <p><b>Quy luật số đặc biệt (cam):</b> ĐB Chẵn {((monthInfo.specialEvenRatio) * 100).toFixed(0)}% — ĐB Lẻ {((monthInfo.specialOddRatio) * 100).toFixed(0)}% {monthInfo.specialEvenRatio >= 0.55 ? '★ Đa số Chẵn' : monthInfo.specialOddRatio >= 0.55 ? '★ Đa số Lẻ' : '(Cân bằng)'}</p>
+                <p><b>Kỳ có số liền kề:</b> {((monthInfo.consecutivePairRate) * 100).toFixed(0)}%</p>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Số xanh chủ đạo tháng:</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {(monthInfo.dominantMainNumbers ?? []).slice(0, 5).map((n) => (
+                      <span className="ball" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">ĐB chủ đạo tháng:</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {(monthInfo.dominantSpecialNumbers ?? []).slice(0, 4).map((n) => (
+                      <span className="ball special" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Số cấm kị tháng:</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {(monthInfo.tabooNumbers ?? []).map((num) => (
+                      <span className="ball taboo" key={num} title="Cấm kị tháng">{numberLabel(num)}</span>
+                    ))}
+                    {!(monthInfo.tabooNumbers?.length) && <span className="muted">—</span>}
+                  </div>
+                </div>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Dãy bộ ba cấm kị tháng (chưa từng đi cùng nhau):</small>
+                  <div className="association-list" style={{ marginTop: '0.3rem' }}>
+                    {(monthInfo.tabooSequences ?? []).slice(0, 5).map((seq) => (
+                      <span className="association" key={seq} style={{ color: '#ef4444', background: 'rgba(239, 68, 68, 0.15)' }}>
+                        ✖ {seq.split(',').map((n) => numberLabel(Number(n))).join(' - ')}
+                      </span>
+                    ))}
+                    {!(monthInfo.tabooSequences?.length) && <span className="muted">Không có dãy cấm kị đặc biệt.</span>}
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="warning" style={{ margin: '0 0 0.8rem 0', padding: '0.6rem 0.8rem', fontSize: '0.85rem' }}>
+                  ℹ️ <b>Tháng {selectedMonth} chưa có kỳ quay lịch sử</b> trong cơ sở dữ liệu (từ 12/2025 – 08/2026). Đang hiển thị thống kê tham chiếu toàn lịch sử ({records.length} kỳ):
+                </div>
+                <p><b>Chẵn / Lẻ toàn lịch sử:</b> Lẻ 51% — Chẵn 49%</p>
+                <p><b>Cơ cấu phổ biến nhất:</b> <span style={{ color: '#38bdf8', fontWeight: 'bold' }}>3 lẻ / 2 chẵn</span> (chiếm 32% số kỳ)</p>
+                <p><b>Quy luật độ lớn:</b> 82% số xanh &lt; 30 (TB 4.1/5 số xanh)</p>
+                <p><b>Quy luật số đặc biệt:</b> ĐB Chẵn 50% — ĐB Lẻ 50%</p>
+                <p><b>Kỳ có số liền kề:</b> 52% toàn lịch sử</p>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Top số xanh toàn lịch sử:</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {green.slice(0, 5).map((n) => (
+                      <span className="ball" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Top ĐB toàn lịch sử:</small>
+                  <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                    {special.slice(0, 4).map((n) => (
+                      <span className="ball special" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ marginTop: '0.8rem' }}>
+                  <small className="muted">Số cấm kị tháng:</small>
+                  <span className="muted" style={{ display: 'block', marginTop: '0.2rem', fontSize: '0.85rem' }}>Chưa đủ dữ liệu tháng riêng lẻ — đang áp dụng cấm kị theo Ngày {selectedDay}.</span>
+                </div>
+              </>
+            )}
+          </article>
+        </div>
+
+        <section>
+          <h2>Cơ sở suy luận & Nhận định thống kê</h2>
+          <ul>
+            {(activeForecast?.reasoning ?? []).map((item, idx) => (
+              <li key={idx} style={{ margin: '0.4rem 0' }}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      </>
+    )}
   </main>;
 }

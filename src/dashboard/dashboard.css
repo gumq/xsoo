@@ -3,3 +3,7 @@
 .ticket-input{width:min(100%,34rem);box-sizing:border-box;padding:.7rem;border-radius:.5rem;border:1px solid #64748b;background:rgba(15,23,42,.3);color:inherit;font:inherit}
 .iching-result{margin-top:1rem;padding:.75rem 1rem .75rem 4.5rem;border-radius:.5rem;background:rgba(251,146,60,.12);position:relative}.iching-result:before{content:'☯';position:absolute;left:1rem;top:.6rem;color:#fb923c;font-size:2.5rem;line-height:1}
 .pair-note{display:flex;align-items:center;gap:.45rem;margin:.45rem 0;font-size:.9rem}.pair-note .ball{width:1.7rem;height:1.7rem;font-size:.8rem}
+.selector-group{display:flex;gap:1.5rem;margin:1rem 0;flex-wrap:wrap;align-items:center}
+.select-input{padding:.5rem .8rem;border-radius:.5rem;border:1px solid #64748b;background:rgba(15,23,42,.3);color:inherit;font:inherit;margin-left:.5rem}
+.ball.taboo{background:#ef4444;text-decoration:line-through;opacity:.85}
+.warning{background:rgba(239,68,68,.18);border:1px solid #ef4444;border-radius:.5rem;padding:.8rem 1rem;margin-bottom:1rem;color:#fca5a5}
