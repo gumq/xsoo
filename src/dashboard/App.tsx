@@ -58,6 +58,7 @@ export default function App() {
   const [checkerInput, setCheckerInput] = useState('');
   const [selectedDay, setSelectedDay] = useState<number>(() => new Date().getDate());
   const [selectedMonth, setSelectedMonth] = useState<number>(() => new Date().getMonth() + 1);
+  const [selectedHour, setSelectedHour] = useState<'all' | 13 | 21>('all');
   const [iChingCast, setIChingCast] = useState<IChingCast | null>(null);
   const castIChing = (records: readonly EventRecord[]) => {
     if (!records.length) return;
@@ -138,6 +139,7 @@ export default function App() {
           calendar.monthAnalysis,
           selectedDay,
           selectedMonth,
+          selectedHour === 'all' ? undefined : selectedHour,
         )
       : calendar?.calendarForecast;
 
@@ -183,9 +185,9 @@ export default function App() {
     {tab === 'calendar' && (
       <>
         <section>
-          <h2>Chọn ngày & tháng phân tích lịch sử</h2>
+          <h2>Chọn ngày, tháng & giờ phân tích lịch sử</h2>
           <p className="muted">
-            Thuật toán phân tích chu kỳ theo ngày trong tháng (1–31) và theo từng tháng (1–12) trên toàn bộ lịch sử.
+            Thuật toán phân tích chu kỳ theo ngày trong tháng (1–31) và theo từng tháng (1–12) trên toàn bộ lịch sử. Lọc theo giờ sẽ bổ sung cấm kị riêng cho khung 13h hoặc 21h.
           </p>
           <div className="selector-group">
             <label>
@@ -216,6 +218,25 @@ export default function App() {
                 ))}
               </select>
             </label>
+          </div>
+          <div style={{ marginTop: '0.8rem' }}>
+            <b style={{ fontSize: '0.9rem' }}>🕐 Lọc theo giờ quay:</b>
+            <div className="transition-filters" style={{ marginTop: '0.4rem' }}>
+              <button className={selectedHour === 'all' ? 'active-filter' : ''} onClick={() => setSelectedHour('all')}>
+                Chung (13h + 21h)
+              </button>
+              <button className={selectedHour === 13 ? 'active-filter' : ''} onClick={() => setSelectedHour(13)}>
+                🌞 13h
+              </button>
+              <button className={selectedHour === 21 ? 'active-filter' : ''} onClick={() => setSelectedHour(21)}>
+                🌙 21h
+              </button>
+            </div>
+            {selectedHour !== 'all' && (
+              <p className="muted" style={{ marginTop: '0.4rem', fontSize: '0.85rem' }}>
+                ⚡ Dàn 18 số và 3 bộ vé được lọc thêm theo cấm kị riêng của khung <b>{selectedHour}h</b>.
+              </p>
+            )}
           </div>
         </section>
 
@@ -289,6 +310,121 @@ export default function App() {
             );
           })()}
         </section>
+
+        {/* ====== PHÂN TÍCH THEO GIỜ (13h vs 21h) ====== */}
+        {activeForecast?.hourAnalysis && (
+          <section>
+            <h2>🕐 Hoàng đạo & cấm kị theo giờ — Ngày {selectedDay}</h2>
+            <p className="muted">
+              So sánh số chủ đạo và số cấm kị riêng cho khung <b>13h</b> và <b>21h</b> vào Ngày {selectedDay} trong tháng. Số cam 🟠 là phân tích số đặc biệt.
+            </p>
+            <div className="two">
+              {/* ---- 13h ---- */}
+              <article>
+                <h3>🌞 Khung 13h — {activeForecast.hourAnalysis.h13.totalDraws} kỳ</h3>
+                {activeForecast.hourAnalysis.h13.totalDraws >= 3 ? (
+                  <>
+                    <p><b>Chẵn / Lẻ:</b> Lẻ {(activeForecast.hourAnalysis.h13.oddRatio * 100).toFixed(0)}% — Chẵn {(activeForecast.hourAnalysis.h13.evenRatio * 100).toFixed(0)}% {activeForecast.hourAnalysis.h13.dominantOddEvenPattern !== '—' ? `· ${activeForecast.hourAnalysis.h13.dominantOddEvenPattern}` : ''}</p>
+                    <p><b>Số dưới 30:</b> {(activeForecast.hourAnalysis.h13.under30Rate * 100).toFixed(0)}% số xanh &lt; 30</p>
+                    <p><b>ĐB cam:</b> Chẵn {(activeForecast.hourAnalysis.h13.specialEvenRatio * 100).toFixed(0)}% — Lẻ {(activeForecast.hourAnalysis.h13.specialOddRatio * 100).toFixed(0)}% {activeForecast.hourAnalysis.h13.specialEvenRatio >= 0.55 ? '★ Đa số Chẵn' : activeForecast.hourAnalysis.h13.specialOddRatio >= 0.55 ? '★ Đa số Lẻ' : ''}</p>
+                    <div style={{ marginTop: '0.7rem' }}>
+                      <small className="muted">🌟 Số xanh hoàng đạo 13h (hay ra nhất):</small>
+                      <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                        {activeForecast.hourAnalysis.h13.topMainNumbers.slice(0, 5).map((n) => (
+                          <span className="ball" key={n.number} title={`${n.count} lần (${(n.rate * 100).toFixed(0)}%)`}>{numberLabel(n.number)}</span>
+                        ))}
+                        {!activeForecast.hourAnalysis.h13.topMainNumbers.length && <span className="muted">—</span>}
+                      </div>
+                    </div>
+                    <div style={{ marginTop: '0.7rem' }}>
+                      <small className="muted">🟠 ĐB hoàng đạo 13h:</small>
+                      <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                        {activeForecast.hourAnalysis.h13.topSpecialNumbers.slice(0, 4).map((n) => (
+                          <span className="ball special" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                        ))}
+                        {!activeForecast.hourAnalysis.h13.topSpecialNumbers.length && <span className="muted">—</span>}
+                      </div>
+                    </div>
+                    {activeForecast.hourAnalysis.h13.tabooMainNumbers.length > 0 && (
+                      <div style={{ marginTop: '0.7rem' }}>
+                        <small className="muted">🚫 Số xanh cấm kị 13h (chưa từng/ít ra):</small>
+                        <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                          {activeForecast.hourAnalysis.h13.tabooMainNumbers.map((num) => (
+                            <span className="ball taboo" key={num} title="Cấm kị 13h">{numberLabel(num)}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {activeForecast.hourAnalysis.h13.tabooSpecialNumbers.length > 0 && (
+                      <div style={{ marginTop: '0.7rem' }}>
+                        <small className="muted">🚫 ĐB cam cấm kị 13h:</small>
+                        <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                          {activeForecast.hourAnalysis.h13.tabooSpecialNumbers.map((num) => (
+                            <span className="ball special" key={num} style={{ opacity: 0.5, textDecoration: 'line-through' }} title="ĐB cấm kị 13h">{numberLabel(num)}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <p className="muted">Chưa đủ dữ liệu khung 13h cho Ngày {selectedDay} ({activeForecast.hourAnalysis.h13.totalDraws} kỳ — cần ít nhất 3 kỳ).</p>
+                )}
+              </article>
+
+              {/* ---- 21h ---- */}
+              <article>
+                <h3>🌙 Khung 21h — {activeForecast.hourAnalysis.h21.totalDraws} kỳ</h3>
+                {activeForecast.hourAnalysis.h21.totalDraws >= 3 ? (
+                  <>
+                    <p><b>Chẵn / Lẻ:</b> Lẻ {(activeForecast.hourAnalysis.h21.oddRatio * 100).toFixed(0)}% — Chẵn {(activeForecast.hourAnalysis.h21.evenRatio * 100).toFixed(0)}% {activeForecast.hourAnalysis.h21.dominantOddEvenPattern !== '—' ? `· ${activeForecast.hourAnalysis.h21.dominantOddEvenPattern}` : ''}</p>
+                    <p><b>Số dưới 30:</b> {(activeForecast.hourAnalysis.h21.under30Rate * 100).toFixed(0)}% số xanh &lt; 30</p>
+                    <p><b>ĐB cam:</b> Chẵn {(activeForecast.hourAnalysis.h21.specialEvenRatio * 100).toFixed(0)}% — Lẻ {(activeForecast.hourAnalysis.h21.specialOddRatio * 100).toFixed(0)}% {activeForecast.hourAnalysis.h21.specialEvenRatio >= 0.55 ? '★ Đa số Chẵn' : activeForecast.hourAnalysis.h21.specialOddRatio >= 0.55 ? '★ Đa số Lẻ' : ''}</p>
+                    <div style={{ marginTop: '0.7rem' }}>
+                      <small className="muted">🌟 Số xanh hoàng đạo 21h (hay ra nhất):</small>
+                      <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                        {activeForecast.hourAnalysis.h21.topMainNumbers.slice(0, 5).map((n) => (
+                          <span className="ball" key={n.number} title={`${n.count} lần (${(n.rate * 100).toFixed(0)}%)`}>{numberLabel(n.number)}</span>
+                        ))}
+                        {!activeForecast.hourAnalysis.h21.topMainNumbers.length && <span className="muted">—</span>}
+                      </div>
+                    </div>
+                    <div style={{ marginTop: '0.7rem' }}>
+                      <small className="muted">🟠 ĐB hoàng đạo 21h:</small>
+                      <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                        {activeForecast.hourAnalysis.h21.topSpecialNumbers.slice(0, 4).map((n) => (
+                          <span className="ball special" key={n.number} title={`${n.count} lần`}>{numberLabel(n.number)}</span>
+                        ))}
+                        {!activeForecast.hourAnalysis.h21.topSpecialNumbers.length && <span className="muted">—</span>}
+                      </div>
+                    </div>
+                    {activeForecast.hourAnalysis.h21.tabooMainNumbers.length > 0 && (
+                      <div style={{ marginTop: '0.7rem' }}>
+                        <small className="muted">🚫 Số xanh cấm kị 21h (chưa từng/ít ra):</small>
+                        <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                          {activeForecast.hourAnalysis.h21.tabooMainNumbers.map((num) => (
+                            <span className="ball taboo" key={num} title="Cấm kị 21h">{numberLabel(num)}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {activeForecast.hourAnalysis.h21.tabooSpecialNumbers.length > 0 && (
+                      <div style={{ marginTop: '0.7rem' }}>
+                        <small className="muted">🚫 ĐB cam cấm kị 21h:</small>
+                        <div className="draw-balls" style={{ marginTop: '0.3rem' }}>
+                          {activeForecast.hourAnalysis.h21.tabooSpecialNumbers.map((num) => (
+                            <span className="ball special" key={num} style={{ opacity: 0.5, textDecoration: 'line-through' }} title="ĐB cấm kị 21h">{numberLabel(num)}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <p className="muted">Chưa đủ dữ liệu khung 21h cho Ngày {selectedDay} ({activeForecast.hourAnalysis.h21.totalDraws} kỳ — cần ít nhất 3 kỳ).</p>
+                )}
+              </article>
+            </div>
+          </section>
+        )}
 
         <div className="two">
           <article>

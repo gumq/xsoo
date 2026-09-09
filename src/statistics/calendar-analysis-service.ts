@@ -1,4 +1,4 @@
-import type { CalendarAnalysis, CalendarForecast, CalendarTicket, DayOfMonthAnalysis, EventRecord, EventRules, MonthAnalysis, PairCount, TopNumber } from '../core/domain';
+import type { CalendarAnalysis, CalendarForecast, CalendarTicket, DayOfMonthAnalysis, EventRecord, EventRules, HourAnalysis, MonthAnalysis, PairCount, TopNumber } from '../core/domain';
 
 const average = (values: number[]) => values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
 
@@ -10,6 +10,83 @@ export class CalendarAnalysisService {
     const monthAnalysis = this.analyzeMonths(records);
     const calendarForecast = this.forecast(records, dayOfMonthAnalysis, monthAnalysis, now);
     return { dayOfMonthAnalysis, monthAnalysis, calendarForecast };
+  }
+
+  /** Analyze statistics for a specific draw hour (13 or 21) given a subset of records. */
+  public analyzeHourGroup(hour: 13 | 21, records: readonly EventRecord[]): HourAnalysis {
+    const totalDraws = records.length;
+    if (totalDraws === 0) {
+      return {
+        hour, totalDraws: 0,
+        topMainNumbers: [], tabooMainNumbers: [],
+        topSpecialNumbers: [], tabooSpecialNumbers: [],
+        oddRatio: 0, evenRatio: 0, under30Rate: 0,
+        specialOddRatio: 0, specialEvenRatio: 0,
+        dominantOddEvenPattern: '—', oddEvenDistribution: {},
+      };
+    }
+
+    const mainCounts = new Map<number, number>();
+    const specialCounts = new Map<number, number>();
+    let totalOdd = 0; let totalEven = 0; let totalNumbers = 0;
+    let totalUnder30 = 0;
+    let specialOddCount = 0; let specialEvenCount = 0;
+    const oddEvenComboCounts = new Map<string, number>();
+
+    records.forEach((record) => {
+      record.mainNumbers.forEach((num) => {
+        mainCounts.set(num, (mainCounts.get(num) ?? 0) + 1);
+        if (num < 30) totalUnder30 += 1;
+      });
+      specialCounts.set(record.specialNumber, (specialCounts.get(record.specialNumber) ?? 0) + 1);
+      if (record.specialNumber % 2 !== 0) specialOddCount += 1;
+      else specialEvenCount += 1;
+
+      const oddCount = record.mainNumbers.filter((n) => n % 2 !== 0).length;
+      const evenCount = record.mainNumbers.length - oddCount;
+      totalOdd += oddCount;
+      totalEven += evenCount;
+      totalNumbers += record.mainNumbers.length;
+
+      const comboKey = `${oddCount} lẻ / ${evenCount} chẵn`;
+      oddEvenComboCounts.set(comboKey, (oddEvenComboCounts.get(comboKey) ?? 0) + 1);
+    });
+
+    const topMainNumbers = this.topNumbers(mainCounts, totalDraws, 10);
+    const topSpecialNumbers = this.topNumbers(specialCounts, totalDraws, 5);
+
+    const avgMainCount = average([...mainCounts.values()]);
+    const tabooMainNumbers = Array.from({ length: this.rules.mainMax - this.rules.mainMin + 1 }, (_, offset) => offset + this.rules.mainMin)
+      .filter((num) => (mainCounts.get(num) ?? 0) < avgMainCount * 0.3)
+      .sort((a, b) => (mainCounts.get(a) ?? 0) - (mainCounts.get(b) ?? 0))
+      .slice(0, 8);
+
+    const avgSpecialCount = average([...specialCounts.values()]);
+    const tabooSpecialNumbers = Array.from({ length: this.rules.specialMax - this.rules.specialMin + 1 }, (_, offset) => offset + this.rules.specialMin)
+      .filter((num) => (specialCounts.get(num) ?? 0) < avgSpecialCount * 0.3)
+      .sort((a, b) => (specialCounts.get(a) ?? 0) - (specialCounts.get(b) ?? 0))
+      .slice(0, 4);
+
+    const oddEvenDistribution: Record<string, number> = {};
+    oddEvenComboCounts.forEach((cnt, key) => {
+      oddEvenDistribution[key] = totalDraws ? cnt / totalDraws : 0;
+    });
+    const dominantOddEvenPattern = [...oddEvenComboCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? '—';
+
+    return {
+      hour, totalDraws, topMainNumbers, tabooMainNumbers, topSpecialNumbers, tabooSpecialNumbers,
+      oddRatio: totalNumbers ? totalOdd / totalNumbers : 0,
+      evenRatio: totalNumbers ? totalEven / totalNumbers : 0,
+      under30Rate: totalNumbers ? totalUnder30 / totalNumbers : 0,
+      specialOddRatio: totalDraws ? specialOddCount / totalDraws : 0,
+      specialEvenRatio: totalDraws ? specialEvenCount / totalDraws : 0,
+      dominantOddEvenPattern, oddEvenDistribution,
+    };
+  }
+
+  /** Helper to extract draw hour from a record's timestamp string. */
+  private recordHour(record: EventRecord): number {
+    return parseInt(record.timestamp.slice(11, 13), 10);
   }
 
   /** Analyze patterns for each day of the month (1-31) across all history. */
@@ -285,6 +362,7 @@ export class CalendarAnalysisService {
     monthAnalysis: MonthAnalysis[],
     day: number,
     month: number,
+    hour?: 13 | 21,
   ): CalendarForecast {
     const dayData = dayAnalysis[day - 1];
     const monthData = monthAnalysis[month - 1];
@@ -293,10 +371,19 @@ export class CalendarAnalysisService {
     const dayHasData = (dayData?.totalDraws ?? 0) > 0;
     const monthHasData = (monthData?.totalDraws ?? 0) > 0;
 
+    // Compute per-hour analysis for draws on this specific day-of-month
+    const dayRecords = records.filter((r) => new Date(r.date).getUTCDate() === day);
+    const records13 = dayRecords.filter((r) => this.recordHour(r) === 13);
+    const records21 = dayRecords.filter((r) => this.recordHour(r) === 21);
+    const h13 = this.analyzeHourGroup(13, records13);
+    const h21 = this.analyzeHourGroup(21, records21);
+    const hourAnalysis = { h13, h21 };
+
     if (!dayHasData && !records.length) {
       return {
         basedOnDay: day,
         basedOnMonth: month,
+        basedOnHour: hour,
         candidatePool18: [],
         tickets: [],
         suggestedGreens: [],
@@ -304,6 +391,7 @@ export class CalendarAnalysisService {
         reasoning: ['Chưa đủ dữ liệu lịch sử cho ngày/tháng này.'],
         avoidNumbers: [],
         avoidSequences: [],
+        hourAnalysis,
       };
     }
 
@@ -350,6 +438,16 @@ export class CalendarAnalysisService {
     ]);
     const tabooSpecialSet = new Set<number>(dayData?.tabooSpecialNumbers ?? []);
     const tabooSequenceSet = new Set<string>(monthData?.tabooSequences ?? []);
+
+    // Nếu có chọn giờ cụ thể, bổ sung thêm số cấm kị theo giờ đó
+    const activeHourData = hour === 13 ? h13 : hour === 21 ? h21 : null;
+    if (activeHourData && activeHourData.totalDraws >= 3) {
+      activeHourData.tabooMainNumbers.forEach((n) => tabooSet.add(n));
+      activeHourData.tabooSpecialNumbers.forEach((n) => tabooSpecialSet.add(n));
+      reasoning.push(
+        `Lọc thêm theo giờ ${hour}h: loại ${activeHourData.tabooMainNumbers.length} số xanh và ${activeHourData.tabooSpecialNumbers.length} số cam chưa từng/ít ra ở khung ${hour}h (${activeHourData.totalDraws} kỳ quay).`,
+      );
+    }
 
     // 2. PHÂN TÍCH QUY LUẬT CHẴN / LẺ, ĐỘ LỚN & ĐẶC BIỆT
     const effectiveOddRatio = dayHasData ? dayData.oddRatio : 0.5;
@@ -641,6 +739,7 @@ export class CalendarAnalysisService {
     return {
       basedOnDay: day,
       basedOnMonth: month,
+      basedOnHour: hour,
       candidatePool18,
       tickets,
       suggestedGreens: tickets[0]?.greens ?? [],
@@ -648,6 +747,7 @@ export class CalendarAnalysisService {
       reasoning,
       avoidNumbers,
       avoidSequences,
+      hourAnalysis,
     };
   }
 

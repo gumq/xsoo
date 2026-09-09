@@ -61,9 +61,26 @@ export interface CalendarTicket {
   orange: number;
 }
 
+export interface HourAnalysis {
+  hour: 13 | 21;
+  totalDraws: number;
+  topMainNumbers: TopNumber[];
+  tabooMainNumbers: number[];
+  topSpecialNumbers: TopNumber[];
+  tabooSpecialNumbers: number[];
+  oddRatio: number;
+  evenRatio: number;
+  under30Rate: number;
+  specialOddRatio: number;
+  specialEvenRatio: number;
+  dominantOddEvenPattern: string;
+  oddEvenDistribution: Record<string, number>;
+}
+
 export interface CalendarForecast {
   basedOnDay: number;
   basedOnMonth: number;
+  basedOnHour?: 13 | 21;
   candidatePool18: number[];
   tickets: CalendarTicket[];
   suggestedGreens: number[];
@@ -71,6 +88,7 @@ export interface CalendarForecast {
   reasoning: string[];
   avoidNumbers: number[];
   avoidSequences: string[];
+  hourAnalysis?: { h13: HourAnalysis; h21: HourAnalysis };
 }
 export interface CalendarAnalysis {
   dayOfMonthAnalysis: DayOfMonthAnalysis[];
