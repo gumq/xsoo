@@ -118,6 +118,15 @@ export interface CalendarForecast {
   hourAnalysis?: { h13: HourAnalysis; h21: HourAnalysis };
   weekAnalysis?: WeekAnalysis[];
   top10Tickets?: CombinedTicket[];
+  excludedNumbers?: number[];
+  nextDrawInfo?: {
+    targetHour: 13 | 21;
+    targetDrawId: string;
+    basisDrawId?: string;
+    basisDate?: string;
+    basisDrawHour?: number;
+    excludedFromBasis?: number[];
+  };
 }
 export interface CalendarAnalysis {
   dayOfMonthAnalysis: DayOfMonthAnalysis[];

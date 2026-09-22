@@ -451,6 +451,8 @@ export class CalendarAnalysisService {
     month: number,
     hour?: 13 | 21,
     week?: 1 | 2 | 3 | 4 | 5,
+    excludeNumbers: readonly number[] = [],
+    nextDrawInfo?: CalendarForecast['nextDrawInfo'],
   ): CalendarForecast {
     const dayData = dayAnalysis[day - 1];
     const monthData = monthAnalysis[month - 1];
@@ -553,6 +555,14 @@ export class CalendarAnalysisService {
       activeWeekData.tabooSpecialNumbers.forEach((n) => tabooSpecialSet.add(n));
       reasoning.push(
         `Lọc thêm theo Tuần ${week} (${activeWeekData.weekLabel}): loại ${activeWeekData.tabooMainNumbers.length} số xanh và ${activeWeekData.tabooSpecialNumbers.length} số cam ít ra trong tuần này (${activeWeekData.totalDraws} kỳ quay).`,
+      );
+    }
+
+    // Nếu có danh sách số loại trừ từ kỳ trước (ví dụ kỳ 13h làm cơ sở loại trừ cho kỳ 21h)
+    if (excludeNumbers.length > 0) {
+      excludeNumbers.forEach((n) => tabooSet.add(n));
+      reasoning.push(
+        `Loại trừ ${excludeNumbers.length} số xanh đã xuất hiện ở kỳ tham chiếu trước: ${excludeNumbers.map((n) => String(n).padStart(2, '0')).join(', ')}.`,
       );
     }
 
@@ -867,6 +877,8 @@ export class CalendarAnalysisService {
       hourAnalysis,
       weekAnalysis,
       top10Tickets,
+      excludedNumbers: [...excludeNumbers],
+      nextDrawInfo,
     };
   }
 

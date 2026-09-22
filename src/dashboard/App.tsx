@@ -60,6 +60,7 @@ export default function App() {
   const [selectedMonth, setSelectedMonth] = useState<number>(() => new Date().getMonth() + 1);
   const [selectedHour, setSelectedHour] = useState<'all' | 13 | 21>('all');
   const [selectedWeek, setSelectedWeek] = useState<'all' | 1 | 2 | 3 | 4 | 5>('all');
+  const [excludeBasisGreens, setExcludeBasisGreens] = useState(true);
   const [iChingCast, setIChingCast] = useState<IChingCast | null>(null);
   const castIChing = (records: readonly EventRecord[]) => {
     if (!records.length) return;
@@ -133,6 +134,33 @@ export default function App() {
     const dayInfo = calendar?.dayOfMonthAnalysis?.find((d) => d.day === selectedDay);
     const monthInfo = calendar?.monthAnalysis?.find((m) => m.month === selectedMonth);
 
+    // Xác định kỳ kế tiếp dựa trên kỳ mới nhất trong lịch sử
+    const sortedRecords = [...records].sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+    const latestRecord = sortedRecords[0];
+    const latestDrawNum = latestRecord ? parseInt(latestRecord.drawId.replace('LOTTO535-', ''), 10) : 0;
+    const latestHour = latestRecord ? parseInt(latestRecord.timestamp.slice(11, 13), 10) : 13;
+    
+    // Kỳ kế tiếp sẽ quay vào giờ nào
+    const nextTargetHour: 13 | 21 = latestHour === 13 ? 21 : 13;
+    const nextDrawId = `LOTTO535-${String(latestDrawNum + 1).padStart(5, '0')}`;
+    
+    // Kỳ tham chiếu (kỳ liền kề trước đó, ví dụ kỳ 13h của cùng ngày hoặc ngày trước)
+    const basisRecord = latestRecord;
+    const basisDrawHour = basisRecord ? parseInt(basisRecord.timestamp.slice(11, 13), 10) : undefined;
+    const numbersToExcludeFromBasis = (excludeBasisGreens && basisRecord) ? basisRecord.mainNumbers : [];
+
+    const nextDrawInfo = {
+      targetHour: (selectedHour !== 'all' ? selectedHour : nextTargetHour) as 13 | 21,
+      targetDrawId: nextDrawId,
+      basisDrawId: basisRecord?.drawId,
+      basisDate: basisRecord?.date,
+      basisDrawHour,
+      excludedFromBasis: numbersToExcludeFromBasis,
+    };
+
+    const effectiveHour = selectedHour === 'all' ? undefined : selectedHour;
+    const effectiveWeek = selectedWeek === 'all' ? undefined : selectedWeek;
+
     const activeForecast = (calendar && records.length && calendar.dayOfMonthAnalysis && calendar.monthAnalysis)
       ? new CalendarAnalysisService(defaultRules).forecastForDayAndMonth(
           records,
@@ -140,8 +168,10 @@ export default function App() {
           calendar.monthAnalysis,
           selectedDay,
           selectedMonth,
-          selectedHour === 'all' ? undefined : selectedHour,
-          selectedWeek === 'all' ? undefined : selectedWeek,
+          effectiveHour,
+          effectiveWeek,
+          numbersToExcludeFromBasis,
+          nextDrawInfo,
         )
       : calendar?.calendarForecast;
 
@@ -262,7 +292,82 @@ export default function App() {
               </p>
             )}
           </div>
+
+          {basisRecord && (
+            <div style={{ marginTop: '0.8rem', padding: '0.6rem 0.8rem', background: 'rgba(56, 189, 248, 0.08)', borderRadius: '6px', border: '1px solid rgba(56, 189, 248, 0.2)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <div>
+                  <b style={{ fontSize: '0.9rem', color: '#38bdf8' }}>🎯 Cơ chế loại trừ theo kỳ liền trước ({basisRecord.drawId.replace('LOTTO535-', '#')} lúc {basisRecord.timestamp.slice(11, 16)}):</b>
+                  <p className="muted" style={{ margin: '0.2rem 0 0', fontSize: '0.82rem' }}>
+                    Kỳ trước ra: {basisRecord.mainNumbers.map(numberLabel).join(', ')} + ĐB {numberLabel(basisRecord.specialNumber)}. Bật tính năng này sẽ loại sạch 5 số xanh của kỳ trước khỏi các bộ số dự đoán kỳ kế tiếp.
+                  </p>
+                </div>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', cursor: 'pointer', fontSize: '0.85rem' }}>
+                  <input
+                    type="checkbox"
+                    checked={excludeBasisGreens}
+                    onChange={(e) => setExcludeBasisGreens(e.target.checked)}
+                  />
+                  <span><b>Loại 5 số kỳ trước</b></span>
+                </label>
+              </div>
+            </div>
+          )}
         </section>
+
+        {/* ====== DỰ ĐOÁN CÁC BỘ SỐ CƠ HỘI CHO KỲ KẾ TIẾP ====== */}
+        {latestRecord && (
+          <section style={{ border: '2px solid #38bdf8', background: 'rgba(15, 23, 42, 0.65)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <div>
+                <h2 style={{ margin: 0, color: '#38bdf8' }}>
+                  🔮 Dự đoán các bộ số cơ hội cho Kỳ kế tiếp ({nextDrawId.replace('LOTTO535-', '#')})
+                </h2>
+                <p className="muted" style={{ margin: '0.3rem 0 0', fontSize: '0.85rem' }}>
+                  Mục tiêu quay: <b>{selectedHour !== 'all' ? `${selectedHour}h` : `${nextTargetHour}h`}</b> · Dựa trên kết quả kỳ liền trước <b>{latestRecord.drawId.replace('LOTTO535-', '#')}</b> ({latestRecord.timestamp.slice(11, 16)})
+                  {excludeBasisGreens ? ' · Đã loại trừ 5 số xanh kỳ trước' : ' · Giữ nguyên toàn bộ số'}
+                </p>
+              </div>
+              <span className="ball" style={{ width: 'auto', padding: '0.2rem 0.6rem', fontSize: '0.8rem', borderRadius: '4px', background: '#0284c7' }}>
+                Kỳ tiếp theo: {nextDrawId.replace('LOTTO535-', '#')}
+              </span>
+            </div>
+
+            {excludeBasisGreens && (
+              <div style={{ marginTop: '0.6rem', fontSize: '0.82rem', color: '#f59e0b' }}>
+                🚫 Đang loại trừ 5 số xanh của kỳ {latestRecord.drawId.replace('LOTTO535-', '#')} ({latestRecord.mainNumbers.map(numberLabel).join(', ')}) để tránh lặp số và tập trung vào các số tiềm năng còn lại.
+              </div>
+            )}
+
+            <div className="recommendation-grid" style={{ marginTop: '0.8rem' }}>
+              {(activeForecast?.tickets ?? []).map((ticket) => {
+                const oddCount = ticket.greens.filter((n) => n % 2 !== 0).length;
+                const under30Count = ticket.greens.filter((n) => n < 30).length;
+                const orangeIsEven = ticket.orange % 2 === 0;
+                return (
+                  <article className="recommendation" key={`next-${ticket.ticketIndex}`} style={{ borderColor: '#38bdf8' }}>
+                    <small style={{ color: '#38bdf8', fontWeight: 'bold' }}>Vé cơ hội {ticket.ticketIndex} (Kỳ {nextDrawId.replace('LOTTO535-', '#')})</small>
+                    <div className="recommendation-balls">
+                      <span className="ball special" title={`ĐB: ${numberLabel(ticket.orange)}`}>
+                        {numberLabel(ticket.orange)}
+                      </span>
+                      {ticket.greens.map((num) => (
+                        <span className="ball" key={num} title={`Số xanh: ${numberLabel(num)}`}>
+                          {numberLabel(num)}
+                        </span>
+                      ))}
+                    </div>
+                    <div style={{ marginTop: '0.4rem', fontSize: '0.8rem', color: '#94a3b8' }}>
+                      <span>⚖ {oddCount}L / {ticket.greens.length - oddCount}C</span> ·{' '}
+                      <span>🎯 {under30Count} số &lt; 30</span> ·{' '}
+                      <span>🟠 ĐB {orangeIsEven ? 'chẵn' : 'lẻ'}</span>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         <section>
           <h2>3 Bộ số dự đoán cho Ngày {selectedDay} Tháng {selectedMonth}</h2>
