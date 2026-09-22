@@ -1,4 +1,4 @@
-import type { CalendarAnalysis, CalendarForecast, CalendarTicket, DayOfMonthAnalysis, EventRecord, EventRules, HourAnalysis, MonthAnalysis, PairCount, TopNumber } from '../core/domain';
+import type { CalendarAnalysis, CalendarForecast, CalendarTicket, CombinedTicket, DayOfMonthAnalysis, EventRecord, EventRules, HourAnalysis, MonthAnalysis, PairCount, TopNumber, WeekAnalysis } from '../core/domain';
 
 const average = (values: number[]) => values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
 
@@ -87,6 +87,93 @@ export class CalendarAnalysisService {
   /** Helper to extract draw hour from a record's timestamp string. */
   private recordHour(record: EventRecord): number {
     return parseInt(record.timestamp.slice(11, 13), 10);
+  }
+
+  /** Get week-of-month (1–5) from day-of-month. */
+  public static getWeekOfMonth(day: number): 1 | 2 | 3 | 4 | 5 {
+    if (day <= 7) return 1;
+    if (day <= 14) return 2;
+    if (day <= 21) return 3;
+    if (day <= 28) return 4;
+    return 5;
+  }
+
+  /** Label for a given week number. */
+  public static weekLabel(week: 1 | 2 | 3 | 4 | 5): string {
+    const ranges: Record<number, string> = { 1: 'ngày 1–7', 2: 'ngày 8–14', 3: 'ngày 15–21', 4: 'ngày 22–28', 5: 'ngày 29–31' };
+    return ranges[week] ?? '';
+  }
+
+  /** Analyze statistics for a specific week-of-month (1–5) given a subset of records. */
+  public analyzeWeekGroup(week: 1 | 2 | 3 | 4 | 5, records: readonly EventRecord[]): WeekAnalysis {
+    const label = CalendarAnalysisService.weekLabel(week);
+    const totalDraws = records.length;
+    if (totalDraws === 0) {
+      return {
+        week, weekLabel: label, totalDraws: 0,
+        topMainNumbers: [], tabooMainNumbers: [],
+        topSpecialNumbers: [], tabooSpecialNumbers: [],
+        oddRatio: 0, evenRatio: 0, under30Rate: 0,
+        specialOddRatio: 0, specialEvenRatio: 0,
+        dominantOddEvenPattern: '—', oddEvenDistribution: {},
+      };
+    }
+
+    const mainCounts = new Map<number, number>();
+    const specialCounts = new Map<number, number>();
+    let totalOdd = 0; let totalEven = 0; let totalNumbers = 0;
+    let totalUnder30 = 0; let specialOddCount = 0; let specialEvenCount = 0;
+    const oddEvenComboCounts = new Map<string, number>();
+
+    records.forEach((record) => {
+      record.mainNumbers.forEach((num) => {
+        mainCounts.set(num, (mainCounts.get(num) ?? 0) + 1);
+        if (num < 30) totalUnder30 += 1;
+      });
+      specialCounts.set(record.specialNumber, (specialCounts.get(record.specialNumber) ?? 0) + 1);
+      if (record.specialNumber % 2 !== 0) specialOddCount += 1;
+      else specialEvenCount += 1;
+
+      const oddCount = record.mainNumbers.filter((n) => n % 2 !== 0).length;
+      const evenCount = record.mainNumbers.length - oddCount;
+      totalOdd += oddCount;
+      totalEven += evenCount;
+      totalNumbers += record.mainNumbers.length;
+      const comboKey = `${oddCount} lẻ / ${evenCount} chẵn`;
+      oddEvenComboCounts.set(comboKey, (oddEvenComboCounts.get(comboKey) ?? 0) + 1);
+    });
+
+    const topMainNumbers = this.topNumbers(mainCounts, totalDraws, 10);
+    const topSpecialNumbers = this.topNumbers(specialCounts, totalDraws, 5);
+
+    const avgMainCount = average([...mainCounts.values()]);
+    const tabooMainNumbers = Array.from({ length: this.rules.mainMax - this.rules.mainMin + 1 }, (_, offset) => offset + this.rules.mainMin)
+      .filter((num) => (mainCounts.get(num) ?? 0) < avgMainCount * 0.3)
+      .sort((a, b) => (mainCounts.get(a) ?? 0) - (mainCounts.get(b) ?? 0))
+      .slice(0, 8);
+
+    const avgSpecialCount = average([...specialCounts.values()]);
+    const tabooSpecialNumbers = Array.from({ length: this.rules.specialMax - this.rules.specialMin + 1 }, (_, offset) => offset + this.rules.specialMin)
+      .filter((num) => (specialCounts.get(num) ?? 0) < avgSpecialCount * 0.3)
+      .sort((a, b) => (specialCounts.get(a) ?? 0) - (specialCounts.get(b) ?? 0))
+      .slice(0, 4);
+
+    const oddEvenDistribution: Record<string, number> = {};
+    oddEvenComboCounts.forEach((cnt, key) => {
+      oddEvenDistribution[key] = totalDraws ? cnt / totalDraws : 0;
+    });
+    const dominantOddEvenPattern = [...oddEvenComboCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? '—';
+
+    return {
+      week, weekLabel: label, totalDraws,
+      topMainNumbers, tabooMainNumbers, topSpecialNumbers, tabooSpecialNumbers,
+      oddRatio: totalNumbers ? totalOdd / totalNumbers : 0,
+      evenRatio: totalNumbers ? totalEven / totalNumbers : 0,
+      under30Rate: totalNumbers ? totalUnder30 / totalNumbers : 0,
+      specialOddRatio: totalDraws ? specialOddCount / totalDraws : 0,
+      specialEvenRatio: totalDraws ? specialEvenCount / totalDraws : 0,
+      dominantOddEvenPattern, oddEvenDistribution,
+    };
   }
 
   /** Analyze patterns for each day of the month (1-31) across all history. */
@@ -363,6 +450,7 @@ export class CalendarAnalysisService {
     day: number,
     month: number,
     hour?: 13 | 21,
+    week?: 1 | 2 | 3 | 4 | 5,
   ): CalendarForecast {
     const dayData = dayAnalysis[day - 1];
     const monthData = monthAnalysis[month - 1];
@@ -379,11 +467,18 @@ export class CalendarAnalysisService {
     const h21 = this.analyzeHourGroup(21, records21);
     const hourAnalysis = { h13, h21 };
 
+    // Compute per-week analysis for the entire month records
+    const weekAnalysis = ([1, 2, 3, 4, 5] as const).map((w) => {
+      const wRecords = records.filter((r) => CalendarAnalysisService.getWeekOfMonth(new Date(r.date).getUTCDate()) === w);
+      return this.analyzeWeekGroup(w, wRecords);
+    });
+
     if (!dayHasData && !records.length) {
       return {
         basedOnDay: day,
         basedOnMonth: month,
         basedOnHour: hour,
+        basedOnWeek: week,
         candidatePool18: [],
         tickets: [],
         suggestedGreens: [],
@@ -392,6 +487,8 @@ export class CalendarAnalysisService {
         avoidNumbers: [],
         avoidSequences: [],
         hourAnalysis,
+        weekAnalysis,
+        top10Tickets: [],
       };
     }
 
@@ -446,6 +543,16 @@ export class CalendarAnalysisService {
       activeHourData.tabooSpecialNumbers.forEach((n) => tabooSpecialSet.add(n));
       reasoning.push(
         `Lọc thêm theo giờ ${hour}h: loại ${activeHourData.tabooMainNumbers.length} số xanh và ${activeHourData.tabooSpecialNumbers.length} số cam chưa từng/ít ra ở khung ${hour}h (${activeHourData.totalDraws} kỳ quay).`,
+      );
+    }
+
+    // Nếu có chọn tuần cụ thể, bổ sung thêm số cấm kị theo tuần đó
+    const activeWeekData = week ? weekAnalysis.find((w) => w.week === week) : null;
+    if (activeWeekData && activeWeekData.totalDraws >= 5) {
+      activeWeekData.tabooMainNumbers.forEach((n) => tabooSet.add(n));
+      activeWeekData.tabooSpecialNumbers.forEach((n) => tabooSpecialSet.add(n));
+      reasoning.push(
+        `Lọc thêm theo Tuần ${week} (${activeWeekData.weekLabel}): loại ${activeWeekData.tabooMainNumbers.length} số xanh và ${activeWeekData.tabooSpecialNumbers.length} số cam ít ra trong tuần này (${activeWeekData.totalDraws} kỳ quay).`,
       );
     }
 
@@ -736,10 +843,20 @@ export class CalendarAnalysisService {
         .join(', ')}.`,
     );
 
+    const top10Tickets = this.buildTop10Tickets({
+      records, dayData, monthData, activeWeekData, activeHourData,
+      globalCounts, pairCounts, maxGlobal, maxPair,
+      tabooSet, tabooSpecialSet,
+      dayFreq, monthFreq, maxDayRate, maxMonthRate,
+      combinedOddBias, under30Ratio,
+      dayHasData, monthHasData,
+    });
+
     return {
       basedOnDay: day,
       basedOnMonth: month,
       basedOnHour: hour,
+      basedOnWeek: week,
       candidatePool18,
       tickets,
       suggestedGreens: tickets[0]?.greens ?? [],
@@ -748,7 +865,207 @@ export class CalendarAnalysisService {
       avoidNumbers,
       avoidSequences,
       hourAnalysis,
+      weekAnalysis,
+      top10Tickets,
     };
+  }
+
+  /** Build top-10 combined tickets using composite scoring from all signals. */
+  private buildTop10Tickets(params: {
+    records: readonly EventRecord[];
+    dayData: DayOfMonthAnalysis | undefined;
+    monthData: MonthAnalysis | undefined;
+    activeWeekData: WeekAnalysis | null | undefined;
+    activeHourData: HourAnalysis | null;
+    globalCounts: Map<number, number>;
+    pairCounts: Map<string, number>;
+    maxGlobal: number;
+    maxPair: number;
+    tabooSet: Set<number>;
+    tabooSpecialSet: Set<number>;
+    dayFreq: Map<number, number>;
+    monthFreq: Map<number, number>;
+    maxDayRate: number;
+    maxMonthRate: number;
+    combinedOddBias: number;
+    under30Ratio: number;
+    dayHasData: boolean;
+    monthHasData: boolean;
+  }): CombinedTicket[] {
+    const {
+      records, dayData, monthData, activeWeekData, activeHourData,
+      globalCounts, pairCounts, maxGlobal, maxPair,
+      tabooSet, tabooSpecialSet,
+      dayFreq, monthFreq, maxDayRate, maxMonthRate,
+      combinedOddBias, under30Ratio,
+      dayHasData, monthHasData,
+    } = params;
+
+    const pairKey = (a: number, b: number) => (a < b ? `${a},${b}` : `${b},${a}`);
+
+    // Frequencies per signal
+    const weekFreq = activeWeekData
+      ? new Map(activeWeekData.topMainNumbers.map((n) => [n.number, n.rate]))
+      : new Map<number, number>();
+    const maxWeekRate = Math.max(0.001, ...(activeWeekData?.topMainNumbers ?? []).map((n) => n.rate));
+
+    const hourFreq = activeHourData
+      ? new Map(activeHourData.topMainNumbers.map((n) => [n.number, n.rate]))
+      : new Map<number, number>();
+    const maxHourRate = Math.max(0.001, ...(activeHourData?.topMainNumbers ?? []).map((n) => n.rate));
+
+    const top5Day = new Set((dayData?.topMainNumbers ?? []).slice(0, 5).map((n) => n.number));
+    const top5Week = new Set((activeWeekData?.topMainNumbers ?? []).slice(0, 5).map((n) => n.number));
+    const top5Hour = new Set((activeHourData?.topMainNumbers ?? []).slice(0, 5).map((n) => n.number));
+    const top5Month = new Set((monthData?.dominantMainNumbers ?? []).slice(0, 5).map((n) => n.number));
+
+    // Score every non-taboo number 1–35
+    const allNumbers = Array.from({ length: this.rules.mainMax - this.rules.mainMin + 1 }, (_, i) => i + this.rules.mainMin);
+    const eligible = allNumbers.filter((n) => !tabooSet.has(n));
+
+    const scored = eligible.map((num) => {
+      const isOdd = num % 2 !== 0;
+      const isUnder30 = num < 30;
+      const dayScore = dayHasData ? (dayFreq.get(num) ?? 0) / maxDayRate : 0;
+      const monthScore = monthHasData ? (monthFreq.get(num) ?? 0) / maxMonthRate : 0;
+      const weekScore = activeWeekData && activeWeekData.totalDraws >= 5 ? (weekFreq.get(num) ?? 0) / maxWeekRate : 0;
+      const hourScore = activeHourData && activeHourData.totalDraws >= 3 ? (hourFreq.get(num) ?? 0) / maxHourRate : 0;
+      const globalScore = (globalCounts.get(num) ?? 0) / maxGlobal;
+
+      const oddEvenBonus = combinedOddBias > 0 ? (isOdd ? 0.06 : -0.06) : combinedOddBias < 0 ? (isOdd ? -0.06 : 0.06) : 0;
+      const under30Bonus = isUnder30 ? (under30Ratio > 0.7 ? 0.06 : 0.03) : -0.03;
+
+      const dominantBonus =
+        (top5Day.has(num) ? 0.30 : 0) +
+        (top5Week.has(num) ? 0.18 : 0) +
+        (top5Hour.has(num) ? 0.15 : 0) +
+        (top5Month.has(num) ? 0.10 : 0);
+
+      const score =
+        0.30 * dayScore +
+        0.20 * monthScore +
+        0.20 * weekScore +
+        0.15 * hourScore +
+        0.15 * globalScore +
+        dominantBonus +
+        oddEvenBonus +
+        under30Bonus;
+
+      return { num, score };
+    });
+
+    scored.sort((a, b) => b.score - a.score || a.num - b.num);
+    const pool20 = scored.slice(0, 20).map((s) => s.num);
+    const scoreMap = new Map(scored.map((s) => [s.num, s.score]));
+
+    // Parity target from day pattern
+    let targetOdd = 3;
+    if (dayHasData && dayData?.dominantOddEvenPattern) {
+      const m = dayData.dominantOddEvenPattern.match(/^(\d+)\s*lẻ/);
+      if (m) targetOdd = Number(m[1]);
+    } else if (combinedOddBias < -0.05) targetOdd = 2;
+
+    // Special number scoring helper
+    const daySpecialFreq = new Map((dayData?.topSpecialNumbers ?? []).map((n) => [n.number, n.rate]));
+    const monthSpecialFreq = new Map((monthData?.dominantSpecialNumbers ?? []).map((n) => [n.number, n.rate]));
+    const weekSpecialFreq = new Map((activeWeekData?.topSpecialNumbers ?? []).map((n) => [n.number, n.rate]));
+    const hourSpecialFreq = new Map((activeHourData?.topSpecialNumbers ?? []).map((n) => [n.number, n.rate]));
+    const maxDS = Math.max(0.001, ...(dayData?.topSpecialNumbers ?? []).map((n) => n.rate));
+    const maxMS = Math.max(0.001, ...(monthData?.dominantSpecialNumbers ?? []).map((n) => n.rate));
+    const maxWS = Math.max(0.001, ...(activeWeekData?.topSpecialNumbers ?? []).map((n) => n.rate));
+    const maxHS = Math.max(0.001, ...(activeHourData?.topSpecialNumbers ?? []).map((n) => n.rate));
+
+    const eligibleSpecials = Array.from({ length: this.rules.specialMax - this.rules.specialMin + 1 }, (_, i) => i + this.rules.specialMin)
+      .filter((s) => !tabooSpecialSet.has(s));
+
+    const scoreSpecial = (orange: number, greens: number[]) => {
+      const isOdd = orange % 2 !== 0;
+      const ds = (daySpecialFreq.get(orange) ?? 0) / maxDS;
+      const ms = (monthSpecialFreq.get(orange) ?? 0) / maxMS;
+      const ws = (weekSpecialFreq.get(orange) ?? 0) / maxWS;
+      const hs = (hourSpecialFreq.get(orange) ?? 0) / maxHS;
+      const specialRecords = records.filter((r) => r.specialNumber === orange);
+      const linkScore = specialRecords.length
+        ? average(greens.map((g) => specialRecords.filter((r) => r.mainNumbers.includes(g)).length / specialRecords.length))
+        : 0;
+      let parityBonus = 0;
+      if (dayHasData && (dayData?.specialEvenRatio ?? 0) >= 0.55 && !isOdd) parityBonus = 0.15;
+      else if (dayHasData && (dayData?.specialOddRatio ?? 0) >= 0.55 && isOdd) parityBonus = 0.15;
+      return 0.30 * ds + 0.20 * ms + 0.20 * ws + 0.15 * hs + 0.15 * linkScore + parityBonus;
+    };
+
+    // Build 10 diverse tickets using greedy pool-coverage approach
+    const tickets: CombinedTicket[] = [];
+    const usedSpecials = new Set<number>();
+
+    // Produce 10 tickets by varying seed strategies
+    const seeds = [
+      // Top seeds: best singles from dominant sets
+      ...pool20.slice(0, 10),
+    ];
+
+    for (let t = 0; t < 10 && pool20.length >= 5; t += 1) {
+      const seed = seeds[t] ?? pool20[t % pool20.length];
+      const greens: number[] = [seed];
+
+      // Fill remaining 4 slots greedily using synergy + composite score
+      while (greens.length < this.rules.mainCount) {
+        const currentOdd = greens.filter((n) => n % 2 !== 0).length;
+        const currentUnder30 = greens.filter((n) => n < 30).length;
+        // Prefer unused numbers in pool, then allow reuse across tickets
+        const candidates = pool20.filter((n) => !greens.includes(n));
+        if (!candidates.length) break;
+
+        const ranked = candidates.map((cand) => {
+          const isOdd = cand % 2 !== 0;
+          const isUnder30 = cand < 30;
+          const synergy = average(greens.map((g) => (pairCounts.get(pairKey(g, cand)) ?? 0) / maxPair));
+          const baseScore = (scoreMap.get(cand) ?? 0);
+          let parityBonus = 0;
+          if (currentOdd < targetOdd && isOdd) parityBonus = 0.15;
+          else if (currentOdd >= targetOdd && !isOdd) parityBonus = 0.15;
+          let under30Bonus = 0;
+          if (currentUnder30 < 4 && isUnder30) under30Bonus = 0.10;
+          // Vary ticket diversity by penalizing numbers already in earlier tickets
+          const diversityPenalty = tickets.some((tk) => tk.greens.includes(cand)) ? (0.05 * t / 10) : 0;
+          return { cand, score: 0.45 * synergy + 0.40 * baseScore + parityBonus + under30Bonus - diversityPenalty };
+        });
+        ranked.sort((a, b) => b.score - a.score || a.cand - b.cand);
+        greens.push(ranked[0].cand);
+      }
+
+      greens.sort((a, b) => a - b);
+
+      // Pick best special for this ticket
+      const rankedSpecials = eligibleSpecials
+        .map((orange) => ({ orange, score: scoreSpecial(orange, greens) - (usedSpecials.has(orange) ? 0.20 : 0) }))
+        .sort((a, b) => b.score - a.score || a.orange - b.orange);
+      const orange = rankedSpecials[0]?.orange ?? 1;
+      usedSpecials.add(orange);
+
+      // Build label explaining why this ticket was chosen
+      const sources: string[] = [];
+      if (top5Day.has(seed)) sources.push(`Chủ đạo ngày`);
+      if (top5Week.has(seed)) sources.push(`Chủ đạo tuần`);
+      if (top5Hour.has(seed)) sources.push(`Hoàng đạo ${activeHourData?.hour ?? ''}h`);
+      if (top5Month.has(seed)) sources.push(`Chủ đạo tháng`);
+      if (!sources.length) sources.push('Điểm tổng hợp cao');
+
+      const oddCnt = greens.filter((n) => n % 2 !== 0).length;
+      const u30Cnt = greens.filter((n) => n < 30).length;
+      const compositeScore = parseFloat(average(greens.map((n) => scoreMap.get(n) ?? 0)).toFixed(4));
+
+      tickets.push({
+        rank: t + 1,
+        greens,
+        orange,
+        compositeScore,
+        label: `${oddCnt}L/${greens.length - oddCnt}C · ${u30Cnt}<30 · ĐB${orange % 2 === 0 ? 'C' : 'L'}`,
+        sources,
+      });
+    }
+
+    return tickets;
   }
 
   private topNumbers(counts: Map<number, number>, totalDraws: number, limit: number): TopNumber[] {
